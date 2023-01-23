@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+
+</head>
+<body>
+<div class="bg-dark min-vh-100">
+  <nav class="navbar navbar-expand-lg bg-primary bg-opacity-75 border-bottom border-primary fixed-top backdrop-filter">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">
+        <img src="../assets/images/logo.svg" alt="">
+      </a>
+
+      <div class="ml-auto d-flex justify-content-center align-items-center">
+        <div class="me-2 text-white">
+          Hello, <b>Marius</b>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0 rounded-circle btn-avatar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/images/avatar.png" alt="" class="bg-primary rounded-circle img-fluid">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-list-check"></i> My Dashboard</a></li>
+            <li class="border-top"><a class="dropdown-item" href="#"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-6 d-flex position-relative main-container text-white">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-12 col-md-2">
+          <h2 class="text-center fs-5 mb-4">My Profile</h2>
+          <div class="rounded-circle thumbnail-avatar m-auto mb-4">
+            <img src="../assets/images/avatar.png" alt="" class="img-fluid border border-3 border-dark rounded-circle">
+          </div>
+          <p class="mb-1 text-center fw-semibold">
+            Mariusa Constantina
+          </p>
+          <p class="mb-0 text-center text-secondary">
+            marius@web-interactive.ro
+          </p>
+          <p class="mb-4 text-center text-secondary">
+            0724553592
+          </p>
+          <div class="">
+            <button type="button" class="btn btn-primary w-100 mb-2 text-start" data-bs-toggle="modal" data-bs-target="#modal-qr">
+              <span class="me-2 text-success">MY</span>
+              QR Code
+            </button>
+            <button type="button" class="btn btn-primary w-100 mb-2 text-start" data-bs-toggle="modal" data-bs-target="#modal-personal-info">
+              <i class="fas fa-user-alt me-2"></i>
+              Personal info
+            </button>
+            <button type="button" class="btn btn-primary w-100 mb-2 text-start" data-bs-toggle="modal" data-bs-target="#modal-my-tickets">
+              <i class="fas fa-ticket-alt me-2"></i>
+              My Tickets
+            </button>
+            <button type="button" class="btn btn-primary w-100 mb-2 text-start" data-bs-toggle="modal" data-bs-target="#modal-change-password">
+              <i class="me-2 fas fa-key"></i>
+              Change password
+            </button>
+            <button type="button" class="btn btn-primary w-100 mb-2 text-start" data-bs-toggle="modal" data-bs-target="#modal-notification">
+              <i class="fas fa-bell me-2"></i>
+              Notifications settings
+            </button>
+            <button type="button" class="btn btn-primary w-100 mb-2 text-start" data-bs-toggle="modal" data-bs-target="#modal-social-media">
+              <i class="fas fa-photo-video me-2"></i>
+              Social media
+            </button>
+            <button type="button" class="btn btn-primary w-100 mb-2 text-start" data-bs-toggle="modal" data-bs-target="#modal-close-account">
+              <i class="fas fa-times-circle me-2"></i>
+              Close account
+            </button>
+          </div>
+
+        </div>
+
+        <div class="col-12 col-md-8 border-start border-end border-primary">
+          <h2 class="text-center fs-5">My Events</h2>
+
+          <div class="row mb-4">
+            <div class="col-12 col-md-3">
+              <label for="input-filter-time" class="form-label">Filter by time</label>
+              <select name="filters[event_date]" id="input-filter-time" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+
+              </select>
+            </div>
+            <div class="col-12 col-md-3">
+              <label for="input-filter-type" class="form-label">Filter by type</label>
+              <select name="filters[event_type]" id="input-filter-type" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+
+              </select>
+            </div>
+            <div class="col-12 col-md-3">
+              <label for="input-filter-role" class="form-label">Filter by role</label>
+              <select name="filters[role]" id="input-filter-role" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+
+              </select>
+            </div>
+            <div class="col-12 col-md-3">
+              <label for="input-filter-search" class="form-label">Search</label>
+              <input type="text" name="filters[search_key]" value="" class="form-control" id="input-filter-search">
+<!--              <i class="fas fa-search"></i>-->
+            </div>
+          </div>
+
+          <p class="mb-4">Your next event is:</p>
+
+
+          <a href="#" class="mb-4 d-block text-decoration-none">
+            <div class="card bg-primary">
+              <div class="card-body text-white">
+                <div class="row">
+                  <div class="col-12 col-md-2 text-center">
+                    <span class=" display-4 fw-semibold">01</span><br>
+                    <span class="fs-1 fw-semibold text-uppercase">MAY</span>
+                  </div>
+                  <div class="col-12 col-md-2">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                      <img src="../assets/images/logo-ticket.png" class="img-fluid logo-event">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8 d-flex justify-content-between">
+                    <div>
+                      <h3 class="mb-2 fs-4">MyConnector Conference</h3>
+                      <p class="mb-1">
+                        <span class="text-secondary">Starting:</span>
+                        <span class="ms-2"><i class="fas fa-calendar"></i> May 01, 2022</span>
+                        <span class="ms-2"><i class="fas fa-clock"></i> 11:00 (GMT+03:00)</span>
+                      </p>
+
+                      <p class="mb-1">
+                        <span class="text-secondary">Type:</span>
+                        <span class="ms-2"><i class="fas fa-globe"></i> Virtual Event</span>
+                      </p>
+
+                      <p class="mb-1">
+                        <span class="text-secondary">Your roles:</span>
+                        <span class="ms-2"><i class="fas fa-user-cog"></i> Exhibitor</span>
+                        <span class="ms-2"><i class="fas fa-user-alt"></i> Visitor</span>
+                      </p>
+                    </div>
+
+                    <div class="my-auto">
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="mb-4 d-block text-decoration-none">
+            <div class="card bg-primary">
+              <div class="card-body text-white">
+                <div class="row">
+                  <div class="col-12 col-md-2 text-center">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                      <span class="fw-semibold">Passed <br> event</span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2">
+                    <div class="d-flex align-items-center justify-content-center logo-event">
+                      <img src="../assets/images/logo-ticket-2.png" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-8 d-flex justify-content-between">
+
+                    <div>
+                      <h3 class="mb-2 fs-4">MyConnector Conference</h3>
+                      <p class="mb-1">
+                        <span class="text-secondary">Starting:</span>
+                        <span class="ms-2"><i class="fas fa-calendar"></i> May 01, 2022</span>
+                        <span class="ms-2"><i class="fas fa-clock"></i> 11:00 (GMT+03:00)</span>
+                      </p>
+
+                      <p class="mb-1">
+                        <span class="text-secondary">Type:</span>
+                        <span class="ms-2"><i class="fas fa-globe"></i> Virtual Event</span>
+                      </p>
+
+                      <p class="mb-1">
+                        <span class="text-secondary">Your roles:</span>
+                        <span class="ms-2"><i class="fas fa-user-cog"></i> Exhibitor</span>
+                        <span class="ms-2"><i class="fas fa-user-alt"></i> Visitor</span>
+                      </p>
+                    </div>
+
+                    <div class="my-auto">
+                      <i class="fas fa-chevron-right"></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="col-12 col-md-2">
+          <h2 class="text-center fs-5 mb-4">My Favorites</h2>
+          <div class="rounded-circle thumbnail-avatar m-auto mb-4">
+            <i class="fa-solid fa-star border border-3 border-dark bg-primary fs-4 justify-content-center p-1 d-flex align-items-center rounded-circle w-100 h-100"></i>
+          </div>
+          <p class="mb-0 text-center fw-semibold">
+            The following are saved <br>
+            to your favorites:
+          </p>
+          <p class="text-center text-secondary mb-4">
+            1 contacts
+          </p>
+
+          <p class="fw-semibold mb-2">Favorites/event:</p>
+
+          <a href="" class="text-decoration-none mb-2">
+            <div class="card text-center bg-primary text-white">
+              <div class="card-body mt-4">
+                <p class="card-text">
+                  MyConnector Conference
+                </p>
+              </div>
+              <div class="card-footer text-end border-0 bg-primary pt-0">
+                <small class="text-success">1 assets</small>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
+    <div class="container-fluid d-flex align-items-center">
+      <span class="fw-bold fs-4">Hello, </span> <img src="../assets/images/hello_icon.svg" alt="" class="mx-1"> <span class="fw-bold fs-4">Mariusa Constantina!</span>
+      <span class="ms-2">You are navigating MyConnectors' dashboard. From here you can access your events, change personal information or manage saved assets(videos, documents, business cards etc.)</span>
+    </div>
+  </footer>
+
+</div>
+
+<div class="modal fade" id="modal-qr" tabindex="-1" aria-labelledby="modal-qr-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-qr-label">Below you can see your QR code.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+      <p>To access an offline event, share your info with our partners, share your vCard with other guests.</p>
+      <div class="bg-light p-4 text-center">
+        <img src="data:image/png;base64,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">
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-personal-info" tabindex="-1" aria-labelledby="modal-personal-info-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-personal-info-label">Personal info</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 col-md-6">
+
+            </div>
+            <div class="col-12 col-md-6">
+
+              <div class="mb-3">
+                <label class="form-label text-primary" for="input-salutation">Salutation</label>
+                <select name="salutation" id="input-salutation" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+                  <option value="">Select Salutation</option>
+                  <option value="Mr.">Mr.</option>
+                  <option value="Ms.">Ms.</option>
+                  <option value="Mrs.">Mrs.</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label text-primary" for="input-firstname">Firstname</label>
+                <input class="form-control" id="input-firstname" type="text" name="firstname" placeholder="Fill in your given firstname" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label text-primary" for="input-lastname">Lastname</label>
+                <input class="form-control" id="input-lastname" type="text" name="lastname" placeholder="Fill in your given lastname" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label text-primary" for="input-phone">Phone</label>
+                <input class="form-control" id="input-phone" type="text" name="phone" placeholder="Fill in your phone" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label text-primary" for="input-timezone">Timezone</label>
+                <select name="id_timezone" id="input-timezone" class="form-control js-select2">
+                  <option value="">Select Salutation</option>
+                  <option value="Mr.">Mr.</option>
+                  <option value="Ms.">Ms.</option>
+                  <option value="Mrs.">Mrs.</option>
+                </select>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="row w-100">
+            <div class="col-12 col-md-6">
+              <button type="button" class="btn btn-primary w-50">Remove Image</button>
+            </div>
+            <div class="col-12 col-md-6">
+              <button type="submit" class="btn btn-primary w-100">Save</button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-my-tickets" tabindex="-1" aria-labelledby="modal-qr-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-my-tickets-label">Assign/modify your tickets.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="card bg-primary text-white mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                  <img src="../assets/images/logo-ticket.png" alt="" class="img-fluid logo-event">
+                </div>
+              </div>
+              <div class="col-12 col-md-9">
+                <h3>MyConnector Conference</h3>
+                <p>
+                  <span class="text-secondary">Starting:</span>
+                  <span class="ms-2"><i class="fas fa-calendar"></i> May 01, 2022</span>
+                  <span class="ms-2"><i class="fas fa-clock"></i> 11:00 (GMT+03:00)</span>
+                </p>
+
+                <div class="border-top border-dark pt-2">
+                  <a href="#" class="btn btn-sm btn-success text-white">Modify /Assign Tickets (1)</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-primary text-white">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                  <img src="../assets/images/logo-ticket-2.png" alt="" class="img-fluid logo-event">
+                </div>
+              </div>
+              <div class="col-12 col-md-9">
+                <h3>MyConnector Conference</h3>
+                <p>
+                  <span class="text-secondary">Starting:</span>
+                  <span class="ms-2"><i class="fas fa-calendar"></i> May 01, 2022</span>
+                  <span class="ms-2"><i class="fas fa-clock"></i> 11:00 (GMT+03:00)</span>
+                </p>
+
+                <div class="border-top border-dark pt-2">
+                  <p class="mb-0">
+                    No tickets to be modified/assigned.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-change-password" tabindex="-1" aria-labelledby="modal-change-password-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-change-password-label">Change your password.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <p>The new password should be at least 7 characters long, with at least a small case letter, at least an uppercase letter, at least a number and at least a special character</p>
+          
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-current-password">Current Password</label>
+            <input class="form-control" id="input-current-password" type="password" name="current_password" autocomplete="new-password" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-new-password">New Password</label>
+            <input class="form-control" id="input-new-password" type="password" name="new_password" autocomplete="new-password" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-repeat-password">Repeat Password</label>
+            <input class="form-control" id="input-repeat-password" type="password" name="repeat_password" autocomplete="new-password" required>
+          </div>
+      
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary w-100">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-notification" tabindex="-1" aria-labelledby="modal-notification-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-notification-label">Change which notifications you receive.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="card bg-primary text-white mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                  <img src="../assets/images/logo-ticket.png" alt="" class="img-fluid logo-event">
+                </div>
+              </div>
+              <div class="col-12 col-md-9">
+                <h3>MyConnector Conference</h3>
+                <p>
+                  <span class="text-secondary">Starting:</span>
+                  <span class="ms-2"><i class="fas fa-calendar"></i> May 01, 2022</span>
+                  <span class="ms-2"><i class="fas fa-clock"></i> 11:00 (GMT+03:00)</span>
+                </p>
+
+                <div class="border-top border-dark pt-2">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-sms-0" name="communication_preferences[0][sms]" value="1">
+                    <label class="form-check-label" for="input-sms-0">SMS</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-mobile-0" name="communication_preferences[0][mobile]" value="1">
+                    <label class="form-check-label" for="input-mobile-0">Push</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-email-0" name="communication_preferences[0][email]" value="1">
+                    <label class="form-check-label" for="input-email-0">E-Mail</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-attendees-0" name="communication_preferences[0][attendees]" value="1">
+                    <label class="form-check-label" for="input-attendees-0">Show in attendees</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-primary text-white">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                  <img src="../assets/images/logo-ticket-2.png" alt="" class="img-fluid logo-event">
+                </div>
+              </div>
+              <div class="col-12 col-md-9">
+                <h3>MyConnector Conference</h3>
+                <p>
+                  <span class="text-secondary">Starting:</span>
+                  <span class="ms-2"><i class="fas fa-calendar"></i> May 01, 2022</span>
+                  <span class="ms-2"><i class="fas fa-clock"></i> 11:00 (GMT+03:00)</span>
+                </p>
+
+                <div class="border-top border-dark pt-2">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-sms-1" name="communication_preferences[1][sms]" value="1">
+                    <label class="form-check-label" for="input-sms-1">SMS</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-mobile-1" name="communication_preferences[1][mobile]" value="1">
+                    <label class="form-check-label" for="input-mobile-1">Push</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-email-1" name="communication_preferences[1][email]" value="1">
+                    <label class="form-check-label" for="input-email-1">E-Mail</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="input-attendees-1" name="communication_preferences[1][attendees]" value="1">
+                    <label class="form-check-label" for="input-attendees-1">Show in attendees</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-social-media" tabindex="-1" aria-labelledby="modal-social-media-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-social-media-label">Edit your social media contacts.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          <p>Your social media profiles will be displayed during events that allow guests interactions and networking, in your public profile section or business card exchange.</p>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-facebook">Facebook</label>
+            <input class="form-control" id="input-facebook" type="text" name="social_media_links[facebook]" placeholder="paste your url here">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-instagram">Instagram</label>
+            <input class="form-control" id="input-instagram" type="text" name="social_media_links[instagram]" placeholder="paste your url here">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-twitter">Twitter</label>
+            <input class="form-control" id="input-twitter" type="text" name="social_media_links[twitter]" placeholder="paste your url here">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-linkedin">Linkedin</label>
+            <input class="form-control" id="input-linkedin" type="text" name="social_media_links[linkedin]" placeholder="paste your url here">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary w-100">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal-close-account" tabindex="-1" aria-labelledby="modal-close-account-label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modal-close-account-label">Close your account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="">
+        <div class="modal-body">
+          
+          <div class="alert alert-primary bg-primary text-white">
+            This action permanently deletes your account from MyConnector.com platform.
+          </div>
+          
+          <p>Please type "CLOSE" and your password below to confirm that you wish to close your account!</p>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-close">Type here "CLOSE"</label>
+            <input class="form-control" id="input-close" type="text" name="close_input" autocomplete="new-password" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-primary" for="input-close-password">Password</label>
+            <input class="form-control" id="input-close-password" type="password" name="password" autocomplete="new-password" required>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary w-100">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
