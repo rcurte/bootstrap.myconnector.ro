@@ -3278,6 +3278,20 @@ var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 var tooltipList = _toConsumableArray(tooltipTriggerList).map(function (tooltipTriggerEl) {
   return new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Tooltip(tooltipTriggerEl);
 });
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('#sidebar-toggle').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.sidebar').toggleClass('sidebar-min');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').toggleClass('p-sidebar');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-filters').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.filters').removeClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').addClass('p-filter');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.close-filters').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.filters').addClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-filters').removeClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('p-filter');
+});
 
 /***/ }),
 

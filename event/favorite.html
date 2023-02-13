@@ -12,10 +12,10 @@
 </head>
 <body>
 <div class="bg-dark min-vh-100">
-  <nav class="navbar navbar-expand-lg bg-primary bg-opacity-75 border-bottom border-primary fixed-top backdrop-filter">
+  <nav class="navbar navbar-expand-lg bg-primary bg-opacity-75 border-bottom border-primary fixed-top backdrop-filter p-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <div class="d-flex">
+      <div class="d-flex py-2">
         <a href="#" class="navbar-brand">
           <img src="../assets/images/swosh.svg" alt="">
         </a>
@@ -56,6 +56,12 @@
           </ul>
         </div>
         <a class="btn btn-nav-link bg-transparent fs-5 border-0 d-flex align-items-center" href="#"><i class="fa-solid fa-star"></i></a>
+      </div>
+
+      <div class="m-auto">
+        <a href="" class="d-block">
+          <img src="../assets/images/logo-ticket.png" alt="" class="img-fluid logo-event-header">
+        </a>
       </div>
 
       <div class="ml-auto d-flex justify-content-center align-items-center">
@@ -631,23 +637,6 @@
 <script src="../assets/js/main.js"></script>
 
 <script>
-  $('#sidebar-toggle').on('click', function () {
-    $('.sidebar').toggleClass('sidebar-min');
-    $('main').toggleClass('p-sidebar')
-  });
-
-  $('.show-filters').on('click', function () {
-    $('.filters').removeClass('d-none');
-    $(this).addClass('d-none');
-    $('main').addClass('p-filter');
-  });
-
-  $('.close-filters').on('click', function () {
-    $('.filters').addClass('d-none');
-    $('.show-filters').removeClass('d-none');
-    $('main').removeClass('p-filter');
-  });
-
   $('#input-group').on('change', function () {
     $formCheck = $(this).closest('.form-check');
     $formCheck.find('label').toggleClass('text-secondary');

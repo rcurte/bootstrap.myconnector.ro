@@ -1,0 +1,154 @@
+// Height
+$s2bs5d-height:                   $input-height !default;
+$s2bs5d-height-inner:             $input-line-height * 1rem !default;
+
+// Z-Index
+$s2bs5d-zindex:                   $zindex-modal + 1 !default;
+
+// Padding
+$s2bs5d-padding-y:                $form-select-padding-y !default;
+$s2bs5d-padding-x:                $form-select-padding-x !default;
+
+// Font
+$s2bs5d-font-family:              inherit !default;
+$s2bs5d-font-size:                $form-select-font-size !default;
+$s2bs5d-font-weight:              $form-select-font-weight !default;
+$s2bs5d-line-height:              $form-select-line-height !default;
+
+// Color & background
+$s2bs5d-color:                    $white !default;
+$s2bs5d-placeholder-color:        $input-placeholder-color !default;
+$s2bs5d-bg:                       $primary !default;
+$s2bs5d-bg-position:              $form-select-bg-position !default;
+$s2bs5d-bg-size:                  $form-select-bg-size !default;
+
+// Border & shadow
+$s2bs5d-border-width:             $form-select-border-width !default;
+$s2bs5d-border-color:             $primary !default;
+$s2bs5d-border-radius:            $form-select-border-radius !default;
+$s2bs5d-box-shadow:               $form-select-box-shadow !default;
+$s2bs5d-transition:               $input-transition !default;
+
+// Indicator
+$s2bs5d-indicator-padding:        $form-select-indicator-padding !default;
+$s2bs5d-indicator:                str-replace($form-select-indicator, #{$form-select-indicator-color} ,$white); //$form-select-indicator !default;
+
+// Focus
+$s2bs5d-focus-border-color:       $primary !default;
+$s2bs5d-focus-width:              $form-select-focus-width !default;
+$s2bs5d-focus-box-shadow:         $form-select-focus-box-shadow !default;
+
+// Valid
+$s2bs5d-valid-border-color:       $form-feedback-valid-color !default;
+$s2bs5d-valid-focus-box-shadow:   0 0 0 $s2bs5d-focus-width rgba($s2bs5d-valid-border-color, $input-btn-focus-color-opacity) !default;
+
+// Invalid
+$s2bs5d-invalid-border-color:     $form-feedback-invalid-color !default;
+$s2bs5d-invalid-focus-box-shadow: 0 0 0 $s2bs5d-focus-width rgba($s2bs5d-invalid-border-color, $input-btn-focus-color-opacity) !default;
+
+// Disabled
+$s2bs5d-disabled-color:           $text-muted !default;
+$s2bs5d-disabled-bg:              $form-select-disabled-bg !default;
+$s2bs5d-disabled-border-color:    $s2bs5d-border-color !default;
+
+// Items
+$s2bs5d-item-padding-y:           $s2bs5d-padding-y !default;
+$s2bs5d-item-padding-x:           $s2bs5d-padding-x !default;
+$s2bs5d-item-active-bg:           $dark !default;
+$s2bs5d-item-hover-bg:            $dark !default;
+$s2bs5d-item-focus-bg:            $dark !default;
+
+// Groups
+$s2bs5d-group-padding-y:          $s2bs5d-padding-y !default;
+$s2bs5d-group-padding-x:          $s2bs5d-padding-x * .5 !default;
+$s2bs5d-group-color:              $secondary !default;
+$s2bs5d-group-font-weight:        $headings-font-weight !default;
+
+// Multiple items
+$s2bs5d-multi-item-padding-y:     $badge-padding-y !default;
+$s2bs5d-multi-item-padding-x:     $badge-padding-x !default;
+
+$s2bs5d-options-max-height:       15rem !default;
+
+// Clear/Remove
+$s2bs5d-clear-width:              .75rem !default;
+$s2bs5d-clear-height:             .75rem !default;
+$s2bs5d-clear-padding-y:          $btn-close-padding-y !default;
+$s2bs5d-clear-padding-x:          $btn-close-padding-x !default;
+$s2bs5d-clear-icon:               str-replace($btn-close-bg, #{$btn-close-color}, #{shade-color($s2bs5d-border-color, 50%)}) !default;
+$s2bs5d-clear-bg:                 transparent escape-svg($s2bs5d-clear-icon) center / $s2bs5d-clear-height auto no-repeat !default;
+$s2bs5d-clear-hover-bg:           transparent escape-svg($btn-close-bg) center / $s2bs5d-clear-height auto no-repeat !default;
+
+// Small
+$s2bs5d-height-sm:                $input-height-sm !default;
+$s2bs5d-height-inner-sm:          $input-line-height * 1em !default;
+$s2bs5d-padding-y-sm:             $form-select-padding-y-sm !default;
+$s2bs5d-padding-x-sm:             $form-select-padding-x-sm !default;
+$s2bs5d-font-size-sm:             $form-select-font-size-sm !default;
+$s2bs5d-border-radius-sm:         $form-select-border-radius-sm !default;
+$s2bs5d-item-padding-y-sm:        $s2bs5d-padding-y-sm !default;
+$s2bs5d-item-padding-x-sm:        $s2bs5d-padding-x-sm !default;
+$s2bs5d-group-padding-y-sm:       $s2bs5d-padding-y-sm !default;
+$s2bs5d-group-padding-x-sm:       $s2bs5d-padding-x-sm * .5 !default;
+$s2bs5d-clear-width-sm:           .5rem !default;
+$s2bs5d-clear-height-sm:          .5rem !default;
+$s2bs5d-clear-padding-y-sm:       .125rem !default;
+$s2bs5d-clear-padding-x-sm:       .125rem !default;
+$s2bs5d-clear-bg-sm:              transparent escape-svg($s2bs5d-clear-icon) center / $s2bs5d-clear-height-sm auto no-repeat !default;
+$s2bs5d-clear-hover-bg-sm:        transparent escape-svg($btn-close-bg) center / $s2bs5d-clear-height-sm auto no-repeat !default;
+
+$s2bs5d-small: (
+    "height": $s2bs5d-height-sm,
+    "height-inner": $s2bs5d-height-inner-sm,
+    "padding-y": $s2bs5d-padding-y-sm,
+    "padding-x": $s2bs5d-padding-x-sm,
+    "font-size": $s2bs5d-font-size-sm,
+    "border-radius": $s2bs5d-border-radius-sm,
+    "item-padding-y": $s2bs5d-item-padding-y-sm,
+    "item-padding-x": $s2bs5d-item-padding-x-sm,
+    "group-padding-y": $s2bs5d-group-padding-y-sm,
+    "group-padding-x": $s2bs5d-group-padding-x-sm,
+    "clear-width": $s2bs5d-clear-width-sm,
+    "clear-height": $s2bs5d-clear-height-sm,
+    "clear-padding-y": $s2bs5d-clear-padding-y-sm,
+    "clear-padding-x": $s2bs5d-clear-padding-x-sm,
+    "clear-bg": $s2bs5d-clear-bg-sm,
+    "clear-hover-bg": $s2bs5d-clear-hover-bg-sm,
+) !default;
+
+// Large
+$s2bs5d-height-lg:                $input-height-lg !default;
+$s2bs5d-height-inner-lg:          $input-line-height * 1em !default;
+$s2bs5d-padding-y-lg:             $form-select-padding-y-lg !default;
+$s2bs5d-padding-x-lg:             $form-select-padding-x-lg !default;
+$s2bs5d-font-size-lg:             $form-select-font-size-lg !default;
+$s2bs5d-border-radius-lg:         $form-select-border-radius-lg !default;
+$s2bs5d-item-padding-y-lg:        $s2bs5d-padding-y-lg !default;
+$s2bs5d-item-padding-x-lg:        $s2bs5d-padding-x-lg !default;
+$s2bs5d-group-padding-y-lg:       $s2bs5d-padding-y-lg !default;
+$s2bs5d-group-padding-x-lg:       $s2bs5d-padding-x-lg * .5 !default;
+$s2bs5d-clear-width-lg:           1rem !default;
+$s2bs5d-clear-height-lg:          1rem !default;
+$s2bs5d-clear-padding-y-lg:       .5rem !default;
+$s2bs5d-clear-padding-x-lg:       .5rem !default;
+$s2bs5d-clear-bg-lg:              transparent escape-svg($s2bs5d-clear-icon) center / $s2bs5d-clear-height-lg auto no-repeat !default;
+$s2bs5d-clear-hover-bg-lg:        transparent escape-svg($btn-close-bg) center / $s2bs5d-clear-height-lg auto no-repeat !default;
+
+$s2bs5d-large: (
+    "height": $s2bs5d-height-lg,
+    "height-inner": $s2bs5d-height-inner-lg,
+    "padding-y": $s2bs5d-padding-y-lg,
+    "padding-x": $s2bs5d-padding-x-lg,
+    "font-size": $s2bs5d-font-size-lg,
+    "border-radius": $s2bs5d-border-radius-lg,
+    "item-padding-y": $s2bs5d-item-padding-y-lg,
+    "item-padding-x": $s2bs5d-item-padding-x-lg,
+    "group-padding-y": $s2bs5d-group-padding-y-lg,
+    "group-padding-x": $s2bs5d-group-padding-x-lg,
+    "clear-width": $s2bs5d-clear-width-lg,
+    "clear-height": $s2bs5d-clear-height-lg,
+    "clear-padding-y": $s2bs5d-clear-padding-y-lg,
+    "clear-padding-x": $s2bs5d-clear-padding-x-lg,
+    "clear-bg": $s2bs5d-clear-bg-lg,
+    "clear-hover-bg": $s2bs5d-clear-hover-bg-lg,
+) !default;

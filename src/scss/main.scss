@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$font-size-base: 0.875rem;
+
+$primary: #2f3252 !default;
+$dark: #242542;
+$success: #2fd326;
+$secondary: #858798;
+$danger: #e61657;
+$input-btn-padding-y: 0.875rem !default;
+$input-btn-padding-x: 1rem !default;
+$border-radius: .625rem !default;
+$form-check-label-cursor: pointer;
+$form-check-input-checked-bg-color: $success;
+$dropdown-link-active-bg: #e9ecef !default;
+
+$tooltip-bg: $primary;
+
+$accordion-color: $secondary;
+$accordion-bg: $primary;
+$accordion-border-color: $primary;
+$accordion-border-radius: 0;
+$accordion-button-active-color: #fff;
+$accordion-button-active-bg: $primary;
+$accordion-icon-color: $secondary;
+$accordion-icon-active-color: #fff;
+
+@import "~bootstrap/scss/bootstrap";
+@import "~select2/src/scss/core";
+@import "~select2-bootstrap-5-theme/src/select2-bootstrap-5-theme";
+@import "../select2-bootstrap-5-dark-theme/src/select2-bootstrap-5-dark-theme";
+
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.4);
+  border-radius: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary;
+  border-radius: 7px;
+  height: 80%;
+}
+
+:root {
+  --bs-body-font-family: 'Poppins', sans-serif;
+  --bs-body-bg: #242542;
+}
+html {
+  background-color: var(--bs-body-bg);
+}
+.backdrop-filter {
+  backdrop-filter: blur(16px) saturate(180%);
+}
+
+.card-login {
+  width: 450px;
+
+  .nav-link.active.bg-opacity-50 {
+    --bs-bg-opacity: 1;
+  }
+
+  .nav-link.active::after {
+    content: " ";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: linear-gradient(180deg, #21cbcb 0%, #60ff38 100%);
+  }
+}
+
+.btn-avatar {
+  width: 50px;
+  border: 2px solid transparent;
+  background-color: #2fd326;
+}
+.h-main {
+  min-height: calc(100vh - 153px);
+}
+.main-container {
+  padding-bottom: 5.2rem;
+  padding-top: 4.4rem;
+}
+.has-sidebar {
+  padding-left: 70px;
+}
+.p-sidebar {
+  padding-left: 200px;
+}
+.p-filter {
+  padding-right: 300px;
+}
+.thumbnail-avatar {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to bottom, #21cbcb, #60ff38);
+  padding: 2px;
+}
+.dropdown-scroll {
+  width: 350px;
+
+  ul {
+    max-height: 480px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+}
+.logo-event {
+  max-height: 120px;
+}
+
+.dropdown-live-img {
+  width: 50px;
+  height: 50px;
+
+  > .badge {
+    bottom: -8px;
+    left: 8px
+  }
+}
+.sidebar {
+  width: 200px;
+  z-index: 2;
+}
+.logo-event-header {
+  max-height: 72px;
+}
+.sidebar-min {
+  width: 70px;
+  .btn-nav-link {
+    justify-content: center;
+    i {
+      margin-right: 0 !important;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+.btn-nav-link {
+  @include button-variant(
+                  $dark,
+                  $dark,
+                  $secondary,
+                  $primary,
+                  $primary,
+                  $white,
+                  $primary,
+                  $primary,
+                  $white,
+                  $dark,
+                  $dark,
+                  $dark
+  );
+}
+.filters {
+  width: 300px;
+  z-index: 2;
+}
+.show-filters {
+  z-index: 2;
+  position: fixed;
+  right: 0;
+  top: 78px;
+  border-radius: var(--bs-btn-border-radius) 0 0 var(--bs-btn-border-radius);
+}
+.input-group-overlay {
+  right: 10px;
+  top: 16px;
+  cursor: pointer;
+}
+.form-control-primary {
+  background-color: $primary;
+  color: $white;
+  border-color: $primary;
+
+  &:focus {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+  &::placeholder {
+    color: $secondary;
+  }
+}
+.accordion-body {
+  background-color: $dark;
+}
+.h-150px {
+  height: 150px;
+}
+.badge-icon-sm {
+  width: 28px;
+  height: 28px;
+  right: 4px;
+  top: 4px;
+}
+.text-2-row {
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.event-select2 .select2-selection--single {
+  padding-top: 0;
+  padding-bottom: 0;
+}
