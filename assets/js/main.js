@@ -3273,7 +3273,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_2___default());
-jquery__WEBPACK_IMPORTED_MODULE_2___default().fn.select2.defaults.set('theme', 'bootstrap-5');
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('.js-select2').select2();
 var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 var tooltipList = _toConsumableArray(tooltipTriggerList).map(function (tooltipTriggerEl) {

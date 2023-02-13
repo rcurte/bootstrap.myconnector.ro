@@ -35,8 +35,9 @@
     </div>
   </nav>
 
-  <main class="pt-6 d-flex position-relative main-container text-white">
-    <div class="container-fluid">
+  <div class="d-flex position-relative main-container text-white">
+    <main class="flex-grow-1">
+    <div class="container-fluid pt-4">
       <div class="row">
 
         <div class="col-12 col-md-2">
@@ -92,26 +93,31 @@
           <div class="row mb-4">
             <div class="col-12 col-md-3">
               <label for="input-filter-time" class="form-label">Filter by time</label>
-              <select name="filters[event_date]" id="input-filter-time" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+              <select name="filters[event_date]" id="input-filter-time" class="form-control js-select2" data-minimum-results-for-search="Infinity" data-theme="bootstrap-dark-5">
 
               </select>
             </div>
             <div class="col-12 col-md-3">
               <label for="input-filter-type" class="form-label">Filter by type</label>
-              <select name="filters[event_type]" id="input-filter-type" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+              <select name="filters[event_type]" id="input-filter-type" class="form-control js-select2" data-minimum-results-for-search="Infinity" data-theme="bootstrap-dark-5">
 
               </select>
             </div>
             <div class="col-12 col-md-3">
               <label for="input-filter-role" class="form-label">Filter by role</label>
-              <select name="filters[role]" id="input-filter-role" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+              <select name="filters[role]" id="input-filter-role" class="form-control js-select2" data-minimum-results-for-search="Infinity" data-theme="bootstrap-dark-5">
 
               </select>
             </div>
             <div class="col-12 col-md-3">
               <label for="input-filter-search" class="form-label">Search</label>
-              <input type="text" name="filters[search_key]" value="" class="form-control" id="input-filter-search">
-<!--              <i class="fas fa-search"></i>-->
+              <div class="position-relative">
+                <input type="text" name="filters[search_key]" value="" class="form-control form-control-primary pe-5"
+                       id="input-filter-search">
+                <span class="position-absolute input-group-overlay">
+                    <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                  </span>
+              </div>
             </div>
           </div>
 
@@ -242,6 +248,7 @@
       </div>
     </div>
   </main>
+  </div>
 
   <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
     <div class="container-fluid d-flex align-items-center">
@@ -288,7 +295,7 @@
 
               <div class="mb-3">
                 <label class="form-label text-primary" for="input-salutation">Salutation</label>
-                <select name="salutation" id="input-salutation" class="form-control js-select2" data-minimum-results-for-search="Infinity">
+                <select name="salutation" id="input-salutation" class="form-control js-select2" data-minimum-results-for-search="Infinity" data-theme="bootstrap-5">
                   <option value="">Select Salutation</option>
                   <option value="Mr.">Mr.</option>
                   <option value="Ms.">Ms.</option>
@@ -313,7 +320,7 @@
 
               <div class="mb-3">
                 <label class="form-label text-primary" for="input-timezone">Timezone</label>
-                <select name="id_timezone" id="input-timezone" class="form-control js-select2">
+                <select name="id_timezone" id="input-timezone" class="form-control js-select2" data-theme="bootstrap-5">
                   <option value="">Select Salutation</option>
                   <option value="Mr.">Mr.</option>
                   <option value="Ms.">Ms.</option>

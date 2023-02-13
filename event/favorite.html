@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event info</title>
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+
+</head>
+<body>
+<div class="bg-dark min-vh-100">
+  <nav class="navbar navbar-expand-lg bg-primary bg-opacity-75 border-bottom border-primary fixed-top backdrop-filter">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <div class="d-flex">
+        <a href="#" class="navbar-brand">
+          <img src="../assets/images/swosh.svg" alt="">
+        </a>
+        <div class="dropdown">
+          <button class="btn text-white fs-5 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            1 live sessions
+          </button>
+          <ul class="dropdown-menu dropdown-menu-start p-0" style="width: 350px;">
+            <li class="p-3 border-bottom">
+              The following sessions are live now:
+            </li>
+            <li>
+              <a class="dropdown-item p-2 d-flex" href="#">
+                <div class="position-relative me-2 d-flex align-items-center border border-success rounded dropdown-live-img">
+                  <img src="../assets/images/logo-ticket.png" alt="" class="img-fluid">
+                  <span class="badge bg-danger position-absolute">Live</span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="text-primary fw-semibold">Test 1</span>
+                  <small class="text-secondary"><i class="fa-solid fa-clock me-2"></i> 30 Jan, 12:37 - 28 Feb, 12:37 EET</small>
+                  <span class="badge bg-primary align-self-baseline">View live</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item p-2 d-flex" href="#">
+                <div class="position-relative me-2 d-flex align-items-center border border-success rounded dropdown-live-img">
+                  <img src="../assets/images/logo-ticket.png" alt="" class="img-fluid">
+                  <span class="badge bg-danger position-absolute">Live</span>
+                </div>
+                <div class="d-flex flex-column">
+                  <span class="text-primary fw-semibold">Test 2</span>
+                  <small class="text-secondary"><i class="fa-solid fa-clock me-2"></i> 30 Jan, 12:37 - 28 Feb, 12:37 EET</small>
+                  <span class="badge bg-primary align-self-baseline">View live</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a class="btn btn-nav-link bg-transparent fs-5 border-0 d-flex align-items-center" href="#"><i class="fa-solid fa-star"></i></a>
+      </div>
+
+      <div class="ml-auto d-flex justify-content-center align-items-center">
+        <div class="me-3">
+          <div class="dropdown">
+            <button class="btn btn-nav-link bg-transparent fs-5 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-message"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end p-0 dropdown-scroll">
+              <ul class="list-unstyled mb-0">
+                <li class="p-2 border-bottom d-flex align-items-center">
+                  <div class="me-2">
+                    <div class="btn-avatar rounded-circle">
+                      <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                    </div>
+                  </div>
+                  <div class="me-2">
+                    <p class="fw-bold mb-1">Adrian Stanescu</p>
+                    <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                    <small class="text-secondary">2 days ago</small>
+                  </div>
+
+                  <div class="ms-auto d-flex flex-column align-content-around">
+                    <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                    <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                  </div>
+                </li>
+
+                <li class="p-2 border-bottom d-flex align-items-center">
+                  <div class="me-2">
+                    <div class="btn-avatar rounded-circle">
+                      <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                    </div>
+                  </div>
+                  <div class="me-2">
+                    <p class="fw-bold mb-1">Adrian Stanescu</p>
+                    <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                    <small class="text-secondary">2 days ago</small>
+                  </div>
+
+                  <div class="ms-auto d-flex flex-column align-content-around">
+                    <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                    <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                  </div>
+                </li>
+
+              </ul>
+              <div class="border-top d-flex justify-content-between p-2">
+                <button type="button" class="btn btn-link p-0 text-decoration-none"><i class="fa-solid fa-envelope-open-text me-1"></i> Mark all as read</button>
+                <button type="button" class="btn btn-link p-0 text-decoration-none text-danger"><i class="fa-solid fa-trash me-1"></i> Delete all</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="me-3">
+          <div class="dropdown">
+            <button class="btn btn-nav-link bg-transparent fs-5 border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bell"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end p-0 dropdown-scroll">
+            <ul class="list-unstyled mb-0">
+              <li class="p-2 border-bottom d-flex align-items-center">
+                <div class="me-2">
+                  <div class="btn-avatar rounded-circle">
+                    <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                  </div>
+                </div>
+                <div class="me-2">
+                  <p class="fw-bold mb-1">Adrian Stanescu</p>
+                  <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                  <small class="text-secondary">2 days ago</small>
+                </div>
+
+                <div class="ms-auto d-flex flex-column align-content-around">
+                  <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                  <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </li>
+
+              <li class="p-2 border-bottom d-flex align-items-center">
+                <div class="me-2">
+                  <div class="btn-avatar rounded-circle">
+                    <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                  </div>
+                </div>
+                <div class="me-2">
+                  <p class="fw-bold mb-1">Adrian Stanescu</p>
+                  <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                  <small class="text-secondary">2 days ago</small>
+                </div>
+
+                <div class="ms-auto d-flex flex-column align-content-around">
+                  <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                  <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </li>
+
+              <li class="p-2 border-bottom d-flex align-items-center">
+                <div class="me-2">
+                  <div class="btn-avatar rounded-circle">
+                    <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                  </div>
+                </div>
+                <div class="me-2">
+                  <p class="fw-bold mb-1">Adrian Stanescu</p>
+                  <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                  <small class="text-secondary">2 days ago</small>
+                </div>
+
+                <div class="ms-auto d-flex flex-column align-content-around">
+                  <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                  <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </li>
+
+              <li class="p-2 border-bottom d-flex align-items-center">
+                <div class="me-2">
+                  <div class="btn-avatar rounded-circle">
+                    <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                  </div>
+                </div>
+                <div class="me-2">
+                  <p class="fw-bold mb-1">Adrian Stanescu</p>
+                  <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                  <small class="text-secondary">2 days ago</small>
+                </div>
+
+                <div class="ms-auto d-flex flex-column align-content-around">
+                  <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                  <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </li>
+
+              <li class="p-2 border-bottom d-flex align-items-center">
+                <div class="me-2">
+                  <div class="btn-avatar rounded-circle">
+                    <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                  </div>
+                </div>
+                <div class="me-2">
+                  <p class="fw-bold mb-1">Adrian Stanescu</p>
+                  <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                  <small class="text-secondary">2 days ago</small>
+                </div>
+
+                <div class="ms-auto d-flex flex-column align-content-around">
+                  <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                  <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </li>
+
+              <li class="p-2 border-bottom d-flex align-items-center">
+                <div class="me-2">
+                  <div class="btn-avatar rounded-circle">
+                    <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+                  </div>
+                </div>
+                <div class="me-2">
+                  <p class="fw-bold mb-1">Adrian Stanescu</p>
+                  <p class="mb-0">Aici vine mesajul meu de test si se duce maxim pe 2 randuri</p>
+                  <small class="text-secondary">2 days ago</small>
+                </div>
+
+                <div class="ms-auto d-flex flex-column align-content-around">
+                  <button type="button" class="btn btn-link p-0 text-decoration-none fs-5 mb-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Mark as read"><i class="fa-solid fa-envelope-open-text"></i></button>
+                  <button type="button" class="btn btn-link p-0 text-decoration-none text-danger fs-5 mt-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Delete"><i class="fa-solid fa-trash"></i></button>
+                </div>
+              </li>
+            </ul>
+              <div class="border-top d-flex justify-content-between p-2">
+                <button type="button" class="btn btn-link p-0 text-decoration-none"><i class="fa-solid fa-envelope-open-text me-1"></i> Mark all as read</button>
+                <button type="button" class="btn btn-link p-0 text-decoration-none text-danger"><i class="fa-solid fa-trash me-1"></i> Delete all</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="me-2 text-white">
+          Hello, <b>Marius</b>
+          <div class="text-end">
+            Visitor <i class="fa-solid fa-eye"></i>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn p-0 rounded-circle btn-avatar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../assets/images/avatar.png" alt="" class="bg-primary rounded-circle img-fluid">
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item p-2" href="#"><i class="fa-solid fa-list-check"></i> My Dashboard</a></li>
+            <li><h6 class="dropdown-header">View as:</h6></li>
+            <li><a class="dropdown-item p-2" href="#"><span class="ms-4">Exhibitor</span></a></li>
+            <li><a class="dropdown-item p-2" href="#"><span class="ms-1"><i class="fa-solid fa-check text-success me-1"></i>Visitor</span></a></li>
+            <li class="border-top"><a class="dropdown-item p-2" href="#"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="d-flex position-relative main-container text-white">
+    <div class="d-flex flex-column p-2 justify-content-between sidebar sidebar-min position-fixed z-index h-main bg-dark"> <!-- Remove class "sidebar-min"  -->
+      <ul class="nav nav-pills flex-column mb-auto">
+
+        <li class="nav-item mb-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Lobby">
+            <i class="fa-solid fa-door-open me-2 fs-5"></i>
+            <span>Lobby</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Agenda">
+            <i class="fa-solid fa-circle-play me-2 fs-5"></i>
+            <span>Agenda</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Expo area">
+            <i class="fa-solid fa-map me-2 fs-5"></i>
+            <span>Expo area</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Custom pg">
+            <i class="fa-solid fa-building me-2 fs-5"></i>
+            <span>Custom pg</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Speakers">
+            <i class="fa-solid fa-user-group me-2 fs-5"></i>
+            <span>Speakers</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Networking">
+            <i class="fa-solid fa-users me-2 fs-5"></i>
+            <span>Networking</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tickets">
+            <i class="fa-solid fa-address-card me-2 fs-5"></i>
+            <span>Tickets</span>
+          </a>
+        </li>
+
+      </ul>
+      <button type="button" class="btn btn-nav-link d-flex align-items-center" id="sidebar-toggle" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Collapse menu">
+        <i class="fa-solid fa-chevron-left me-2 fs-5"></i>
+        <span>Collapse menu</span>
+      </button>
+    </div>
+
+    <main class="flex-grow-1 has-sidebar">
+      <div class="container-xxl pt-4">
+        <div class="row">
+
+          <div class="col-12 col-md-2">
+            <div class="mb-3">
+              <label for="input-group" class="form-label">Group content by</label>
+              <div class="form-check px-3 py-3 rounded form-switch d-flex justify-content-between align-items-center bg-primary">
+                <label class="form-check-label" for="input-group">Event</label>
+                <input class="form-check-input m-0 py-2 px-3" type="checkbox" role="switch" id="input-group">
+                <label class="form-check-label text-secondary" for="input-group">Type</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="mb-3 event-select2">
+              <label for="input-search" class="form-label">Selected event</label>
+              <select name="" class="form-control" id="input-event" data-theme="bootstrap-dark-5">
+
+              </select>
+            </div>
+
+            <div class="mb-3 type-select2 d-none">
+              <label for="input-type" class="form-label">Selected type</label>
+              <select name="" class="form-control" id="input-type" data-theme="bootstrap-dark-5"></select>
+            </div>
+
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="mb-3">
+              <label for="input-search" class="form-label">Search</label>
+              <div class="position-relative">
+                <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search MyFavorites">
+                <span class="position-absolute input-group-overlay">
+                  <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="container-xxl mt-2 mb-4">
+
+        <div class="accordion" id="accordion-category">
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="heading-session">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-session" aria-expanded="true" aria-controls="collapse-session">
+                (0 saved Sessions)
+              </button>
+            </h2>
+            <div id="collapse-session" class="accordion-collapse collapse " aria-labelledby="heading-session">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="heading-marketplace">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-marketplace" aria-expanded="false" aria-controls="collapse-marketplace">
+                (0 saved Marketplace Product)
+              </button>
+            </h2>
+            <div id="collapse-marketplace" class="accordion-collapse collapse" aria-labelledby="heading-marketplace">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="heading-contacts">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-contacts" aria-expanded="true" aria-controls="collapse-contacts">
+                Contacts (1 saved Contacts)
+              </button>
+            </h2>
+            <div id="collapse-contacts" class="accordion-collapse collapse show" aria-labelledby="heading-contacts">
+              <div class="accordion-body">
+
+                <div class="group-by-type d-none">
+                 <div class="row">
+
+                  <div class="col-12 col-sm-4 col-md-3">
+                    <div class="card border-0 bg-transparent">
+                      <div class="card-img-top bg-white rounded text-center position-relative">
+                        <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
+                        <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center">
+                          <i class="fa-solid fa-address-card lh-base"></i>
+                        </span>
+                      </div>
+                      <div class="card-body bg-transparent pt-1">
+                        <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-4 col-md-3">
+                    <div class="card border-0 bg-transparent">
+                      <div class="card-img-top bg-white rounded text-center position-relative">
+                        <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
+                        <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center">
+                          <i class="fa-solid fa-address-card lh-base"></i>
+                        </span>
+                      </div>
+                      <div class="card-body bg-transparent pt-1">
+                        <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-4 col-md-3">
+                    <div class="card border-0 bg-transparent">
+                      <div class="card-img-top bg-white rounded text-center position-relative">
+                        <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
+                        <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center">
+                          <i class="fa-solid fa-address-card lh-base"></i>
+                        </span>
+                      </div>
+                      <div class="card-body bg-transparent pt-1">
+                        <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-sm-4 col-md-3">
+                    <div class="card border-0 bg-transparent">
+                      <div class="card-img-top bg-white rounded text-center position-relative">
+                        <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
+                        <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center">
+                          <i class="fa-solid fa-address-card lh-base"></i>
+                        </span>
+                      </div>
+                      <div class="card-body bg-transparent pt-1">
+                        <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="group-by-event">
+
+                  <div class="accordion" id="accordion-contact-1">
+
+                    <div class="accordion-item mb-2">
+                      <h2 class="accordion-header" id="heading-contact-1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-contact-1" aria-expanded="true" aria-controls="collapse-contact-1">
+                          MyConnector Conference (1 contact)
+                        </button>
+                      </h2>
+                      <div id="collapse-contact-1" class="accordion-collapse collapse show" aria-labelledby="heading-contact-1">
+                        <div class="accordion-body">
+
+                          <div class="row">
+
+                            <div class="col-12 col-sm-4 col-md-3">
+                              <div class="card border-0 bg-transparent">
+                                <div class="card-img-top bg-white rounded text-center position-relative">
+                                  <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
+                                  <span
+                                      class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center">
+                                    <i class="fa-solid fa-address-card lh-base"></i>
+                                  </span>
+                                </div>
+                                <div class="card-body bg-transparent pt-1">
+                                  <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the
+                                    card title and make up the bulk of the card's content.</p>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="heading-speaker">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-speaker" aria-expanded="false" aria-controls="collapse-speaker">
+                (0 saved Speakers)
+              </button>
+            </h2>
+            <div id="collapse-speaker" class="accordion-collapse collapse" aria-labelledby="heading-speaker">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="heading-poster">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-poster" aria-expanded="false" aria-controls="collapse-poster">
+                (0 saved E-Posters)
+              </button>
+            </h2>
+            <div id="collapse-poster" class="accordion-collapse collapse" aria-labelledby="heading-poster">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="heading-partner">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-partner" aria-expanded="false" aria-controls="collapse-partner">
+                (0 saved Partners)
+              </button>
+            </h2>
+            <div id="collapse-partner" class="accordion-collapse collapse" aria-labelledby="heading-partner">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="heading-document">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-document" aria-expanded="false" aria-controls="collapse-document">
+                (0 saved Documents (diplomas)
+              </button>
+            </h2>
+            <div id="collapse-document" class="accordion-collapse collapse" aria-labelledby="heading-document">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item ">
+            <h2 class="accordion-header" id="heading-project">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project" aria-expanded="false" aria-controls="collapse-project">
+                (0 saved Partner Projects)
+              </button>
+            </h2>
+            <div id="collapse-project" class="accordion-collapse collapse" aria-labelledby="heading-project">
+              <div class="accordion-body">
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <div class="filters p-2 mt-2 d-none h-main position-fixed end-0 bg-dark">
+      <div class="border-bottom border-primary px-2 pb-2 d-flex justify-content-between align-items-center">
+        <span>Categories filters</span>  <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-5 close-filters"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="p-2 border-bottom border-primary">
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="filter-1">
+          <label class="form-check-label" for="filter-1">
+            Default checkbox
+          </label>
+        </div>
+
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="filter-2">
+          <label class="form-check-label" for="filter-2">
+            Default checkbox
+          </label>
+        </div>
+
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="filter-3">
+          <label class="form-check-label" for="filter-3">
+            Default checkbox
+          </label>
+        </div>
+
+        <button type="button" class="btn btn-nav-link p-0 bg-transparent border-0"><i class="fa-solid fa-circle-check"></i> Select all</button>
+
+      </div>
+
+    </div>
+
+    <button type="button" class="btn btn-nav-link show-filters"><i class="fa-solid fa-arrow-down-wide-short fs-4"></i></button>
+  </div>
+
+
+
+  <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center p-2">
+        <img src="../assets/images/play.svg" alt="" class="me-2">
+        <h1 class="fs-4 mb-0">MyFavourites</h1>
+      </div>
+
+      <div>
+        <span>powered by</span>
+        <img src="../assets/images/logo.svg" alt="" class="ms-1">
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="../assets/js/main.js"></script>
+
+<script>
+  $('#sidebar-toggle').on('click', function () {
+    $('.sidebar').toggleClass('sidebar-min');
+    $('main').toggleClass('p-sidebar')
+  });
+
+  $('.show-filters').on('click', function () {
+    $('.filters').removeClass('d-none');
+    $(this).addClass('d-none');
+    $('main').addClass('p-filter');
+  });
+
+  $('.close-filters').on('click', function () {
+    $('.filters').addClass('d-none');
+    $('.show-filters').removeClass('d-none');
+    $('main').removeClass('p-filter');
+  });
+
+  $('#input-group').on('change', function () {
+    $formCheck = $(this).closest('.form-check');
+    $formCheck.find('label').toggleClass('text-secondary');
+
+    $('.group-by-event').toggleClass('d-none');
+    $('.event-select2').toggleClass('d-none');
+
+    $('.group-by-type').toggleClass('d-none');
+    $('.type-select2').toggleClass('d-none');
+  });
+
+  //Set Dropdown with SearchBox via dropdownAdapter option (https://stackoverflow.com/questions/35799854/how-to-add-selectall-using-dropdownadapter-on-select2-v4)
+  var Utils = $.fn.select2.amd.require('select2/utils');
+  var Dropdown = $.fn.select2.amd.require('select2/dropdown');
+  var DropdownSearch = $.fn.select2.amd.require('select2/dropdown/search');
+  var CloseOnSelect = $.fn.select2.amd.require('select2/dropdown/closeOnSelect');
+  var AttachBody = $.fn.select2.amd.require('select2/dropdown/attachBody');
+  var SingleSelection = $.fn.select2.amd.require('select2/selection/single');
+  var dropdownAdapter = Utils.Decorate(Utils.Decorate(Utils.Decorate(Dropdown, DropdownSearch), CloseOnSelect), AttachBody);
+
+  $('#input-type').select2({
+    multiple: true,
+    selectOnClose: false,
+    dropdownAdapter: dropdownAdapter,
+    selectionAdapter: SingleSelection,
+    minimumResultsForSearch: 0,
+    data: [
+      {
+        id: 0,
+        text: 'Sessions',
+        icon: '<i class="fa-solid fa-play"></i>',
+
+      },
+      {
+        id: 1,
+        text: 'Marketplace Product',
+        icon: '<i class="fa-solid fa-cart-shopping"></i>',
+      }
+    ],
+    templateResult: function (type) {
+      if (!type.id) {
+        return type.text;
+      }
+
+      if (type.selected) {
+        var $type = $('<div class="d-flex align-items-center"><div class="me-2">'+ type.icon +'</div><div>'+ type.text +'</div> <i class="fa-solid fa-circle-check ms-auto text-success"></i></div>');
+      } else {
+        var $type = $('<div class="d-flex align-items-center"><div class="me-2">'+ type.icon +'</div><div>'+ type.text +'</div></div>');
+      }
+
+      return $type;
+    },
+    templateSelection: function (type) {
+      var $type = $('<div class="d-flex align-items-center ms-1"><div class="me-2"><i class="fa-solid fa-box-archive"></i></div><div>All categories selected</div></div>');
+
+      return $type;
+    }
+  }).on('select2:opening select2:closing', function (event) {
+    var searchfield = $(this).parent().find('.select2-search__field');
+    searchfield.prop('disabled', true);
+  });
+
+  $('#input-event').select2({
+    multiple: true,
+    selectOnClose: false,
+    dropdownAdapter: dropdownAdapter,
+    selectionAdapter: SingleSelection,
+    minimumResultsForSearch: 0,
+    data: [
+      {
+        id: 0,
+        text: 'MyConnector Conferance',
+        datatime: '01 May 2022 - 15 Apr 2023',
+        image: '../assets/images/logo-ticket.png',
+
+      },
+      {
+        id: 0,
+        text: 'MyConnector Conferance',
+        datatime: '01 May 2022 - 15 Apr 2023',
+        image: '../assets/images/logo-ticket.png',
+      }
+    ],
+    templateResult: function (event) {
+      if (!event.id) {
+        return event.text;
+      }
+
+      if (event.selected) {
+        var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div> <i class="fa-solid fa-circle-check ms-auto text-success"></i></div>');
+      } else {
+        var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div></div>');
+      }
+
+      return $event;
+    },
+    templateSelection: function (event) {
+      var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div></div>');
+
+      return $event;
+    }
+  }).on('select2:opening select2:closing', function (event) {
+    var searchfield = $(this).parent().find('.select2-search__field');
+    searchfield.prop('disabled', true);
+  });
+
+</script>
+</body>
+</html>
