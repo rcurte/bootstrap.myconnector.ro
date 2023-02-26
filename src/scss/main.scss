@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$font-size-base: 0.875rem;
+$font-size-base: 0.875rem !default;
 
 $primary: #2f3252 !default;
-$dark: #242542;
-$success: #2fd326;
-$secondary: #858798;
-$danger: #e61657;
+$dark: #242542 !default;
+$success: #2fd326 !default;
+$secondary: #858798 !default;
+$danger: #e61657 !default;
 $input-btn-padding-y: 0.875rem !default;
 $input-btn-padding-x: 1rem !default;
 $border-radius: .625rem !default;
 $form-check-label-cursor: pointer;
-$form-check-input-checked-bg-color: $success;
+$form-check-input-checked-bg-color: $success !default;
 $dropdown-link-active-bg: #e9ecef !default;
 
 $tooltip-bg: $primary;
+$tooltip-font-size: $font-size-base;
 
 $accordion-color: $secondary;
 $accordion-bg: $primary;
@@ -24,6 +25,8 @@ $accordion-button-active-color: #fff;
 $accordion-button-active-bg: $primary;
 $accordion-icon-color: $secondary;
 $accordion-icon-active-color: #fff;
+$popover-body-padding-y: .5em !default;
+$popover-body-padding-x: 1em !default;
 
 @import "~bootstrap/scss/bootstrap";
 @import "~select2/src/scss/core";
@@ -74,9 +77,57 @@ html {
     background: linear-gradient(180deg, #21cbcb 0%, #60ff38 100%);
   }
 }
+#btn-menu {
+  i {
+    width: 20px;
+  }
+}
+.top-4 {
+  top: 4px
+}
+.bottom-4 {
+  bottom: 4px
+}
+.start-4 {
+  left: 4px
+}
+.end-4 {
+  right: 4px
+}
 
+.top--4 {
+  top: -4px
+}
+.bottom--4 {
+  bottom: -4px
+}
+.start--4 {
+  left: -4px
+}
+.end--4 {
+  right: -4px
+}
+
+.badge-active {
+  position: absolute;
+  background-color: $success;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+}
+.badge-count {
+  background-color: $danger;
+  color: $white;
+  position: absolute;
+  border-radius: var(--bs-border-radius-pill);
+  font-size: .75rem;
+  font-weight: $font-weight-bold;
+  padding: 0 0.3em;
+}
 .btn-avatar {
   width: 50px;
+  height: 50px;
   border: 2px solid transparent;
   background-color: #2fd326;
 }
@@ -133,6 +184,11 @@ html {
 .sidebar {
   width: 200px;
   z-index: 2;
+  ul {
+    li {
+      max-height: 48px;
+    }
+  }
 }
 .logo-event-header {
   max-height: 72px;
@@ -164,6 +220,7 @@ html {
                   $dark,
                   $dark
   );
+  position: relative;
 }
 .filters {
   width: 300px;
@@ -204,8 +261,13 @@ html {
 .badge-icon-sm {
   width: 28px;
   height: 28px;
-  right: 4px;
-  top: 4px;
+}
+.badge-icon-xs {
+  width: 24px;
+  height: 24px;
+  i {
+    font-size: 0.75rem;
+  }
 }
 .text-2-row {
   height: 40px;
@@ -217,4 +279,55 @@ html {
 .event-select2 .select2-selection--single {
   padding-top: 0;
   padding-bottom: 0;
+}
+.min-w-100 {
+  min-width: 100%;
+}
+.ms--15 {
+  margin-left: -1rem;
+}
+
+.btn-dropdown-chat {
+  &:hover {
+    .header-chat {
+      background-color: $white !important;
+      i.fa-angle-down {
+        display: block;
+      }
+      small {
+        display: none;
+      }
+    }
+  }
+  &.show {
+    a {
+      visibility: hidden !important;
+    }
+    .header-chat {
+      background-color: $white !important;
+      i.fa-xmark {
+        display: block;
+      }
+      i.fa-angle-down {
+        display: none;
+      }
+      small {
+        display: none;
+      }
+    }
+  }
+  .header-chat {
+    i {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .sidebar {
+    z-index: 1031;
+  }
+  .has-sidebar {
+    padding-left: 0;
+  }
 }

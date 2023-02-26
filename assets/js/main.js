@@ -3278,6 +3278,12 @@ var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 var tooltipList = _toConsumableArray(tooltipTriggerList).map(function (tooltipTriggerEl) {
   return new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Tooltip(tooltipTriggerEl);
 });
+var popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+var popoverList = _toConsumableArray(popoverTriggerList).map(function (popoverTriggerEl) {
+  return new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Popover(popoverTriggerEl, {
+    html: true
+  });
+});
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('#sidebar-toggle').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.sidebar').toggleClass('sidebar-min');
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').toggleClass('p-sidebar');
@@ -3291,6 +3297,13 @@ jquery__WEBPACK_IMPORTED_MODULE_2___default()('.close-filters').on('click', func
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.filters').addClass('d-none');
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-filters').removeClass('d-none');
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('p-filter');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('#btn-menu').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).find('i').toggleClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).toggleClass('btn-success btn-primary border-white rounded-circle');
+
+  //Sidebar
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.sidebar').removeClass('sidebar-min').toggleClass('d-none d-flex w-100 h-100').find('ul').toggleClass('flex-grow-1 justify-content-center h-100');
 });
 
 /***/ }),
