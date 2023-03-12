@@ -12624,6 +12624,9 @@ select + .select2-container--bootstrap-dark-5 {
 :root {
   --bs-body-font-family: "Poppins", sans-serif;
   --bs-body-bg: #242542;
+  --swiper-navigation-size: 12;
+  --swiper-theme-color: #fff;
+  --swiper-pagination-bullet-inactive-color: #858798;
 }
 
 html {
@@ -12856,6 +12859,10 @@ html {
   height: 150px;
 }
 
+.h-60px {
+  height: 60px;
+}
+
 .badge-icon-sm {
   width: 28px;
   height: 28px;
@@ -12918,11 +12925,81 @@ html {
   display: none;
 }
 
+.contact-map {
+  z-index: 1;
+  right: 2rem;
+  bottom: 2rem;
+  top: 2rem;
+}
+
+.card-track {
+  border: 0;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(47, 47, 106) 77%, rgb(63, 69, 103) 100%);
+  border-left: 10px solid #fff;
+  transition: all 0.3s;
+}
+.card-track:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 2px 8px #242542;
+}
+
+.card-info-category {
+  height: 100px;
+}
+.card-info-category img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100px;
+}
+
+.info-gallery {
+  height: 200px;
+  cursor: pointer;
+}
+.info-gallery:hover p {
+  display: flex;
+}
+.info-gallery img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.info-gallery p {
+  z-index: 2;
+  display: none;
+  transition: all 0.3s;
+  top: 0.8rem;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  right: 0.8rem;
+}
+
+.card-testimonial img {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+}
+
+#carousel-testimonials .carousel-control-prev,
+#carousel-testimonials .carousel-control-next {
+  top: 50px;
+}
+
 @media (max-width: 991.98px) {
   .sidebar {
     z-index: 1031;
   }
   .has-sidebar {
     padding-left: 0;
+  }
+  .contact-map {
+    position: relative !important;
+    background-color: #242542 !important;
+    width: 100% !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }

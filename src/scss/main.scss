@@ -50,6 +50,9 @@ $popover-body-padding-x: 1em !default;
 :root {
   --bs-body-font-family: 'Poppins', sans-serif;
   --bs-body-bg: #242542;
+  --swiper-navigation-size: 12;
+  --swiper-theme-color: #fff;
+  --swiper-pagination-bullet-inactive-color: #858798;
 }
 html {
   background-color: var(--bs-body-bg);
@@ -258,6 +261,9 @@ html {
 .h-150px {
   height: 150px;
 }
+.h-60px {
+  height: 60px;
+}
 .badge-icon-sm {
   width: 28px;
   height: 28px;
@@ -323,11 +329,80 @@ html {
   }
 }
 
+.contact-map {
+  z-index: 1;
+  right: 2rem;
+  bottom: 2rem;
+  top: 2rem;
+}
+.card-track {
+  border: 0;
+  background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(47, 47, 106, 1) 77%, rgba(63, 69, 103, 1) 100% );
+  border-left: 10px solid $white;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 2px 8px #242542;
+  }
+}
+.card-info-category {
+  height: 100px;
+  img {
+    object-fit: contain;
+    height: 100px;
+  }
+}
+.info-gallery {
+  height: 200px;
+  cursor: pointer;
+  &:hover {
+    p {
+      display: flex;
+    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  p {
+    z-index: 2;
+    display: none;
+    transition: all 0.3s;
+    top: .8rem;
+    bottom: .8rem;
+    left: .8rem;
+    right: .8rem;
+  }
+}
+.card-testimonial {
+  img {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+  }
+}
+#carousel-testimonials {
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 50px;
+  }
+}
+
 @include media-breakpoint-down(lg) {
   .sidebar {
     z-index: 1031;
   }
   .has-sidebar {
     padding-left: 0;
+  }
+  .contact-map {
+    position: relative !important;
+    background-color: $dark !important;
+    width: 100% !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
