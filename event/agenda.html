@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/all.min.css">
-
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css">
 
 </head>
 <body>
@@ -288,10 +288,16 @@
       <ul class="nav nav-pills flex-column justify-content-center flex-grow-1">
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Event Info">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Event Info">
             <i class="fa-solid fa-circle-info me-2 fs-4"></i>
             <span>Event Info</span>
-            <div class="badge-active bottom-4 end-4"></div>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1 d-flex flex-grow-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Entrance">
+            <i class="fa-solid fa-archway me-2 fs-4"></i>
+            <span>Entrance</span>
           </a>
         </li>
 
@@ -303,9 +309,10 @@
         </li>
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Agenda">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Agenda">
             <i class="fa-solid fa-circle-play me-2 fs-4"></i>
             <span>Agenda</span>
+            <div class="badge-active bottom-4 end-4"></div>
           </a>
         </li>
 
@@ -356,257 +363,132 @@
     </div>
 
     <main class="flex-grow-1 has-sidebar">
+      <div class="container-xxl pt-4">
 
-      <div class="container-xxl py-4">
         <div class="row">
-          <div class="col-12 col-md-6 mb-sm-3 mb-xs-3">
-            <h2 class="fw-semibold">Text and image</h2>
-            Dicta sunt explicabo nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est.
-          </div>
-          <div class="col-12 col-md-6">
-            <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/214c25254669fa96d5b123ae113ef5d9210a0916.png" alt="" class="img-fluid rounded">
-          </div>
-        </div>
-      </div>
 
-      <div class="bg-primary py-4 bg-opacity-50">
-
-        <div class="row container-fluid">
-          <div class="col-12 col-md-6 offset-md-3">
-            <h2 class="fw-semibold text-center mb-4">Video</h2>
-            <div class="d-flex justify-content-center ratio ratio-16x9 mb-4">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/8TmTwzh6dbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-4">
-          <div class="card text-bg-dark rounded-0 ratio ratio ratio-16x9">
-            <img
-                src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/511b6493d667be0ec2193b7b4d65baef87d27dd0.png"
-                class="card-img rounded-0">
-            <div class="card-img-overlay d-flex align-items-end p-5">
-              <h2 class="card-title text-primary display-1 fw-bold">Hero Banner1</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="container-xxl py-4">
-          <div class="row">
-            <div class="col-12 col-md-6 align-self-center">
-              <h2 class="fw-semibold mb-0 mb-md-3 mb-sm-3">Program info</h2>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <p class="my-2"><i class="fa-solid fa-calendar me-2 fs-5"></i> Test Test value</p>
-                </div>
-                <div class="col-12 col-md-6">
-                  <p class="my-2"><i class="fa-solid fa-location-dot me-2 fs-5"></i> Location At Pub</p>
-                </div>
-                <div class="col-12 col-md-6">
-                  <p class="my-2"><i class="fa-solid fa-location-dot me-2 fs-5"></i> Location At Pub</p>
+          <div class="col-12 col-sm-3 col-md-3">
+            <div class="mb-3">
+              <label for="input-display" class="form-label">Display</label>
+              <div class="p-3 rounded d-flex justify-content-between align-items-center bg-primary">
+                <div class="form-check mb-0">
+                  <input type="checkbox" value="" class="form-check-input" id="input-display">
+                  <label class="form-check-label" for="input-display">Show only live sessions</label>
                 </div>
               </div>
             </div>
           </div>
 
-        </div>
-      </div>
-
-      <div class="container-xxl py-4">
-        <div class="d-flex justify-content-center py-4">
-
-          <div class="text-center mx-2">
-            <p class="h1 fw-semibold mb-0">100000+</p>
-            <span>Femei</span>
+          <div class="col-12 col-sm col-md">
+            <div class="mb-3">
+              <label for="input-search" class="form-label">Search</label>
+              <div class="position-relative">
+                <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search...">
+                <span class="position-absolute input-group-overlay">
+                  <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div class="text-center mx-2">
-            <p class="h1 fw-semibold mb-0">50</p>
-            <span>Barbati</span>
-          </div>
+          <div class="col-12 col-sm-auto col-md-auto">
+            <div class="mb-3">
+              <label for="input-search" class="form-label">View</label>
+              <div class="">
+                <button type="button" class="btn btn-nav-link">
+                  <i class="fa-solid fa-window-maximize fs-5"></i>
+                </button>
 
-          <div class="text-center mx-2">
-            <p class="h1 fw-semibold mb-0">9999+</p>
-            <span>Masini</span>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="bg-primary py-4 bg-opacity-50">
-        <div class="container-xxl py-4">
-
-          <h2 class="text-center fw-semibold mb-4">Partners Category</h2>
-          <div class="row justify-content-center">
-
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2">
-              <div class="card border-0 card-info-category">
-                <img src="https://api.myconnector.ro/files/events/partners/10/74567e380c1605825d3e743e44050ca6.png" class="card-img">
+                <button type="button" class="btn btn-nav-link active">
+                  <i class="fa-solid fa-window-restore fs-5"></i>
+                  <span class="badge-active bottom-4 end-4"></span>
+                </button>
               </div>
             </div>
-
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2">
-              <div class="card border-0 card-info-category">
-                <img src="https://api.myconnector.ro/files/events/partners/10/4398a5df08c30ddca4ef43103bd97ae5.png" class="card-img">
-              </div>
-            </div>
-
-          </div>
-
-          <h2 class="text-center fw-semibold my-4">ddsfdsfds</h2>
-          <div class="row justify-content-center">
-
-            <div class="col-6 col-sm-3 col-md-2 col-lg-1 px-2 mb-sm-2">
-              <div class="card border-0">
-                <img src="https://api.myconnector.ro/files/events/partners/10/74567e380c1605825d3e743e44050ca6.png" class="card-img">
-              </div>
-            </div>
-
-            <div class="col-6 col-sm-3 col-md-2 col-lg-1 px-2 mb-sm-2">
-              <div class="card border-0">
-                <img src="https://api.myconnector.ro/files/events/partners/10/4398a5df08c30ddca4ef43103bd97ae5.png" class="card-img">
-              </div>
-            </div>
-
-            <div class="col-6 col-sm-3 col-md-2 col-lg-1 px-2 mb-sm-2">
-              <div class="card border-0">
-                <img src="https://api.myconnector.ro/files/events/partners/10/74567e380c1605825d3e743e44050ca6.png" class="card-img">
-              </div>
-            </div>
-
-            <div class="col-6 col-sm-3 col-md-2 col-lg-1 px-2 mb-sm-2">
-              <div class="card border-0">
-                <img src="https://api.myconnector.ro/files/events/partners/10/4398a5df08c30ddca4ef43103bd97ae5.png" class="card-img">
-              </div>
-            </div>
-
           </div>
 
         </div>
-      </div>
-
-      <div class="position-relative">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1424.2885351589339!2d26.100904!3d44.441837!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDI2JzMwLjYiTiAyNsKwMDYnMDMuMyJF!5e0!3m2!1sen!2sus!4v1678534819599!5m2!1sen!2sus" class="w-100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
-        <div class="bg-primary backdrop-filter position-absolute bg-opacity-75 contact-map p-4 w-25">
-          <div class="d-flex justify-content-center flex-column">
-            <h2 class="fw-semibold my-4">Contact us</h2>
-            <p><i class="fa-solid fa-location-dot me-2"></i> Virtual</p>
-            <p><i class="fa-solid fa-phone me-2"></i> 0040 720 000 000</p>
-            <p><i class="fa-solid fa-at me-2"></i> email@organizer.myc</p>
+        <div class="mb-3">
+          <span class="text-secondary">Active filters:</span>
+
+          <div class="border border-secondary rounded text-secondary d-inline-flex align-items-center ms-2">
+            <a href="" class="text-decoration-none text-secondary px-2 py-1 border-end border-secondary">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+            <span class="px-2 py-1">
+              Nume filtru
+            </span>
           </div>
-        </div>
-      </div>
 
-      <div class="bg-primary py-4 bg-opacity-50">
-        <div class="container-xxl py-4">
-          <div class="row">
-
-            <div class="col-12 col-md-6 align-self-center">
-              <h2 class="fw-semibold">Tax & Finance Forum Cluj-Napoca 2022</h2>
-            </div>
-            <div class="col-12 col-md-6">
-              <p>BusinessMark are plăcerea să anunţe organizarea unei noi ediții a „Tax & Finance Forum Cluj-Napoca”, ce va avea loc pe 1 noiembrie 2022, în format hibrid, atât „onsite” (Grand Hotel Italia), cât și online (pe platforma MyConnector). Experiența „in person” va fi completată de cea virtuală, participanții având facilități de networking, chat și zonă expozițională.
-              </p>
-              <p>În cadrul evenimentului, adresat atât companiilor din mediul privat, cât și celor din sectorul public, vom aborda cele mai importante aspecte și noutăţi legislative cu impact fiscal, principalele provocări pentru contribuabilii români și soluții de adaptare la noile prevederi.
-              </p>
-              <p>Evenimentul va include sesiuni de prezentări și panelul „CFO Roundtable”.</p>
-              <p>
-              Vom prezenta și analiza, alături de experți din cele importante companii de consultanță: tendințe legislative și fiscale la nivel internațional, noutăți privind politicile fiscale în Uniunea Europeană post-pandemie, strategia fiscală a României si armonizarea legislației românești cu cea globală, reforma fiscală în contextul Planului National de Redresare și Reziliență, aspecte privind taxarea în economia digitală, principalele modificări și reglementări ale Codului Fiscal și Codului de Procedură Fiscală, cele mai importante noutăți fiscale, la ce să ne așteptăm din 2023, aspecte privind privind digitalizarea administrației fiscale din România – SAF-T, e-factura și RO e-transport, prețurile de transfer  la nivel internațional și local. Inspecția fiscală a dosarului de prețuri de transfer; exemple și bune practici, TVA, modificări privind impozitul pe profit, perspective și tendințe în inspecțiile fiscale, noutăți privind impozitele și taxele locale, noutăți legislative în domeniul contabilității și raportării financiare internaționale.
-              </p>
-              <p>
-                *Participarea la eveniment echivalează cu 5 ore de pregătire profesională pentru membrii Camerei Consultanților Fiscali.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-      <div class="py-4">
-        <div class="container-xxl py-4">
-          <h2 class="fw-semibold text-center mb-4">Tracks</h2>
-
-          <div class="row justify-content-center">
-
-            <div class="col-12 col-md-8 col-offset-2">
-              <div class="card card-track mb-2 p-4 h-150px justify-content-between align-items-center flex-row">
-                <div class="">
-                  <h3 class="">Track 1</h3>
-                  <p>Test 1</p>
-                </div>
-                <div class="">
-                  <a href="" class="btn btn-light px-5">View track</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-8 col-offset-2">
-              <div class="card card-track mb-2 p-4 h-150px justify-content-between align-items-center flex-row">
-                <div class="">
-                  <h3 class="">Track 1</h3>
-                  <p>Test 1</p>
-                </div>
-                <div class="">
-                  <a href="" class="btn btn-light px-5">View track</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-8 col-offset-2">
-              <div class="card card-track mb-2 p-4 h-150px justify-content-between align-items-center flex-row">
-                <div class="">
-                  <h3 class="">Track 1</h3>
-                  <p>Test 1</p>
-                </div>
-                <div class="">
-                  <a href="" class="btn btn-light px-5">View track</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 mt-4 text-center">
-              <a href="" class="btn btn-outline-light px-5">View all tracks</a>
-            </div>
-
+          <div class="border border-secondary rounded text-secondary d-inline-flex align-items-center ms-2">
+            <a href="" class="text-decoration-none text-secondary px-2 py-1 border-end border-secondary">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+            <span class="px-2 py-1">
+              Nume filtru 2
+            </span>
           </div>
 
         </div>
-      </div>
 
-      <div class="bg-primary py-4 bg-opacity-50">
-        <div class="container-xxl py-4">
-          <h2 class="fw-semibold text-center mb-4">Sessions</h2>
+        <div class="section-session mb-4">
+          <h2 class="h4 mb-2">
+            Test Title
+            <button type="button" class="btn btn-nav-link p-0 bg-transparent border-0 px-2 btn-toggle-session">
+              <i class="fa-solid fa-up-right-and-down-left-from-center fs-5"></i>
+            </button>
+            <button type="button" class="btn btn-nav-link p-0 bg-transparent border-0 px-2 btn-toggle-session d-none">
+              <i class="fa-solid fa-down-left-and-up-right-to-center fs-5"></i>
+            </button>
+          </h2>
+          
+          <div class="mb-4">
+            <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/speaker/10/81b65cba47b9a83cc85acace512c8bd3.png" class="img-fluid w-100">
+          </div>
 
-          <div class="card bg-primary mb-4">
+          <div class="card bg-primary shadow-sm card-session position-relative">
             <div class="card-body">
               <div class="row">
 
-                <div class="col-12 col-md-auto">
-                  <p class="text-secondary"><i class="fa-solid fa-clock me-2"></i> 08:53 - 22:53 (GMT+03:00)</p>
-                  <p class="text-secondary"><i class="fa-solid fa-calendar me-2"></i> Oct 13, 2021</p>
-                  <p class="text-secondary"><i class="fa-solid fa-microphone me-2"></i> Panel</p>
+                <div class="col-12 col-md-2">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="">
+                      <p class=""><i class="fa-solid fa-clock me-2"></i> 12:53 - 13:53</p>
+                      <p class=""><i class="fa-solid fa-calendar me-2"></i> Oct 07, 2021</p>
+                      <p class=""><i class="fa-solid fa-microphone me-2"></i> Panel</p>
+                    </div>
+
+                    <div class="">
+                      <p class="mb-2">Powered by:</p>
+                      <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/sessions/10/51fe180951fa911e7ee5901fa1732914a7b9c365.png" alt="">
+                    </div>
+                  </div>
+
+
                 </div>
 
-                <div class="col-12 col-md">
+                <div class="col-12 col-md-10">
                   <h3 class="h5 mb-3">
-                    Lessons from The Startup World: How to Create a Powerful, Customer-Centric Digital Marketing Strategy on a Shoestring Budget
+                    <a href="" class="text-white text-decoration-none">
+                      Lessons from The Startup World: How to Create a Powerful, Customer-Centric Digital Marketing Strategy on a Shoestring Budget
+                    </a>
                   </h3>
                   <p class="text-secondary">
                     Gain an in-depth understanding of the fundamental steps that are central to any successful marketing strategy. Learn from a practical approach with concrete examples and case studies that will enable you to bring new tactics and tools immediately to your own organization.
                   </p>
 
-                  <div class="row flex-nowrap overflow-auto">
+                  <div class="row flex-wrap flex-md-nowrap overflow-auto pb-4">
 
-                    <div class="col-6 col-md-4">
-                      <a href="" class="text-decoration-none d-flex flex-row align-items-center">
-                        <div class="rounded-circle thumbnail-avatar">
+                    <div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar position-relative">
                           <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                          <div class="position-absolute bottom--4 text-center w-100">
+                            <span class="badge bg-danger rounded-1 py-2">Moderator</span>
+                          </div>
                         </div>
-                        <div class="ms-2 col">
+                        <div class="ms-3 col">
                           <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
                           <p class="text-secondary">
                             Managing Partner <br>
@@ -616,12 +498,42 @@
                       </a>
                     </div>
 
-                    <div class="col-6 col-md-4">
-                      <a href="" class="text-decoration-none d-flex flex-row align-items-center">
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
                         <div class="rounded-circle thumbnail-avatar">
                           <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
                         </div>
-                        <div class="ms-2 col">
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
                           <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
                           <p class="text-secondary">
                             Managing Partner <br>
@@ -638,52 +550,97 @@
             </div>
           </div>
 
-          <div class="card bg-primary mb-4">
+          <div class="card bg-primary shadow-sm card-session position-relative mb-4 d-none">
             <div class="card-body">
               <div class="row">
 
-                <div class="col-12 col-md-auto">
-                  <p class="text-secondary"><i class="fa-solid fa-clock me-2"></i> 08:53 - 22:53 (GMT+03:00)</p>
-                  <p class="text-secondary"><i class="fa-solid fa-calendar me-2"></i> Oct 13, 2021</p>
-                  <p class="text-secondary"><i class="fa-solid fa-microphone me-2"></i> Panel</p>
+                <div class="col-12 col-md-2">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="">
+                      <p class=""><i class="fa-solid fa-clock me-2"></i> 12:53 - 13:53</p>
+                      <p class=""><i class="fa-solid fa-calendar me-2"></i> Oct 07, 2021</p>
+                      <p class=""><i class="fa-solid fa-microphone me-2"></i> Panel</p>
+                    </div>
+
+                    <div class="">
+                      <p class="mb-2">Powered by:</p>
+                      <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/sessions/10/51fe180951fa911e7ee5901fa1732914a7b9c365.png" alt="">
+                    </div>
+                  </div>
+
+
                 </div>
 
-                <div class="col-12 col-md">
+                <div class="col-12 col-md-10">
                   <h3 class="h5 mb-3">
-                    Focus on Innovation
+                    <a href="" class="text-white text-decoration-none">
+                      Lessons from The Startup World: How to Create a Powerful, Customer-Centric Digital Marketing Strategy on a Shoestring Budget
+                    </a>
                   </h3>
                   <p class="text-secondary">
-                    In business and in economics, innovation can become a catalyst for growth.
+                    Gain an in-depth understanding of the fundamental steps that are central to any successful marketing strategy. Learn from a practical approach with concrete examples and case studies that will enable you to bring new tactics and tools immediately to your own organization.
                   </p>
 
-                  <div class="row flex-nowrap overflow-auto">
+                  <div class="row flex-wrap flex-md-nowrap overflow-auto pb-4">
 
-                    <div class="col-6 col-md-4">
-                      <a href="" class="text-decoration-none d-flex flex-row align-items-center">
-                        <div class="rounded-circle thumbnail-avatar">
-                          <img src="https://api.myconnector.ro/files/events/speakers/10/cf6ac556f7ca06d83130e66afce4f689.png" class="img-fluid border border-3 border-dark rounded-circle">
+                    <div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar position-relative">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                          <div class="position-absolute bottom--4 text-center w-100">
+                            <span class="badge bg-danger rounded-1 py-2">Moderator</span>
+                          </div>
                         </div>
-                        <div class="ms-2 col">
-                          <p class="mb-0 fw-semibold text-white">Dragos Gheban</p>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
                           <p class="text-secondary">
                             Managing Partner <br>
-                            Catalyst Solutions
+                            Lagoo Snagov
                           </p>
                         </div>
                       </a>
                     </div>
 
-                    <div class="col-6 col-md-4">
-                      <a href="" class="text-decoration-none d-flex flex-row align-items-center">
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
                         <div class="rounded-circle thumbnail-avatar">
-                          <img src="https://api.myconnector.ro/files/events/speakers/10/646b8512407845a5a67d468c7026c4d0.png" class="img-fluid border border-3 border-dark rounded-circle">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
                         </div>
-                        <div class="ms-2 col">
-                          <p class="mb-0 fw-semibold text-white">Cristian Hossu</p>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
                           <p class="text-secondary">
-                            Creative and passionate <br>
-                            Event Architect | Innovation Driver <br>
-                            Universum Events
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
                           </p>
                         </div>
                       </a>
@@ -695,37 +652,199 @@
               </div>
             </div>
           </div>
-
-          <div class="card bg-primary mb-4">
+          <div class="card bg-primary shadow-sm card-session position-relative mb-4 d-none">
             <div class="card-body">
               <div class="row">
 
-                <div class="col-12 col-md-auto">
-                  <p class="text-secondary"><i class="fa-solid fa-clock me-2"></i> 08:53 - 22:53 (GMT+03:00)</p>
-                  <p class="text-secondary"><i class="fa-solid fa-calendar me-2"></i> Oct 13, 2021</p>
-                  <p class="text-secondary"><i class="fa-solid fa-microphone me-2"></i> Panel</p>
+                <div class="col-12 col-md-2">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="">
+                      <p class=""><i class="fa-solid fa-clock me-2"></i> 12:53 - 13:53</p>
+                      <p class=""><i class="fa-solid fa-calendar me-2"></i> Oct 07, 2021</p>
+                      <p class=""><i class="fa-solid fa-microphone me-2"></i> Panel</p>
+                    </div>
+
+                    <div class="">
+                      <p class="mb-2">Powered by:</p>
+                      <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/sessions/10/51fe180951fa911e7ee5901fa1732914a7b9c365.png" alt="">
+                    </div>
+                  </div>
+
+
                 </div>
 
-                <div class="col-12 col-md">
+                <div class="col-12 col-md-10">
                   <h3 class="h5 mb-3">
-                    Automating IT Operations
+                    <a href="" class="text-white text-decoration-none">
+                      Lessons from The Startup World: How to Create a Powerful, Customer-Centric Digital Marketing Strategy on a Shoestring Budget
+                    </a>
                   </h3>
                   <p class="text-secondary">
-                    What are the types of automatization and how does an organization need to adapt, in order to support them? Join an applied session, that also brings in front the case study of AIOps ready monitoring platform – ARCANNA (Automated Root Cause Analysis Neural Network Assisted)
+                    Gain an in-depth understanding of the fundamental steps that are central to any successful marketing strategy. Learn from a practical approach with concrete examples and case studies that will enable you to bring new tactics and tools immediately to your own organization.
                   </p>
 
-                  <div class="row flex-nowrap overflow-auto">
+                  <div class="row flex-wrap flex-md-nowrap overflow-auto pb-4">
 
-                    <div class="col-6 col-md-4">
-                      <a href="" class="text-decoration-none d-flex flex-row align-items-center">
-                        <div class="rounded-circle thumbnail-avatar">
-                          <img src="https://api.myconnector.ro/files/events/speakers/10/54e30db37ef2d24832641f7fc1f3d1c8.png" class="img-fluid border border-3 border-dark rounded-circle">
+                    <div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar position-relative">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                          <div class="position-absolute bottom--4 text-center w-100">
+                            <span class="badge bg-danger rounded-1 py-2">Moderator</span>
+                          </div>
                         </div>
-                        <div class="ms-2 col">
-                          <p class="mb-0 fw-semibold text-white">Alexandru Măxineanu</p>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
                           <p class="text-secondary">
-                            Division Manager - Concept Tech Events <br>
-                            Universum Events
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card bg-primary shadow-sm card-session position-relative mb-4 d-none">
+            <div class="card-body">
+              <div class="row">
+
+                <div class="col-12 col-md-2">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="">
+                      <p class=""><i class="fa-solid fa-clock me-2"></i> 12:53 - 13:53</p>
+                      <p class=""><i class="fa-solid fa-calendar me-2"></i> Oct 07, 2021</p>
+                      <p class=""><i class="fa-solid fa-microphone me-2"></i> Panel</p>
+                    </div>
+
+                    <div class="">
+                      <p class="mb-2">Powered by:</p>
+                      <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/sessions/10/51fe180951fa911e7ee5901fa1732914a7b9c365.png" alt="">
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <div class="col-12 col-md-10">
+                  <h3 class="h5 mb-3">
+                    <a href="" class="text-white text-decoration-none">
+                      Lessons from The Startup World: How to Create a Powerful, Customer-Centric Digital Marketing Strategy on a Shoestring Budget
+                    </a>
+                  </h3>
+                  <p class="text-secondary">
+                    Gain an in-depth understanding of the fundamental steps that are central to any successful marketing strategy. Learn from a practical approach with concrete examples and case studies that will enable you to bring new tactics and tools immediately to your own organization.
+                  </p>
+
+                  <div class="row flex-wrap flex-md-nowrap overflow-auto pb-4">
+
+                    <div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar position-relative">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                          <div class="position-absolute bottom--4 text-center w-100">
+                            <span class="badge bg-danger rounded-1 py-2">Moderator</span>
+                          </div>
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-4">
+                      <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
+                        <div class="rounded-circle thumbnail-avatar">
+                          <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
+                        </div>
+                        <div class="ms-3 col">
+                          <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                          <p class="text-secondary">
+                            Managing Partner <br>
+                            Lagoo Snagov
                           </p>
                         </div>
                       </a>
@@ -738,469 +857,91 @@
             </div>
           </div>
 
-          <div class="mt-4 text-center">
-            <a href="" class="btn btn-outline-light px-5">View all tracks</a>
-          </div>
 
-        </div>
-      </div>
 
-      <div class="py-4">
-        <div class="container-xxl py-4">
-        <h2 class="fw-semibold mb-4 text-center">Speakers</h2>
-
-          <div class="d-flex justify-content-around row">
-
-            <div class="d-flex flex-column align-items-center col-6 col-md-2">
-              <a href="" class="text-decoration-none d-flex flex-column align-items-center">
-                <div class="rounded-circle thumbnail-avatar">
-                  <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
-                </div>
-                <div class="mt-2 text-center">
-                  <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
-                  <p class="text-secondary">
-                    Managing Partner <br>
-                    Lagoo Snagov
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="d-flex flex-column align-items-center col-6 col-md-2">
-              <a href="" class="text-decoration-none d-flex flex-column align-items-center">
-                <div class="rounded-circle thumbnail-avatar">
-                  <img src="https://api.myconnector.ro/files/events/speakers/10/8070d42cb3c6c07d6aca8c5e1d89b13f.png" class="img-fluid border border-3 border-dark rounded-circle">
-                </div>
-                <div class="mt-2 text-center">
-                  <p class="mb-0 fw-semibold text-white">Andreea Siretchi</p>
-                  <p class="text-secondary">
-                    Chief Operations Officers <br>
-                    at Universum Events
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="d-flex flex-column align-items-center col-6 col-md-2">
-              <a href="" class="text-decoration-none d-flex flex-column align-items-center">
-                <div class="rounded-circle thumbnail-avatar">
-                  <img src="https://api.myconnector.ro/files/events/speakers/10/54e30db37ef2d24832641f7fc1f3d1c8.png" class="img-fluid border border-3 border-dark rounded-circle">
-                </div>
-                <div class="mt-2 text-center">
-                  <p class="mb-0 fw-semibold text-white">Alexandru Măxineanu</p>
-                  <p class="text-secondary">
-                    Division Manager - Concept Tech Events <br>
-                    Universum Events
-                  </p>
-                </div>
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-primary bg-opacity-75 backdrop-filter py-4">
-        <div class="container-xxl py-4">
-
-          <div class="row">
-            <div class="col-12 col-md-6 align-self-center">
-              <h2 class="fw-semibold mb-0 mb-sm-3">Program info</h2>
-            </div>
-            <div class="col-12 col-sm-6">
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <p class="my-2"><i class="fa-solid fa-calendar me-2 fs-5"></i> Period 12/01/2022 - 13/03/2022</p>
-                </div>
-                <div class="col-12 col-md-6">
-                  <p class="my-2"><i class="fa-solid fa-ticket me-2 fs-5"></i> Tickets 340</p>
-                </div>
-                <div class="col-12 col-md-6">
-                  <p class="my-2"><i class="fa-solid fa-location-dot me-2 fs-5"></i> Location Stup Hub</p>
-                </div>
-                <div class="col-12 col-md-6">
-                  <p class="my-2"><i class="fa-solid fa-tag me-2 fs-5"></i> Starting Price 100 RON</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="py-4">
-        <div class="container-xxl py-4">
-          <h2 class="text-center fw-semibold mb-4">Titlu</h2>
-
-          <div class="text-center">
-
-            <p>DRAGI COLEGI,</p>
-
-              <p>Vă mulțumim pentru participarea la &nbsp;Congresul Național de Boli Infecțioase ce are loc în perioada 20 – 22 octombrie 2022, în format hibrid: online și la Hotelul Internațional din Iași.</p>
-
-              <p>Tematica științifică va aborda următoarele subiecte de interes major pentru toți medicii infecționiști:</p>
-
-              <p>– COVID 19</p>
-
-              <p>– Rezistența la antibiotic. Antibioterapie. Infecții severe</p>
-
-              <p>– Infecția cu virusurile hepatitice</p>
-
-              <p>– Infecția cu HIV</p>
-
-              <p>– Varia</p>
-
-              <p>Programul științific al evenimentului include sesiuni de prezentări orale si de e-postere, iar lectorii invitați sunt nume importante din domeniul bolilor infectioase.</p>
-
-              <p>Tematica științifică a congresului se adresează medicilor specialişti şi medicilor rezidenţi din specialitatea de boli infecţioase, dar şi din alte specialităţi (medicină internă, chirurgie, pediatrie, reumatologie, oncologie, epidemiologie, microbiologie, dermatologie, pneumologie etc).</p>
-
-              <p>Vă așteptăm să fiți prezenți în număr cât mai mare la lucrările congresului!</p>
-
-              <p>&nbsp;</p>
-
-              <p>Prof. Dr. Egidia Miftode</p>
-
-              <p>Preşedintele Congresului Național de Boli Infecțioase</p>
-
-              <p>Coordonator activitate didactică – Disciplina Boli Infecțioase</p>
-
-              <p>Universitatea de Medicină și Farmacie „Grigore T. Popa” Iași</p>
-
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="py-4">
-        <div class="container-fluid py-4 px-2">
-
-          <div class="row m-0">
-
-            <div class="col-12 col-md-4 p-0">
-              <div class="info-gallery position-relative">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/d6a3ee9e9a85e1d545cfbce31f0d092b3b04bbd4.png">
-                <p class="justify-content-center align-items-center bg-primary bg-opacity-75 position-absolute mb-0">
-                  Image 1
-                </p>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-4 p-0">
-              <div class="info-gallery position-relative">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/logo/10/3c63cb68a4b0084c5a5b2b3664c24778.png">
-                <p class="justify-content-center align-items-center bg-primary bg-opacity-75 position-absolute mb-0">
-                  Image 2
-                </p>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-4 p-0">
-              <div class="info-gallery position-relative">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/d6a3ee9e9a85e1d545cfbce31f0d092b3b04bbd4.png">
-                <p class="justify-content-center align-items-center bg-primary bg-opacity-75 position-absolute mb-0">
-                  Image 3
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="py-4">
-        <div class="container-xxl py-4">
-
-          <h2 class="text-center fw-semibold mb-4">Partners Category</h2>
-          <div class="row justify-content-center">
-
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2">
-              <div class="card border-0 card-info-category">
-                <img src="https://api.myconnector.ro/files/events/partners/10/74567e380c1605825d3e743e44050ca6.png" class="card-img">
-              </div>
-            </div>
-
-            <div class="col-6 col-sm-4 col-md-3 col-lg-2 px-2">
-              <div class="card border-0 card-info-category">
-                <img src="https://api.myconnector.ro/files/events/partners/10/4398a5df08c30ddca4ef43103bd97ae5.png" class="card-img">
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-primary bg-opacity-75 backdrop-filter py-4">
-        <div class="container-xxl py-4">
-
-          <h2 class="text-center fw-semibold mb-4">Marketplace Products</h2>
-
-          <div class="row justify-content-center">
-
-              <div class="col-6 col-md-3">
-                <div class="card border-0">
-                  <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/marketplace/6888/10/aea6eac28e5fc1b759a5a322ce64c05a.png" class="card-img-top">
-                  <div class="card-body text-primary">
-                    <h5 class="card-title">Nume Produs</h5>
-                    <p class="card-text">Test 1</p>
-                    <p>10 lei</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <div class="card border-0">
-                  <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/marketplace/6888/10/aea6eac28e5fc1b759a5a322ce64c05a.png" class="card-img-top">
-                  <div class="card-body text-primary">
-                    <h5 class="card-title">Nume Produs</h5>
-                    <p class="card-text">Test 1</p>
-                    <p>10 lei</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <div class="card border-0">
-                  <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/marketplace/6888/10/aea6eac28e5fc1b759a5a322ce64c05a.png" class="card-img-top">
-                  <div class="card-body text-primary">
-                    <h5 class="card-title">Nume Produs</h5>
-                    <p class="card-text">Test 1</p>
-                    <p>10 lei</p>
-                  </div>
-                </div>
-              </div>
-
-
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="py-4">
-        <div class="container-xxl py-4">
-          <div class="row justify-content-center">
-
-            <div class="col-6 col-md-3 mb-md-0 mb-3">
-              <div class="card border-0 bg-primary">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/logo/10/3c63cb68a4b0084c5a5b2b3664c24778.png" class="card-img-top h-150px">
-                <div class="card-body bg-primary rounded-bottom">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text text-2-row">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-outline-light w-100">View more</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3 mb-md-0 mb-3">
-              <div class="card border-0 bg-primary">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/eb33e245eb54c4c7d479151bec0fe2f23c7f123c.png" class="card-img-top h-150px">
-                <div class="card-body bg-primary rounded-bottom">
-                  <h5 class="card-title">Card title 2</h5>
-                  <p class="card-text text-2-row">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-outline-light w-100">View more</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-6 col-md-3 mb-md-0 mb-3">
-              <div class="card border-0 bg-primary">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/b170eab6a39101cf83f858618e1afb3003af691b.png" class="card-img-top h-150px">
-                <div class="card-body bg-primary rounded-bottom">
-                  <h5 class="card-title">Card title 3</h5>
-                  <p class="card-text text-2-row">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-outline-light w-100">View more</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-primary bg-opacity-75 backdrop-filter py-4">
-        <div class="container-xxl py-4">
-
-          <div class="row">
-            <div class="col-12 col-md-6 mb-md-0 mb-3 text-md-start text-center">
-              <div class="mb-2 logo-event">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/b7fcde224be3f11b7fd729f4cd755eb372dd9140.png" class="img-fluid">
-              </div>
-              <p class="mb-0">Made with love by <b>MyConnector</b></p>
-            </div>
-            
-            <div class="col-12 col-md-6">
-              <div class="text-md-end text-center mb-2">
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-facebook"></i></a>
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-twitter"></i></a>
-              </div>
-              <p class="text-md-end text-center mb-0">address</p>
-              <p class="text-md-end text-center mb-2">phone</p>
-              <p class="text-md-end text-center mb-2">
-                <a href="" class="text-white text-decoration-none">https://myconnector.ro</a>
-              </p>
-              <p class="text-md-end text-center mb-2">
-                <a href="" class="text-white text-decoration-none">Termeni si conditii</a>
-                <span class="px-2">|</span>
-                <a href="" class="text-white text-decoration-none">Politica de confidentialitate</a>
-              </p>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="py-4">
-        <div class="container-xxl py-4">
-
-          <div class="row">
-            <div class="col-6 col-md-3 mb-md-0 mb-3">
-              <div class="rounded">
-                <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/b7fcde224be3f11b7fd729f4cd755eb372dd9140.png" class="h-60px rounded">
-              </div>
-            </div>
-            <div class="col-6 col-md-3 mb-md-0 mb-3">
-              <div class="d-flex align-items-center">
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-facebook"></i></a>
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-instagram"></i></a>
-                <a href="" class="text-white fs-3 p-2"><i class="fa-brands fa-twitter"></i></a>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <input type="text" class="form-control rounded-0 w-100 h-60px" placeholder="Email Address">
-            </div>
-            <div class="col-6 col-md-3">
-              <button type="button" class="btn btn-outline-light w-100 rounded-0 h-60px">Subscribe</button>
-            </div>
-          </div>
-
-          <div class="row mt-3">
-
-            <div class="col-6 col-md-3">
-              <p class="mb-2 h5">Contact</p>
-            </div>
-
-            <div class="col-6 col-md-3">
-
-            </div>
-
-            <div class="col-6 col-md-3">
-
-            </div>
-
-            <div class="col-6 col-md-3">
-              <p class="mb-2 h5">Facebook</p>
-              <p class="mb-0">
-                <a href="" class="text-white text-decoration-none">Politica de confidentialitate</a>
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="bg-primary bg-opacity-75 backdrop-filter py-4">
-        <div class="container-xxl py-4">
-
-          <h2 class="text-center fw-semibold mb-4">Biletele</h2>
-
-          <div class="row justify-content-center">
-
-            <div class="col-12 col-md-8 col-offset-2">
-              <div class="card card-track mb-2 justify-content-between align-items-center flex-row border-start-0">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="p-4">
-                      <h3 class="">Online Ticket</h3>
-                      <p class="mb-0">ONLINE Access to: Main Stages; Java Stage; DevOps Stage; Mobile Stage; Future of Engineering Stage; Web Stage; QA & Testing Stage; CodeClash Stage; Women in Tech Stage; Big Data & Cloud Stage; Security Stage; Product Management Stage.</p>
-                    </div>
-                  </div>
-                  <div class="col-4 border-start">
-                    <div class="p-4 d-flex justify-content-center align-items-center h-100">
-                      FREE
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12 mt-4 text-center">
-              <a href="" class="btn btn-outline-light px-5">View all tickets</a>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-
-      <div class="py-4">
-        <div class="container-xxl py-4">
-          <h2 class="text-center fw-semibold mb-4">Testimonials</h2>
-
-          <div class="row">
-            <div class="col-12 col-sm-8 col-md-6 offset-sm-2 offset-md-3">
-
-
-
-          <div id="carousel-testimonials" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-inner">
-
-              <div class="carousel-item mt-5 active">
-                <div class="bg-primary rounded p-4 pt-0 card-testimonial position-relative d-flex flex-column justify-content-center align-items-center">
-                  <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/user/image/0/e0fcddeb56cab9ec99b6fdf6b7f87ce7.png" class="rounded-circle">
-                  <h3 class="text-center mt-2">Test 1</h3>
-                  <p class="text-center text-secondary">@asdasd</p>
-                  <p class="text-center mb-0 d-flex flex-column w-25">
-                    <i class="fa-solid fa-quote-left align-self-start text-secondary"></i>
-                   <span>Aici este o parere de bine</span>
-                    <i class="fa-solid fa-quote-right align-self-end text-secondary"></i>
-                  </p>
-                </div>
-              </div>
-
-              <div class="carousel-item mt-5">
-                <div class="bg-primary rounded p-4 pt-0 card-testimonial position-relative d-flex flex-column justify-content-center align-items-center">
-                  <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/user/image/0/e0fcddeb56cab9ec99b6fdf6b7f87ce7.png" class="rounded-circle">
-                  <h3 class="text-center mt-2">Test 1</h3>
-                  <p class="text-center text-secondary">@asdasd</p>
-                  <p class="text-center mb-0 d-flex flex-column w-25">
-                    <i class="fa-solid fa-quote-left align-self-start text-secondary"></i>
-                    <span>Aici este o parere de bine</span>
-                    <i class="fa-solid fa-quote-right align-self-end text-secondary"></i>
-                  </p>
-                </div>
-              </div>
-
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-testimonials" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-testimonials" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+          <div class="card-back"></div>
+          <div class="text-end text-secondary btn-toggle-session">
+            <button type="button" class="btn border-0 p-0 text-secondary">
+              View all sessions from this track <span class="p-2 rounded-circle bg-secondary text-white fw-semibold">+3</span>
             </button>
           </div>
 
-            </div>
-          </div>
 
         </div>
+
       </div>
-
-
     </main>
 
+    <div class="filters p-2 mt-2 d-none h-main position-fixed end-0 bg-dark">
+      <div class="border-bottom border-primary px-2 pb-2 d-flex justify-content-between align-items-center">
+        <span>Agenda filters</span>  <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 close-filters"><i class="fa-solid fa-xmark"></i></button>
+      </div>
 
+      <div class="p-2">
+       <p class="mb-1">Event days</p>
+
+        <div id="datepicker" data-date="12/03/2012" class="filter-datepicker"></div>
+
+      </div>
+
+      <div class="p-2">
+        <p class="mb-1">Event tracks</p>
+
+        <div class="btn btn-nav-link mb-1 bg-primary d-flex active">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="filters[id_track]" id="input-event-track-1" checked>
+            <label class="form-check-label" for="input-event-track-1">
+              Test 1
+            </label>
+          </div>
+        </div>
+
+        <div class="btn btn-nav-link mb-1 bg-primary d-flex">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="filters[id_track]" id="input-event-track-2">
+            <label class="form-check-label" for="input-event-track-2">
+              Test 2
+            </label>
+          </div>
+        </div>
+
+        <div class="btn btn-nav-link mb-1 bg-primary d-flex">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="filters[id_track]" id="input-event-track-3">
+            <label class="form-check-label" for="input-event-track-3">
+              Test 1
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="p-2">
+        <p class="mb-1">Display future/passed sessions</p>
+
+        <div class="btn btn-nav-link mb-1 bg-primary d-flex">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="filters[show_time]" id="input-show-time-1">
+            <label class="form-check-label" for="input-show-time-1">
+              Test 1
+            </label>
+          </div>
+        </div>
+
+        <div class="btn btn-nav-link mb-1 bg-primary d-flex">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="filters[show_time]" id="input-show-time-2">
+            <label class="form-check-label" for="input-show-time-2">
+              Test 2
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button type="button" class="btn btn-nav-link show-filters"><i class="fa-solid fa-arrow-down-wide-short fs-4"></i></button>
   </div>
 
 
@@ -1397,9 +1138,161 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="modal-speaker" tabindex="-1" aria-labelledby="modal-speaker-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xxl">
+      <div class="modal-content">
+        <form action="">
+          <div class="modal-body position-relative">
+
+            <div class="position-absolute end-4 top-4 p-2">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="row">
+
+              <div class="col-12 col-md-4">
+                <div class="card border-0">
+                  <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="card-img">
+                  <div class="card-img-overlay d-flex align-content-between flex-column p-0">
+
+                    <div class="text-end p-2">
+                      <button type="button" class="btn btn-primary shadow-sm border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to favourites">
+                        <i class="fa-solid fa-star fs-4"></i>
+                      </button>
+                    </div>
+
+                    <div class="row mt-auto mx-0">
+                      <div class="col-12 col-sm-6 col-md-6 bg-primary bg-opacity-75 backdrop-filter text-white py-2">
+                        <div class="">
+                          <h3 class="h5">Mihai Cima</h3>
+                          <p class="mb-0">
+                            Managing Partner
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="mt-2 text-secondary h-250px overflow-auto">
+                  <p>Extensive software applications design, architecture &amp; development experience, including web portals, web sites/applications, performance enhancements, intranet solutions and systems integration.<br><br>
+                    Using Agile or another methodology, based on the specifics of the project at hand, I can easily understand the business needs, and, therefore, create a suitable technical solution, by choosing the best technology and the proper human resources, based on the required set of skills.<br><br>
+                    I am mindful when referring to learning about, and further on, adopting cutting edge technologies and techniques when it comes to developing and administrating web applications.<br><br>
+                    Technologies: PHP 7, MySQL design, optimization and development, MsSQL, noSQL (MongoDB, ElasticSearch), Zend Framework, Memcache, Gearman, Redis, RabbitMQ, Apache, Nginx, JavaScript (jQuery, Bootstrap, Angular), HTML 5, CSS 3, Varnish, Sphinx, Solr.<br><br>
+                    Development: Microservices, REST/SOAP APIs, Systems integration via APIs and/or files and direct database connection, CRM, ERM, Intranet Solutions, Google APIs (maps, sheets, analytics, shorturl, places, etc.), Facebook Open Graph, LinkedIN API, WebSockets, Socket.IO</p>
+                </div>
+
+              </div>
+
+              <div class="col-12 col-md-8 d-flex align-self-center flex-column">
+                <h3 class="h4">Mihai Cima sessions:</h3>
+
+                <div class="card bg-dark border-0 mb-2">
+                  <div class="card-body">
+                    <div class="row">
+
+                      <div class="col-12 col-md-3 text-white">
+                        <p class="mb-2">
+                          <i class="fa-solid fa-clock me-2"></i>
+                          09:53 - 23:53
+                        </p>
+                        <p class="mb-2">
+                          <i class="fa-solid fa-calendar me-2"></i>
+                          Oct 13, 2021
+                        </p>
+                        <p class="mb-2">
+                          <a href="#modal-speaker-collapse-1" class="text-decoration-none text-white" data-bs-toggle="collapse" role="button">
+                            <i class="fa-solid fa-calendar-plus me-2"></i>
+                            Add to calendar
+                          </a>
+                        </p>
+                        <div class="bg-primary rounded text-white p-2 collapse" id="modal-speaker-collapse-1">
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Apple</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Google <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Office 365 <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook.com <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Yahoo <small>(online)</small></a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-9">
+                        <h3 class="text-white h5">Democratization of technology and bridging the gap between systems</h3>
+                        <p class="text-secondary mb-0">He will go through the challenges of today markets and the benefits that our new platform brings to companies: User Experience; Open Architecture; Data Analytics; IoT & Telematics;</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-dark border-0 mb-2">
+                  <div class="card-body">
+                    <div class="row">
+
+                      <div class="col-12 col-md-3 text-white">
+                        <p class="mb-2">
+                          <i class="fa-solid fa-clock me-2"></i>
+                          09:53 - 23:53
+                        </p>
+                        <p class="mb-2">
+                          <i class="fa-solid fa-calendar me-2"></i>
+                          Oct 13, 2021
+                        </p>
+                        <p class="mb-2">
+                          <a href="#modal-speaker-collapse-2" class="text-decoration-none text-white" data-bs-toggle="collapse" role="button">
+                            <i class="fa-solid fa-calendar-plus me-2"></i>
+                            Add to calendar
+                          </a>
+                        </p>
+                        <div class="bg-primary rounded text-white p-2 collapse" id="modal-speaker-collapse-2">
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Apple</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Google <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Office 365 <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook.com <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Yahoo <small>(online)</small></a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-9">
+                        <h3 class="text-white h5">Democratization of technology and bridging the gap between systems</h3>
+                        <p class="text-secondary mb-0">He will go through the challenges of today markets and the benefits that our new platform brings to companies: User Experience; Open Architecture; Data Analytics; IoT & Telematics;</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+  $(document).on('click', '.btn-toggle-session', function () {
+    var $section = $(this).closest('.section-session');
+    $section.find('.card-session:not(:first)').toggleClass('d-none');
+    $section.find('.card-session:first').toggleClass('mb-4');
+    $section.find('.card-back').toggleClass('d-none');
+    $section.find('.btn-toggle-session').toggleClass('d-none');
+  });
+
+  $('#datepicker').datepicker();
+
+</script>
 
 </body>
 </html>

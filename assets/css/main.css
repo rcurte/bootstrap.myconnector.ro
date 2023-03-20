@@ -12608,17 +12608,24 @@ select + .select2-container--bootstrap-dark-5 {
 
 ::-webkit-scrollbar {
   width: 7px;
+  height: 7px;
 }
 
+/*track*/
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
+/*thumb*/
 ::-webkit-scrollbar-thumb {
-  background: #2f3252;
-  border-radius: 7px;
-  height: 80%;
+  background: rgba(133, 135, 152, 0.4588235294);
+  border-radius: 5px;
+}
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255, 255, 255, 0.1) rgba(133, 135, 152, 0.4588235294);
 }
 
 :root {
@@ -12627,6 +12634,16 @@ select + .select2-container--bootstrap-dark-5 {
   --swiper-navigation-size: 12;
   --swiper-theme-color: #fff;
   --swiper-pagination-bullet-inactive-color: #858798;
+}
+
+.filter-datepicker .datepicker-inline {
+  background-color: #2f3252;
+  width: 100% !important;
+  border-radius: 0.625rem;
+  padding: 0.5rem;
+}
+.filter-datepicker .datepicker-inline table {
+  width: 100%;
 }
 
 html {
@@ -12859,6 +12876,10 @@ html {
   height: 150px;
 }
 
+.h-250px {
+  height: 250px;
+}
+
 .h-60px {
   height: 60px;
 }
@@ -12984,6 +13005,52 @@ html {
 #carousel-testimonials .carousel-control-prev,
 #carousel-testimonials .carousel-control-next {
   top: 50px;
+}
+
+.video-fixed {
+  max-height: calc(100vh - 155px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-session {
+  z-index: 3;
+}
+
+.card-back:before {
+  content: " ";
+  position: relative;
+  width: 98%;
+  height: 20px;
+  margin: 0 auto;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  background-color: #2f3252;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 0.625rem;
+}
+.card-back:after {
+  content: " ";
+  position: relative;
+  width: 96%;
+  z-index: 1;
+  height: 22px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  display: block;
+  background-color: #2f3252;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 0.625rem;
+}
+
+.modal-xxl {
+  width: 80vw;
+  max-width: 100%;
 }
 
 @media (max-width: 991.98px) {

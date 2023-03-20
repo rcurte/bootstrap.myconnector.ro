@@ -34,17 +34,36 @@ $popover-body-padding-x: 1em !default;
 @import "../select2-bootstrap-5-dark-theme/src/select2-bootstrap-5-dark-theme";
 
 
+//::-webkit-scrollbar {
+//  width: 7px;
+//}
+//::-webkit-scrollbar-track {
+//  background: rgb(0, 0, 0, 0.4);
+//  border-radius: 7px;
+//}
+//::-webkit-scrollbar-thumb {
+//  background: $primary;
+//  border-radius: 7px;
+//  height: 80%;
+//}
+
 ::-webkit-scrollbar {
   width: 7px;
+  height: 7px;
 }
+/*track*/
 ::-webkit-scrollbar-track {
-  background: rgb(0, 0, 0, 0.4);
-  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
+/*thumb*/
 ::-webkit-scrollbar-thumb {
-  background: $primary;
-  border-radius: 7px;
-  height: 80%;
+  background: #85879875;
+  border-radius: 5px;
+}
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(255, 255, 255, 0.1) #85879875;
 }
 
 :root {
@@ -54,6 +73,19 @@ $popover-body-padding-x: 1em !default;
   --swiper-theme-color: #fff;
   --swiper-pagination-bullet-inactive-color: #858798;
 }
+.filter-datepicker {
+  .datepicker-inline {
+    background-color: $primary;
+    width: 100% !important;
+    border-radius: $border-radius;
+    padding: 0.5rem;
+    table {
+      width: 100%;
+    }
+  }
+}
+
+
 html {
   background-color: var(--bs-body-bg);
 }
@@ -261,6 +293,9 @@ html {
 .h-150px {
   height: 150px;
 }
+.h-250px {
+  height: 250px;
+}
 .h-60px {
   height: 60px;
 }
@@ -387,6 +422,50 @@ html {
   .carousel-control-next {
     top: 50px;
   }
+}
+.video-fixed {
+  max-height: calc(100vh - 155px);
+  object-fit: cover;
+}
+.card-session {
+  z-index: 3;
+}
+
+.card-back {
+  &:before {
+    content: ' ';
+    position: relative;
+    width: 98%;
+    height: 20px;
+    margin: 0 auto;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    background-color: $primary;
+    box-shadow: $box-shadow-sm;
+    border-radius: $border-radius;
+  }
+  &:after {
+    content: ' ';
+    position: relative;
+    width: 96%;
+    z-index: 1;
+    height: 22px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    display: block;
+    background-color: $primary;
+    box-shadow: $box-shadow-sm;
+    border-radius: $border-radius;
+  }
+}
+.modal-xxl {
+  width: 80vw;
+  max-width: 100%;
 }
 
 @include media-breakpoint-down(lg) {
