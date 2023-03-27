@@ -282,16 +282,9 @@
     </div>
   </nav>
 
-  <div class="d-flex position-relative main-container text-white">
+  <div class="d-flex position-relative main-container text-white h-100">
     <div class="d-lg-flex d-none flex-column p-2 justify-content-between sidebar sidebar-min position-fixed z-index h-main bg-dark"> <!-- Remove class "sidebar-min"  -->
       <ul class="nav nav-pills flex-column justify-content-center flex-grow-1">
-
-        <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Event Info">
-            <i class="fa-solid fa-circle-info me-2 fs-4"></i>
-            <span>Event Info</span>
-          </a>
-        </li>
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
           <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Entrance">
@@ -307,6 +300,14 @@
             <span>Lobby</span>
           </a>
         </li>
+
+        <li class="nav-item mb-1 d-flex flex-grow-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Event Info">
+            <i class="fa-solid fa-circle-info me-2 fs-4"></i>
+            <span>Event Info</span>
+          </a>
+        </li>
+
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
           <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Agenda">
@@ -363,13 +364,121 @@
 
     <main class="flex-grow-1 has-sidebar">
       <div class="position-relative">
-
         <video autoplay muted loop class="video-fixed w-100 position-fixed">
           <source src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/entrance/10/ece03c2b363432a1ea2637d2034813df.mp4" type="video/mp4">
         </video>
+      </div>
 
+      <div class="position-fixed box-floating-chat d-none">
+        <div class="card card-floating-chat border-0 shadow-sm">
+          <div class="card-header border-bottom-0 bg-white d-flex justify-content-between  p-3">
+            <h5 class="d-flex flex-column text-primary mb-0 fs-5 fw-semibold">
+              <span>Chat with:</span>
+              <span>Razvan Eusebiu</span>
+            </h5>
+            <div>
+              <button type="button" class="btn btn-link text-primary p-2 border-0 fs-4 btn-chat-maximize d-none">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+              <button type="button" class="btn btn-link text-primary p-2 border-0 fs-4 btn-chat-minimize">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-link text-primary p-2 border-0 fs-4 btn-chat-close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body p-3 overflow-auto">
+
+            <div class="d-flex mb-2">
+              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
+                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+              </div>
+              <div class="">
+                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
+                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
+                </div>
+                <div class="text-secondary small">
+                  <small>
+                    Razvan Eusebiu
+                    <span>|</span>
+                    January 10, 16:45
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mb-2">
+              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
+                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+              </div>
+              <div class="">
+                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
+                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
+                </div>
+                <div class="text-secondary small">
+                  <small>
+                    Razvan Eusebiu
+                    <span>|</span>
+                    January 10, 16:45
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex mb-2">
+              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
+                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+              </div>
+              <div class="">
+                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
+                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
+                </div>
+                <div class="text-secondary small">
+                  <small>
+                    Razvan Eusebiu
+                    <span>|</span>
+                    January 10, 16:45
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex">
+              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
+                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+              </div>
+              <div class="">
+                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
+                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
+                </div>
+                <div class="text-secondary small">
+                  <small>
+                    Razvan Eusebiu
+                    <span>|</span>
+                    January 10, 16:45
+                  </small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-footer bg-white border-top-0 p-3">
+            <div class="input-group bg-secondary bg-opacity-25 rounded">
+              <button type="button" class="btn btn-link text-primary fs-4 p-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Attach">
+                <i class="fa-solid fa-paperclip"></i>
+              </button>
+              <input type="text" class="form-control border-0 bg-transparent fs-6 shadow-none" placeholder="Type your message here" autocomplete="off">
+              <button type="button" class="btn btn-link text-success fs-4 p-2">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+
+
 
   </div>
 

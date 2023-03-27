@@ -12709,6 +12709,15 @@ html {
   right: -4px;
 }
 
+.box-floating-chat {
+  bottom: 80px;
+}
+
+.card-floating-chat {
+  width: 380px;
+  height: 500px;
+}
+
 .badge-active {
   position: absolute;
   background-color: #2fd326;
@@ -12740,20 +12749,24 @@ html {
 }
 
 .main-container {
-  padding-bottom: 5.2rem;
-  padding-top: 4.4rem;
+  padding-bottom: 5.4rem;
+  padding-top: 4.55rem;
 }
 
 .has-sidebar {
-  padding-left: 70px;
+  padding-left: 76px;
+}
+
+.has-aside {
+  padding-right: 76px;
 }
 
 .p-sidebar {
   padding-left: 200px;
 }
 
-.p-filter {
-  padding-right: 300px;
+.has-filter {
+  padding-right: 350px;
 }
 
 .thumbnail-avatar {
@@ -12791,7 +12804,7 @@ html {
 
 .sidebar {
   width: 200px;
-  z-index: 2;
+  z-index: 10;
 }
 .sidebar ul li {
   max-height: 48px;
@@ -12801,16 +12814,21 @@ html {
   max-height: 72px;
 }
 
-.sidebar-min {
-  width: 70px;
+.sidebar-min,
+.aside-min {
+  z-index: 10;
+  width: 76px;
 }
-.sidebar-min .btn-nav-link {
+.sidebar-min .btn-nav-link,
+.aside-min .btn-nav-link {
   justify-content: center;
 }
-.sidebar-min .btn-nav-link i {
+.sidebar-min .btn-nav-link i,
+.aside-min .btn-nav-link i {
   margin-right: 0 !important;
 }
-.sidebar-min .btn-nav-link span {
+.sidebar-min .btn-nav-link span,
+.aside-min .btn-nav-link span {
   display: none;
 }
 
@@ -12833,16 +12851,8 @@ html {
 }
 
 .filters {
-  width: 300px;
-  z-index: 2;
-}
-
-.show-filters {
-  z-index: 2;
-  position: fixed;
-  right: 0;
-  top: 78px;
-  border-radius: var(--bs-btn-border-radius) 0 0 var(--bs-btn-border-radius);
+  width: 350px;
+  z-index: 10;
 }
 
 .input-group-overlay {
@@ -13016,6 +13026,9 @@ html {
 .card-session {
   z-index: 3;
 }
+.card-session .session-speaker {
+  overflow-wrap: anywhere;
+}
 
 .card-back:before {
   content: " ";
@@ -13048,17 +13061,100 @@ html {
   border-radius: 0.625rem;
 }
 
+.card-speaker {
+  cursor: pointer;
+}
+.card-speaker .card-img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-speaker .card-img-overlay:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30%;
+  background: linear-gradient(to top, #242542, rgba(36, 37, 66, 0));
+}
+.card-speaker .card-img-overlay > div {
+  z-index: 1;
+}
+
 .modal-xxl {
   width: 80vw;
   max-width: 100%;
 }
 
+.crop-ticket-top,
+.crop-ticket-bottom {
+  width: 16px;
+  height: 16px;
+  background-color: #242542;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  border-radius: 8px;
+}
+
+.crop-ticket-bottom {
+  top: auto;
+  bottom: -8px;
+}
+
+.ticket-border {
+  border-right: 1px dashed #242542;
+}
+
 @media (max-width: 991.98px) {
   .sidebar {
-    z-index: 1031;
+    z-index: 1032;
   }
   .has-sidebar {
     padding-left: 0;
+  }
+  .has-aside {
+    padding-right: 0;
+  }
+  .aside {
+    width: 100%;
+    border-top: 1px solid #2f3252;
+    background-color: rgba(var(--bs-primary-rgb), 0.75) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+            backdrop-filter: blur(16px) saturate(180%);
+  }
+  .aside.h-main {
+    min-height: auto;
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+  }
+  .aside > div {
+    display: flex;
+    flex-direction: row;
+  }
+  .aside .btn-nav-link {
+    background-color: transparent;
+    border: 0;
+  }
+  .filters {
+    width: 100%;
+    height: 100%;
+    z-index: 1031;
+    overflow: auto;
+    padding-bottom: 2rem;
+  }
+  .filters.h-main {
+    max-height: calc(100vh - 72px);
+  }
+  .box-floating-chat {
+    bottom: 148px;
+  }
+  .main-container {
+    padding-bottom: 9.4rem;
   }
   .contact-map {
     position: relative !important;
@@ -13068,5 +13164,9 @@ html {
     left: 0;
     bottom: 0;
     right: 0;
+  }
+  .filter-datepicker .datepicker-inline table {
+    width: auto;
+    margin: 0 auto;
   }
 }

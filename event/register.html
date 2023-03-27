@@ -287,12 +287,33 @@
       <ul class="nav nav-pills flex-column justify-content-center flex-grow-1">
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Lobby">
-            <i class="fa-solid fa-door-open me-2 fs-4"></i>
-            <span>Lobby</span>
-            <div class="badge-active bottom-4 end-4"></div>
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Entrance">
+            <i class="fa-solid fa-archway me-2 fs-4"></i>
+            <span>Entrance</span>
           </a>
         </li>
+
+        <li class="nav-item mb-1 d-flex flex-grow-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Lobby">
+            <i class="fa-solid fa-door-open me-2 fs-4"></i>
+            <span>Lobby</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1 d-flex flex-grow-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Event Info">
+            <i class="fa-solid fa-circle-info me-2 fs-4"></i>
+            <span>Event Info</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1 d-flex flex-grow-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Speakers">
+            <i class="fa-solid fa-user-group me-2 fs-4"></i>
+            <span>Speakers</span>
+          </a>
+        </li>
+
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
           <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Agenda">
@@ -316,13 +337,6 @@
         </li>
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Speakers">
-            <i class="fa-solid fa-user-group me-2 fs-4"></i>
-            <span>Speakers</span>
-          </a>
-        </li>
-
-        <li class="nav-item mb-1 d-flex flex-grow-1">
           <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Networking">
             <i class="fa-solid fa-users me-2 fs-4"></i>
             <span>Networking</span>
@@ -330,9 +344,10 @@
         </li>
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tickets">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tickets">
             <i class="fa-solid fa-address-card me-2 fs-4"></i>
-            <span>Tickets</span>
+            <span>Register</span>
+            <div class="badge-active bottom-4 end-4"></div>
           </a>
         </li>
 
@@ -349,259 +364,182 @@
 
     <main class="flex-grow-1 has-sidebar has-aside">
       <div class="container-xxl pt-4">
-        <div class="row">
-
-          <div class="col-12 col-md-2">
-            <div class="mb-3">
-              <label for="input-group" class="form-label">Group content by</label>
-              <div class="form-check px-3 py-3 rounded form-switch d-flex justify-content-between align-items-center bg-primary">
-                <label class="form-check-label" for="input-group">Event</label>
-                <input class="form-check-input m-0 py-2 px-3" type="checkbox" role="switch" id="input-group">
-                <label class="form-check-label text-secondary" for="input-group">Type</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-4">
-            <div class="mb-3 event-select2">
-              <label for="input-search" class="form-label">Selected event</label>
-              <select name="" class="form-control" id="input-event" data-theme="bootstrap-dark-5">
-
-              </select>
-            </div>
-
-            <div class="mb-3 type-select2 d-none">
-              <label for="input-type" class="form-label">Selected type</label>
-              <select name="" class="form-control" id="input-type" data-theme="bootstrap-dark-5"></select>
-            </div>
-
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="mb-3">
-              <label for="input-search" class="form-label">Search</label>
-              <div class="position-relative">
-                <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search MyFavorites">
-                <span class="position-absolute input-group-overlay">
-                  <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-
+        <div class="d-flex mb-3">
+          <h2 class="h5 me-2 mb-0">Get tickets for IUF București 2023</h2>
+          <span class="text-secondary me-2">18  - 19 Mar 2023</span>
+          <span class="text-secondary me-2">Hybrid Event</span>
         </div>
-      </div>
-      <div class="container-xxl mt-2 mb-4">
+        
+        <div class="mb-3 text-secondary">
+          You can register at this event by selecting one or multiple tickets available below. <br>
+          In case you acquire multiple tickets, you will be able to assign them to other people at a later stage.
+        </div>
 
-        <div class="accordion" id="accordion-category">
+        <ul class="nav nav-pills nav-fill gap-2" id="pills-tab" role="tablist">
+          <li class="nav-item rounded-top" role="presentation">
+            <button class="btn btn-nav-link w-100 mb-3" id="ticket-tab" data-bs-toggle="tab" data-bs-target="#ticket" type="button" role="tab" aria-controls="ticket" aria-selected="true">
+              <span class="me-1">1.</span>Select tickets
+            </button>
+          </li>
+          <li class="nav-item bg-primary rounded-top" role="presentation">
+            <button class="btn btn-nav-link w-100 mb-3 active" id="information-tab" data-bs-toggle="tab" data-bs-target="#information" type="button" role="tab" aria-controls="information" aria-selected="false">
+              <span class="me-1">2.</span>Ticket information
+            </button>
+          </li>
+          <li class="nav-item rounded-top" role="presentation">
+            <button class="btn btn-nav-link w-100 mb-3" id="preview-tab" data-bs-toggle="tab" data-bs-target="#preview" type="button" role="tab" aria-controls="preview" aria-selected="false">
+              <span class="me-1">3.</span>Tickets preview
+            </button>
+          </li>
+          <li class="nav-item rounded-top" role="presentation">
+            <button class="btn btn-nav-link w-100 mb-3" id="billing-tab" data-bs-toggle="tab" data-bs-target="#billing" type="button" role="tab" aria-controls="billing" aria-selected="false">
+              <span class="me-1">4.</span>Billing information
+            </button>
+          </li>
+          <li class="nav-item rounded-top" role="presentation">
+            <button class="btn btn-nav-link w-100 mb-3" id="registration-tab" data-bs-toggle="tab" data-bs-target="#registration" type="button" role="tab" aria-controls="registration" aria-selected="false">
+              <span class="me-1">4.</span>Finish registration
+            </button>
+          </li>
+        </ul>
 
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-session">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-session" aria-expanded="true" aria-controls="collapse-session">
-                (0 saved Sessions)
-              </button>
-            </h2>
-            <div id="collapse-session" class="accordion-collapse collapse " aria-labelledby="heading-session">
-              <div class="accordion-body">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show" id="ticket" role="tabpanel" aria-labelledby="ticket-tab" tabindex="0">
 
+            <div class="bg-primary p-3 pt-0 rounded-bottom rounded-end mb-3">
+              <div class="d-flex mb-3">
+                <span class="badge bg-success rounded-0 py-1 px-2 fs-6 fw-semibold">Note</span>
               </div>
+              <p class="mb-0">
+                You can register at this event by selecting one or multiple tickets available below.
+              </p>
             </div>
-          </div>
 
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-marketplace">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-marketplace" aria-expanded="false" aria-controls="collapse-marketplace">
-                (0 saved Marketplace Product)
-              </button>
-            </h2>
-            <div id="collapse-marketplace" class="accordion-collapse collapse" aria-labelledby="heading-marketplace">
-              <div class="accordion-body">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-contacts">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-contacts" aria-expanded="true" aria-controls="collapse-contacts">
-                Contacts (1 saved Contacts)
-              </button>
-            </h2>
-            <div id="collapse-contacts" class="accordion-collapse collapse show" aria-labelledby="heading-contacts">
-              <div class="accordion-body">
-
-                <div class="group-by-type d-none">
-                  <div class="row">
-
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
+            <div class="bg-primary mb-3 rounded">
+              <div class="row">
+                
+                <div class="col-12 col-md-8 ticket-border position-relative">
+                  <div class="crop-ticket-top"></div>
+                  <div class="crop-ticket-bottom"></div>
+                  <div class="d-flex justify-content-between p-5">
+                    <div class="">
+                      <h3 class="h5">testiare</h3>
+                      <p class="mb-0 text-secondary">testt</p>
                     </div>
 
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
+                    <div class="text-success fs-4 fw-semibold">
+                      Free
                     </div>
-
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
+                <div class="col-12 col-md-4">
+                  <div class="d-flex justify-content-center align-items-center h-100 d-none">
+                    Unavailable
+                  </div>
 
-                <div class="group-by-event">
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    <button type="button" class="btn btn-nav-link bg-dark border-dark">
+                      <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <div class="text-center p-4 fs-5">0</div>
+                    <button type="button" class="btn btn-nav-link bg-dark border-dark">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
 
-                  <div class="accordion" id="accordion-contact-1">
+                </div>
 
-                    <div class="accordion-item mb-2">
-                      <h2 class="accordion-header" id="heading-contact-1">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-contact-1" aria-expanded="true" aria-controls="collapse-contact-1">
-                          MyConnector Conference (1 contact)
-                        </button>
-                      </h2>
-                      <div id="collapse-contact-1" class="accordion-collapse collapse show" aria-labelledby="heading-contact-1">
-                        <div class="accordion-body">
+              </div>
+            </div>
 
-                          <div class="row">
+            <div class="bg-primary mb-3 rounded">
+              <div class="row">
 
-                            <div class="col-12 col-sm-4 col-md-3">
-                              <div class="card border-0 bg-transparent">
-                                <div class="card-img-top bg-white rounded text-center position-relative">
-                                  <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                                  <span
-                                      class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                                    <i class="fa-solid fa-address-card lh-base"></i>
-                                  </span>
-                                </div>
-                                <div class="card-body bg-transparent pt-1">
-                                  <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-
-                        </div>
-                      </div>
+                <div class="col-12 col-md-8 ticket-border position-relative">
+                  <div class="crop-ticket-top"></div>
+                  <div class="crop-ticket-bottom"></div>
+                  <div class="d-flex justify-content-between p-5">
+                    <div class="">
+                      <h3 class="h5">testiare</h3>
+                      <p class="mb-0 text-secondary">testt</p>
                     </div>
+
+                    <div class="text-success fs-4 fw-semibold">
+                      RON 10
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    Unavailable
                   </div>
                 </div>
 
               </div>
-
             </div>
-          </div>
 
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-speaker">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-speaker" aria-expanded="false" aria-controls="collapse-speaker">
-                (0 saved Speakers)
-              </button>
-            </h2>
-            <div id="collapse-speaker" class="accordion-collapse collapse" aria-labelledby="heading-speaker">
-              <div class="accordion-body">
+            <div class="row mb-3">
+              <div class="col-12 col-md-8 d-inline-flex">
+                <div class="bg-primary me-2 rounded d-inline-flex p-2 align-items-center">
+                  <label for="input-ticket-discount" class="small col-md-auto me-2">Insert discount code, here:</label>
+                  <input type="text" class="form-control form-control-primary bg-dark" id="input-ticket-discount" placeholder="*******">
+                </div>
 
+                <div class="align-self-center">
+                  <button type="button" class="btn btn-primary h-auto">Apply</button>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <button type="button" class="btn btn-primary w-100">Next step</button>
               </div>
             </div>
+
           </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-poster">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-poster" aria-expanded="false" aria-controls="collapse-poster">
-                (0 saved E-Posters)
-              </button>
-            </h2>
-            <div id="collapse-poster" class="accordion-collapse collapse" aria-labelledby="heading-poster">
-              <div class="accordion-body">
-
+          <div class="tab-pane fade show active" id="information" role="tabpanel" aria-labelledby="information-tab" tabindex="0">
+            
+            <div class="bg-primary p-3 pt-0 rounded mb-3">
+              <div class="d-flex mb-3">
+                <span class="badge bg-success rounded-0 py-1 px-2 fs-6 fw-semibold">Note</span>
               </div>
+              <p class="mb-0">
+                Please fill in the form below in order to continue your registration process.<br>
+                Be wary of the required fields (marked with *), you must fill it in, otherwise the registration process cannot continue.
+              </p>
             </div>
-          </div>
 
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-partner">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-partner" aria-expanded="false" aria-controls="collapse-partner">
-                (0 saved Partners)
-              </button>
-            </h2>
-            <div id="collapse-partner" class="accordion-collapse collapse" aria-labelledby="heading-partner">
-              <div class="accordion-body">
+            <div class="rounded border border-2 border-primary p-4">
 
+              <div class="mb-3">
+                <label for="input-firstname" class="form-label"><span class="me-1 text-danger">*</span>Firstname</label>
+                <input type="text" class="form-control form-control-primary" id="input-firstname" placeholder="Firstname">
               </div>
-            </div>
-          </div>
 
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-document">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-document" aria-expanded="false" aria-controls="collapse-document">
-                (0 saved Documents (diplomas)
-              </button>
-            </h2>
-            <div id="collapse-document" class="accordion-collapse collapse" aria-labelledby="heading-document">
-              <div class="accordion-body">
-
+              <div class="mb-3">
+                <label for="input-lastname" class="form-label"><span class="me-1 text-danger">*</span>Lastname</label>
+                <input type="text" class="form-control form-control-primary" id="input-lastname" placeholder="Lastname">
               </div>
-            </div>
-          </div>
 
-          <div class="accordion-item ">
-            <h2 class="accordion-header" id="heading-project">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project" aria-expanded="false" aria-controls="collapse-project">
-                (0 saved Partner Projects)
-              </button>
-            </h2>
-            <div id="collapse-project" class="accordion-collapse collapse" aria-labelledby="heading-project">
-              <div class="accordion-body">
-
+              <div class="mb-3">
+                <label for="input-email" class="form-label"><span class="me-1 text-danger">*</span>Email</label>
+                <input type="text" class="form-control form-control-primary" id="input-email" placeholder="Email">
               </div>
-            </div>
-          </div>
 
+
+
+            </div>
+
+          </div>
+          <div class="tab-pane fade bg-primary" id="preview" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
+            preview
+          </div>
+          <div class="tab-pane fade bg-primary" id="billing" role="tabpanel" aria-labelledby="billing-tab" tabindex="0">
+            billing
+          </div>
+          <div class="tab-pane fade bg-primary" id="registration" role="tabpanel" aria-labelledby="registration-tab" tabindex="0">
+            registration
+          </div>
         </div>
+
       </div>
 
       <div class="position-fixed box-floating-chat d-none">
@@ -713,52 +651,6 @@
       </div>
     </main>
 
-    <div class="filters p-2 h-main position-fixed end-0 bg-dark d-none">
-      <div class="overflow-auto">
-        <div class="border-bottom border-primary px-2 pb-2 d-flex justify-content-between align-items-center">
-          <span>Categories filters</span>  <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 close-filters"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-
-        <div class="p-2 border-bottom border-primary">
-          <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" value="" id="filter-1">
-            <label class="form-check-label" for="filter-1">
-              Default checkbox
-            </label>
-          </div>
-
-          <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" value="" id="filter-2">
-            <label class="form-check-label" for="filter-2">
-              Default checkbox
-            </label>
-          </div>
-
-          <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" value="" id="filter-3">
-            <label class="form-check-label" for="filter-3">
-              Default checkbox
-            </label>
-          </div>
-
-          <button type="button" class="btn btn-nav-link p-0 bg-transparent border-0"><i class="fa-solid fa-circle-check"></i> Select all</button>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="h-main bg-dark d-flex align-items-center flex-row flex-lg-column p-2 aside aside-min position-fixed end-0">
-      <div class="m-auto">
-        <button type="button" class="btn btn-nav-link w-100 position-relative show-filters" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Extra filters">
-          <i class="fa-solid fa-arrow-down-wide-short fs-4"></i>
-          <i class="fa-solid fa-star-of-life position-absolute bg-success text-white rounded-circle p-1 top-4 end-4 small"></i>
-        </button>
-        <button type="button" class="btn btn-nav-link w-100 show-filters d-none d-lg-block" id="btn-toggle-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Expand menu">
-          <i class="fa-solid fa-chevron-left fs-4"></i>
-        </button>
-      </div>
-    </div>
   </div>
 
 
@@ -960,112 +852,15 @@
 <script src="../assets/js/main.js"></script>
 
 <script>
-  $('#input-group').on('change', function () {
-    $formCheck = $(this).closest('.form-check');
-    $formCheck.find('label').toggleClass('text-secondary');
-
-    $('.group-by-event').toggleClass('d-none');
-    $('.event-select2').toggleClass('d-none');
-
-    $('.group-by-type').toggleClass('d-none');
-    $('.type-select2').toggleClass('d-none');
-  });
-
-  //Set Dropdown with SearchBox via dropdownAdapter option (https://stackoverflow.com/questions/35799854/how-to-add-selectall-using-dropdownadapter-on-select2-v4)
-  var Utils = $.fn.select2.amd.require('select2/utils');
-  var Dropdown = $.fn.select2.amd.require('select2/dropdown');
-  var DropdownSearch = $.fn.select2.amd.require('select2/dropdown/search');
-  var CloseOnSelect = $.fn.select2.amd.require('select2/dropdown/closeOnSelect');
-  var AttachBody = $.fn.select2.amd.require('select2/dropdown/attachBody');
-  var SingleSelection = $.fn.select2.amd.require('select2/selection/single');
-  var dropdownAdapter = Utils.Decorate(Utils.Decorate(Utils.Decorate(Dropdown, DropdownSearch), CloseOnSelect), AttachBody);
-
-  $('#input-type').select2({
-    multiple: true,
-    selectOnClose: false,
-    dropdownAdapter: dropdownAdapter,
-    selectionAdapter: SingleSelection,
-    minimumResultsForSearch: 0,
-    data: [
-      {
-        id: 0,
-        text: 'Sessions',
-        icon: '<i class="fa-solid fa-play"></i>',
-
-      },
-      {
-        id: 1,
-        text: 'Marketplace Product',
-        icon: '<i class="fa-solid fa-cart-shopping"></i>',
-      }
-    ],
-    templateResult: function (type) {
-      if (!type.id) {
-        return type.text;
-      }
-
-      if (type.selected) {
-        var $type = $('<div class="d-flex align-items-center"><div class="me-2">'+ type.icon +'</div><div>'+ type.text +'</div> <i class="fa-solid fa-circle-check ms-auto text-success"></i></div>');
-      } else {
-        var $type = $('<div class="d-flex align-items-center"><div class="me-2">'+ type.icon +'</div><div>'+ type.text +'</div></div>');
-      }
-
-      return $type;
-    },
-    templateSelection: function (type) {
-      var $type = $('<div class="d-flex align-items-center ms-1"><div class="me-2"><i class="fa-solid fa-box-archive"></i></div><div>All categories selected</div></div>');
-
-      return $type;
-    }
-  }).on('select2:opening select2:closing', function (event) {
-    var searchfield = $(this).parent().find('.select2-search__field');
-    searchfield.prop('disabled', true);
-  });
-
-  $('#input-event').select2({
-    multiple: true,
-    selectOnClose: false,
-    dropdownAdapter: dropdownAdapter,
-    selectionAdapter: SingleSelection,
-    minimumResultsForSearch: 0,
-    data: [
-      {
-        id: 0,
-        text: 'MyConnector Conferance',
-        datatime: '01 May 2022 - 15 Apr 2023',
-        image: '../assets/images/logo-ticket.png',
-
-      },
-      {
-        id: 0,
-        text: 'MyConnector Conferance',
-        datatime: '01 May 2022 - 15 Apr 2023',
-        image: '../assets/images/logo-ticket.png',
-      }
-    ],
-    templateResult: function (event) {
-      if (!event.id) {
-        return event.text;
-      }
-
-      if (event.selected) {
-        var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div> <i class="fa-solid fa-circle-check ms-auto text-success"></i></div>');
-      } else {
-        var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div></div>');
-      }
-
-      return $event;
-    },
-    templateSelection: function (event) {
-      var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div></div>');
-
-      return $event;
-    }
-  }).on('select2:opening select2:closing', function (event) {
-    var searchfield = $(this).parent().find('.select2-search__field');
-    searchfield.prop('disabled', true);
-  });
-
+  $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (event) {
+    $('#' + event.target.id).closest('li').addClass('bg-primary')
+    $('#' + event.relatedTarget.id).closest('li').removeClass('bg-primary')
+  })
+  // tabEl.addEventListener('shown.bs.tab', event => {
+  //   console.log(event.target.id);
+  //   console.log(event.relatedTarget.id);
+  //
+  // })
 </script>
 
 </body>

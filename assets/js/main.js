@@ -3290,13 +3290,13 @@ jquery__WEBPACK_IMPORTED_MODULE_2___default()('#sidebar-toggle').on('click', fun
 });
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-filters').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.filters').removeClass('d-none');
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('d-none');
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').addClass('p-filter');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).closest('.aside').addClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('has-aside').addClass('has-filter');
 });
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('.close-filters').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.filters').addClass('d-none');
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-filters').removeClass('d-none');
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('p-filter');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-filters').closest('.aside').removeClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('has-filter');
 });
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('#btn-menu').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).find('i').toggleClass('d-none');
@@ -3304,6 +3304,17 @@ jquery__WEBPACK_IMPORTED_MODULE_2___default()('#btn-menu').on('click', function 
 
   //Sidebar
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.sidebar').removeClass('sidebar-min').toggleClass('d-none d-flex w-100 h-100').find('ul').toggleClass('flex-grow-1 justify-content-center h-100');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.btn-chat-minimize,.btn-chat-maximize').on('click', function () {
+  var $cardChat = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).closest('.card-floating-chat');
+  $cardChat.find('.btn-chat-minimize').toggleClass('d-none');
+  $cardChat.find('.btn-chat-maximize').toggleClass('d-none');
+  $cardChat.find('.card-footer').toggleClass('d-none');
+  $cardChat.find('.card-body').toggleClass('d-none');
+  $cardChat.toggleClass('h-auto');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.btn-chat-close').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).closest('.card-floating-chat').remove();
 });
 
 /***/ }),

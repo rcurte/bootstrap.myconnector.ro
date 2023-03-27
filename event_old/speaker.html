@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/all.min.css">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css">
 
 </head>
 <body>
@@ -282,15 +283,28 @@
     </div>
   </nav>
 
-  <div class="d-flex position-relative main-container text-white h-100">
+  <div class="d-flex position-relative main-container text-white">
     <div class="d-lg-flex d-none flex-column p-2 justify-content-between sidebar sidebar-min position-fixed z-index h-main bg-dark"> <!-- Remove class "sidebar-min"  -->
       <ul class="nav nav-pills flex-column justify-content-center flex-grow-1">
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Lobby">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Event Info">
+            <i class="fa-solid fa-circle-info me-2 fs-4"></i>
+            <span>Event Info</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1 d-flex flex-grow-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Entrance">
+            <i class="fa-solid fa-archway me-2 fs-4"></i>
+            <span>Entrance</span>
+          </a>
+        </li>
+
+        <li class="nav-item mb-1 d-flex flex-grow-1">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Lobby">
             <i class="fa-solid fa-door-open me-2 fs-4"></i>
             <span>Lobby</span>
-            <div class="badge-active bottom-4 end-4"></div>
           </a>
         </li>
 
@@ -316,9 +330,10 @@
         </li>
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Speakers">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Speakers">
             <i class="fa-solid fa-user-group me-2 fs-4"></i>
             <span>Speakers</span>
+            <div class="badge-active bottom-4 end-4"></div>
           </a>
         </li>
 
@@ -347,41 +362,16 @@
 
     </div>
 
-    <main class="flex-grow-1 has-sidebar has-aside">
+    <main class="flex-grow-1 has-sidebar">
       <div class="container-xxl pt-4">
+
         <div class="row">
 
-          <div class="col-12 col-md-2">
-            <div class="mb-3">
-              <label for="input-group" class="form-label">Group content by</label>
-              <div class="form-check px-3 py-3 rounded form-switch d-flex justify-content-between align-items-center bg-primary">
-                <label class="form-check-label" for="input-group">Event</label>
-                <input class="form-check-input m-0 py-2 px-3" type="checkbox" role="switch" id="input-group">
-                <label class="form-check-label text-secondary" for="input-group">Type</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-4">
-            <div class="mb-3 event-select2">
-              <label for="input-search" class="form-label">Selected event</label>
-              <select name="" class="form-control" id="input-event" data-theme="bootstrap-dark-5">
-
-              </select>
-            </div>
-
-            <div class="mb-3 type-select2 d-none">
-              <label for="input-type" class="form-label">Selected type</label>
-              <select name="" class="form-control" id="input-type" data-theme="bootstrap-dark-5"></select>
-            </div>
-
-          </div>
-
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-sm col-md">
             <div class="mb-3">
               <label for="input-search" class="form-label">Search</label>
               <div class="position-relative">
-                <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search MyFavorites">
+                <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search...">
                 <span class="position-absolute input-group-overlay">
                   <i class="fa-solid fa-magnifying-glass text-secondary"></i>
                 </span>
@@ -389,376 +379,81 @@
             </div>
           </div>
 
-        </div>
-      </div>
-      <div class="container-xxl mt-2 mb-4">
+          <div class="col-12 col-sm-auto col-md-auto">
+            <div class="mb-3">
+              <label for="input-search" class="form-label">View</label>
+              <div class="">
+                <button type="button" class="btn btn-nav-link">
+                  <i class="fa-solid fa-arrow-down-a-z fs-5"></i>
+                </button>
 
-        <div class="accordion" id="accordion-category">
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-session">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-session" aria-expanded="true" aria-controls="collapse-session">
-                (0 saved Sessions)
-              </button>
-            </h2>
-            <div id="collapse-session" class="accordion-collapse collapse " aria-labelledby="heading-session">
-              <div class="accordion-body">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-marketplace">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-marketplace" aria-expanded="false" aria-controls="collapse-marketplace">
-                (0 saved Marketplace Product)
-              </button>
-            </h2>
-            <div id="collapse-marketplace" class="accordion-collapse collapse" aria-labelledby="heading-marketplace">
-              <div class="accordion-body">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-contacts">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-contacts" aria-expanded="true" aria-controls="collapse-contacts">
-                Contacts (1 saved Contacts)
-              </button>
-            </h2>
-            <div id="collapse-contacts" class="accordion-collapse collapse show" aria-labelledby="heading-contacts">
-              <div class="accordion-body">
-
-                <div class="group-by-type d-none">
-                  <div class="row">
-
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-sm-4 col-md-3">
-                      <div class="card border-0 bg-transparent">
-                        <div class="card-img-top bg-white rounded text-center position-relative">
-                          <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                          <span class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                          <i class="fa-solid fa-address-card lh-base"></i>
-                        </span>
-                        </div>
-                        <div class="card-body bg-transparent pt-1">
-                          <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div class="group-by-event">
-
-                  <div class="accordion" id="accordion-contact-1">
-
-                    <div class="accordion-item mb-2">
-                      <h2 class="accordion-header" id="heading-contact-1">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-contact-1" aria-expanded="true" aria-controls="collapse-contact-1">
-                          MyConnector Conference (1 contact)
-                        </button>
-                      </h2>
-                      <div id="collapse-contact-1" class="accordion-collapse collapse show" aria-labelledby="heading-contact-1">
-                        <div class="accordion-body">
-
-                          <div class="row">
-
-                            <div class="col-12 col-sm-4 col-md-3">
-                              <div class="card border-0 bg-transparent">
-                                <div class="card-img-top bg-white rounded text-center position-relative">
-                                  <img src="../assets/images/back_container_ss.png" class="img-fluid h-150px" alt="">
-                                  <span
-                                      class="position-absolute p-1 badge-icon-sm bg-primary border border-white rounded-circle text-white d-flex justify-content-center align-content-center top-4 end-4">
-                                    <i class="fa-solid fa-address-card lh-base"></i>
-                                  </span>
-                                </div>
-                                <div class="card-body bg-transparent pt-1">
-                                  <p class="card-text text-2-row text-white text-center rounded">Some quick example text to build on the
-                                    card title and make up the bulk of the card's content.</p>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-speaker">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-speaker" aria-expanded="false" aria-controls="collapse-speaker">
-                (0 saved Speakers)
-              </button>
-            </h2>
-            <div id="collapse-speaker" class="accordion-collapse collapse" aria-labelledby="heading-speaker">
-              <div class="accordion-body">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-poster">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-poster" aria-expanded="false" aria-controls="collapse-poster">
-                (0 saved E-Posters)
-              </button>
-            </h2>
-            <div id="collapse-poster" class="accordion-collapse collapse" aria-labelledby="heading-poster">
-              <div class="accordion-body">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-partner">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-partner" aria-expanded="false" aria-controls="collapse-partner">
-                (0 saved Partners)
-              </button>
-            </h2>
-            <div id="collapse-partner" class="accordion-collapse collapse" aria-labelledby="heading-partner">
-              <div class="accordion-body">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item mb-2">
-            <h2 class="accordion-header" id="heading-document">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-document" aria-expanded="false" aria-controls="collapse-document">
-                (0 saved Documents (diplomas)
-              </button>
-            </h2>
-            <div id="collapse-document" class="accordion-collapse collapse" aria-labelledby="heading-document">
-              <div class="accordion-body">
-
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item ">
-            <h2 class="accordion-header" id="heading-project">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-project" aria-expanded="false" aria-controls="collapse-project">
-                (0 saved Partner Projects)
-              </button>
-            </h2>
-            <div id="collapse-project" class="accordion-collapse collapse" aria-labelledby="heading-project">
-              <div class="accordion-body">
-
+                <button type="button" class="btn btn-nav-link active">
+                  <i class="fa-solid fa-table-cells-large fs-5"></i>
+                  <span class="badge-active bottom-4 end-4"></span>
+                </button>
               </div>
             </div>
           </div>
 
         </div>
-      </div>
 
-      <div class="position-fixed box-floating-chat d-none">
-        <div class="card card-floating-chat border-0 shadow-sm">
-          <div class="card-header border-bottom-0 bg-white d-flex justify-content-between  p-3">
-            <h5 class="d-flex flex-column text-primary mb-0 fs-5 fw-semibold">
-              <span>Chat with:</span>
-              <span>Razvan Eusebiu</span>
-            </h5>
-            <div>
-              <button type="button" class="btn btn-link text-primary p-2 border-0 fs-4 btn-chat-maximize d-none">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </button>
-              <button type="button" class="btn btn-link text-primary p-2 border-0 fs-4 btn-chat-minimize">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <button type="button" class="btn btn-link text-primary p-2 border-0 fs-4 btn-chat-close">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
+        <div class="row">
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <div class="card text-bg-dark border-0 card-speaker">
+              <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files//events/layout/10/5129d5ab8665c249f61119e996151ad37e2f9990.png" class="card-img">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <h5 class="card-title fs-6">Card title</h5>
+                <p class="card-text small">Test test</p>
+              </div>
             </div>
           </div>
-          <div class="card-body p-3 overflow-auto">
 
-            <div class="d-flex mb-2">
-              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
-                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
+          <div class="col-6 col-md-3 col-lg-2">
+            <div class="card text-bg-dark card-speaker">
+              <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/speakers/10/dd48c80cb6e3f4a627b50dd795aab1ad.png" class="card-img">
+              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                <h5 class="card-title fs-6">Card title</h5>
+                <p class="card-text small">Test test</p>
               </div>
-              <div class="">
-                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
-                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
-                </div>
-                <div class="text-secondary small">
-                  <small>
-                    Razvan Eusebiu
-                    <span>|</span>
-                    January 10, 16:45
-                  </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-flex mb-2">
-              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
-                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
-              </div>
-              <div class="">
-                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
-                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
-                </div>
-                <div class="text-secondary small">
-                  <small>
-                    Razvan Eusebiu
-                    <span>|</span>
-                    January 10, 16:45
-                  </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-flex mb-2">
-              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
-                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
-              </div>
-              <div class="">
-                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
-                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
-                </div>
-                <div class="text-secondary small">
-                  <small>
-                    Razvan Eusebiu
-                    <span>|</span>
-                    January 10, 16:45
-                  </small>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-flex">
-              <div class="btn-avatar rounded-circle position-relative me-2 col-auto">
-                <img src="../assets/images/avatar.png" class="bg-primary rounded-circle img-fluid" alt="">
-              </div>
-              <div class="">
-                <div class="bg-primary px-3 py-2 d-inline-flex rounded">
-                  Aici este un messaj Aici este un messajAici este un messajAici este un messajAici este un messajAici este un messajAici este un messaj
-                </div>
-                <div class="text-secondary small">
-                  <small>
-                    Razvan Eusebiu
-                    <span>|</span>
-                    January 10, 16:45
-                  </small>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="card-footer bg-white border-top-0 p-3">
-            <div class="input-group bg-secondary bg-opacity-25 rounded">
-              <button type="button" class="btn btn-link text-primary fs-4 p-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Attach">
-                <i class="fa-solid fa-paperclip"></i>
-              </button>
-              <input type="text" class="form-control border-0 bg-transparent fs-6 shadow-none" placeholder="Type your message here" autocomplete="off">
-              <button type="button" class="btn btn-link text-success fs-4 p-2">
-                <i class="fa-solid fa-paper-plane"></i>
-              </button>
             </div>
           </div>
+
         </div>
+
       </div>
     </main>
 
-    <div class="filters p-2 h-main position-fixed end-0 bg-dark d-none">
-      <div class="overflow-auto">
-        <div class="border-bottom border-primary px-2 pb-2 d-flex justify-content-between align-items-center">
-          <span>Categories filters</span>  <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 close-filters"><i class="fa-solid fa-xmark"></i></button>
+    <div class="filters p-2 mt-2 d-none h-main position-fixed end-0 bg-dark">
+      <div class="border-bottom border-primary px-2 pb-2 d-flex justify-content-between align-items-center">
+        <span>Filter speakers</span>  <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 close-filters"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="p-2 d-flex flex-column">
+
+        <div class="mb-3">
+          <label for="filter-name" class="form-label">Name</label>
+          <input type="text" name="filters[name]" class="form-control form-control-primary" id="filter-name" placeholder="Type here">
         </div>
 
-        <div class="p-2 border-bottom border-primary">
-          <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" value="" id="filter-1">
-            <label class="form-check-label" for="filter-1">
-              Default checkbox
-            </label>
-          </div>
+        <div class="mb-3">
+          <label for="filter-job-title" class="form-label">Job title:</label>
+          <input type="text" name="filters[job_title]" class="form-control form-control-primary" id="filter-job-title" placeholder="Type here">
+        </div>
 
-          <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" value="" id="filter-2">
-            <label class="form-check-label" for="filter-2">
-              Default checkbox
-            </label>
-          </div>
+        <div class="mb-3">
+          <label for="filter-company" class="form-label">Company</label>
+          <input type="text" name="filters[company]" class="form-control form-control-primary" id="filter-company" placeholder="Type here">
+        </div>
 
-          <div class="form-check mb-2">
-            <input class="form-check-input" type="checkbox" value="" id="filter-3">
-            <label class="form-check-label" for="filter-3">
-              Default checkbox
-            </label>
-          </div>
-
-          <button type="button" class="btn btn-nav-link p-0 bg-transparent border-0"><i class="fa-solid fa-circle-check"></i> Select all</button>
-
+        <div class="">
+          <button type="button" class="btn btn-primary w-100">Apply filters</button>
         </div>
 
       </div>
     </div>
 
-    <div class="h-main bg-dark d-flex align-items-center flex-row flex-lg-column p-2 aside aside-min position-fixed end-0">
-      <div class="m-auto">
-        <button type="button" class="btn btn-nav-link w-100 position-relative show-filters" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Extra filters">
-          <i class="fa-solid fa-arrow-down-wide-short fs-4"></i>
-          <i class="fa-solid fa-star-of-life position-absolute bg-success text-white rounded-circle p-1 top-4 end-4 small"></i>
-        </button>
-        <button type="button" class="btn btn-nav-link w-100 show-filters d-none d-lg-block" id="btn-toggle-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Expand menu">
-          <i class="fa-solid fa-chevron-left fs-4"></i>
-        </button>
-      </div>
-    </div>
+    <button type="button" class="btn btn-nav-link show-filters"><i class="fa-solid fa-arrow-down-wide-short fs-4"></i></button>
   </div>
 
 
@@ -955,116 +650,159 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="modal-speaker" tabindex="-1" aria-labelledby="modal-speaker-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xxl">
+      <div class="modal-content">
+        <form action="">
+          <div class="modal-body position-relative">
+
+            <div class="position-absolute end-4 top-4 p-2">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="row">
+
+              <div class="col-12 col-md-4">
+                <div class="card border-0">
+                  <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="card-img">
+                  <div class="card-img-overlay d-flex align-content-between flex-column p-0">
+
+                    <div class="text-end p-2">
+                      <button type="button" class="btn btn-primary shadow-sm border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add to favourites">
+                        <i class="fa-solid fa-star fs-4"></i>
+                      </button>
+                    </div>
+
+                    <div class="row mt-auto mx-0">
+                      <div class="col-12 col-sm-6 col-md-6 bg-primary bg-opacity-75 backdrop-filter text-white py-2">
+                        <div class="">
+                          <h3 class="h5">Mihai Cima</h3>
+                          <p class="mb-0">
+                            Managing Partner
+                            Lagoo Snagov
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="mt-2 text-secondary h-250px overflow-auto">
+                  <p>Extensive software applications design, architecture &amp; development experience, including web portals, web sites/applications, performance enhancements, intranet solutions and systems integration.<br><br>
+                    Using Agile or another methodology, based on the specifics of the project at hand, I can easily understand the business needs, and, therefore, create a suitable technical solution, by choosing the best technology and the proper human resources, based on the required set of skills.<br><br>
+                    I am mindful when referring to learning about, and further on, adopting cutting edge technologies and techniques when it comes to developing and administrating web applications.<br><br>
+                    Technologies: PHP 7, MySQL design, optimization and development, MsSQL, noSQL (MongoDB, ElasticSearch), Zend Framework, Memcache, Gearman, Redis, RabbitMQ, Apache, Nginx, JavaScript (jQuery, Bootstrap, Angular), HTML 5, CSS 3, Varnish, Sphinx, Solr.<br><br>
+                    Development: Microservices, REST/SOAP APIs, Systems integration via APIs and/or files and direct database connection, CRM, ERM, Intranet Solutions, Google APIs (maps, sheets, analytics, shorturl, places, etc.), Facebook Open Graph, LinkedIN API, WebSockets, Socket.IO</p>
+                </div>
+
+              </div>
+
+              <div class="col-12 col-md-8 d-flex align-self-center flex-column">
+                <h3 class="h4">Mihai Cima sessions:</h3>
+
+                <div class="card bg-dark border-0 mb-2">
+                  <div class="card-body">
+                    <div class="row">
+
+                      <div class="col-12 col-md-3 text-white">
+                        <p class="mb-2">
+                          <i class="fa-solid fa-clock me-2"></i>
+                          09:53 - 23:53
+                        </p>
+                        <p class="mb-2">
+                          <i class="fa-solid fa-calendar me-2"></i>
+                          Oct 13, 2021
+                        </p>
+                        <p class="mb-2">
+                          <a href="#modal-speaker-collapse-1" class="text-decoration-none text-white" data-bs-toggle="collapse" role="button">
+                            <i class="fa-solid fa-calendar-plus me-2"></i>
+                            Add to calendar
+                          </a>
+                        </p>
+                        <div class="bg-primary rounded text-white p-2 collapse" id="modal-speaker-collapse-1">
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Apple</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Google <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Office 365 <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook.com <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Yahoo <small>(online)</small></a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-9">
+                        <h3 class="text-white h5">Democratization of technology and bridging the gap between systems</h3>
+                        <p class="text-secondary mb-0">He will go through the challenges of today markets and the benefits that our new platform brings to companies: User Experience; Open Architecture; Data Analytics; IoT & Telematics;</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card bg-dark border-0 mb-2">
+                  <div class="card-body">
+                    <div class="row">
+
+                      <div class="col-12 col-md-3 text-white">
+                        <p class="mb-2">
+                          <i class="fa-solid fa-clock me-2"></i>
+                          09:53 - 23:53
+                        </p>
+                        <p class="mb-2">
+                          <i class="fa-solid fa-calendar me-2"></i>
+                          Oct 13, 2021
+                        </p>
+                        <p class="mb-2">
+                          <a href="#modal-speaker-collapse-2" class="text-decoration-none text-white" data-bs-toggle="collapse" role="button">
+                            <i class="fa-solid fa-calendar-plus me-2"></i>
+                            Add to calendar
+                          </a>
+                        </p>
+                        <div class="bg-primary rounded text-white p-2 collapse" id="modal-speaker-collapse-2">
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Apple</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Google <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Office 365 <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook</a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Outlook.com <small>(online)</small></a>
+                          <a href="" class="btn btn-nav-link p-0 bg-transparent border-0 d-block text-start">Yahoo <small>(online)</small></a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-md-9">
+                        <h3 class="text-white h5">Democratization of technology and bridging the gap between systems</h3>
+                        <p class="text-secondary mb-0">He will go through the challenges of today markets and the benefits that our new platform brings to companies: User Experience; Open Architecture; Data Analytics; IoT & Telematics;</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
 </div>
 
 <script src="../assets/js/main.js"></script>
+<script src="../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 
 <script>
-  $('#input-group').on('change', function () {
-    $formCheck = $(this).closest('.form-check');
-    $formCheck.find('label').toggleClass('text-secondary');
-
-    $('.group-by-event').toggleClass('d-none');
-    $('.event-select2').toggleClass('d-none');
-
-    $('.group-by-type').toggleClass('d-none');
-    $('.type-select2').toggleClass('d-none');
+  $(document).on('click', '.btn-toggle-session', function () {
+    var $section = $(this).closest('.section-session');
+    $section.find('.card-session:not(:first)').toggleClass('d-none');
+    $section.find('.card-session:first').toggleClass('mb-4');
+    $section.find('.card-back').toggleClass('d-none');
+    $section.find('.btn-toggle-session').toggleClass('d-none');
   });
 
-  //Set Dropdown with SearchBox via dropdownAdapter option (https://stackoverflow.com/questions/35799854/how-to-add-selectall-using-dropdownadapter-on-select2-v4)
-  var Utils = $.fn.select2.amd.require('select2/utils');
-  var Dropdown = $.fn.select2.amd.require('select2/dropdown');
-  var DropdownSearch = $.fn.select2.amd.require('select2/dropdown/search');
-  var CloseOnSelect = $.fn.select2.amd.require('select2/dropdown/closeOnSelect');
-  var AttachBody = $.fn.select2.amd.require('select2/dropdown/attachBody');
-  var SingleSelection = $.fn.select2.amd.require('select2/selection/single');
-  var dropdownAdapter = Utils.Decorate(Utils.Decorate(Utils.Decorate(Dropdown, DropdownSearch), CloseOnSelect), AttachBody);
-
-  $('#input-type').select2({
-    multiple: true,
-    selectOnClose: false,
-    dropdownAdapter: dropdownAdapter,
-    selectionAdapter: SingleSelection,
-    minimumResultsForSearch: 0,
-    data: [
-      {
-        id: 0,
-        text: 'Sessions',
-        icon: '<i class="fa-solid fa-play"></i>',
-
-      },
-      {
-        id: 1,
-        text: 'Marketplace Product',
-        icon: '<i class="fa-solid fa-cart-shopping"></i>',
-      }
-    ],
-    templateResult: function (type) {
-      if (!type.id) {
-        return type.text;
-      }
-
-      if (type.selected) {
-        var $type = $('<div class="d-flex align-items-center"><div class="me-2">'+ type.icon +'</div><div>'+ type.text +'</div> <i class="fa-solid fa-circle-check ms-auto text-success"></i></div>');
-      } else {
-        var $type = $('<div class="d-flex align-items-center"><div class="me-2">'+ type.icon +'</div><div>'+ type.text +'</div></div>');
-      }
-
-      return $type;
-    },
-    templateSelection: function (type) {
-      var $type = $('<div class="d-flex align-items-center ms-1"><div class="me-2"><i class="fa-solid fa-box-archive"></i></div><div>All categories selected</div></div>');
-
-      return $type;
-    }
-  }).on('select2:opening select2:closing', function (event) {
-    var searchfield = $(this).parent().find('.select2-search__field');
-    searchfield.prop('disabled', true);
-  });
-
-  $('#input-event').select2({
-    multiple: true,
-    selectOnClose: false,
-    dropdownAdapter: dropdownAdapter,
-    selectionAdapter: SingleSelection,
-    minimumResultsForSearch: 0,
-    data: [
-      {
-        id: 0,
-        text: 'MyConnector Conferance',
-        datatime: '01 May 2022 - 15 Apr 2023',
-        image: '../assets/images/logo-ticket.png',
-
-      },
-      {
-        id: 0,
-        text: 'MyConnector Conferance',
-        datatime: '01 May 2022 - 15 Apr 2023',
-        image: '../assets/images/logo-ticket.png',
-      }
-    ],
-    templateResult: function (event) {
-      if (!event.id) {
-        return event.text;
-      }
-
-      if (event.selected) {
-        var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div> <i class="fa-solid fa-circle-check ms-auto text-success"></i></div>');
-      } else {
-        var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div></div>');
-      }
-
-      return $event;
-    },
-    templateSelection: function (event) {
-      var $event = $('<div class="d-flex align-items-center"><div class="me-2 dropdown-live-img d-flex align-items-center"><img src="'+ event.image +'" class="img-fluid"></div><div>'+ event.text +'<br><i class="fa-solid fa-calendar"></i> '+ event.datatime +'</div></div>');
-
-      return $event;
-    }
-  }).on('select2:opening select2:closing', function (event) {
-    var searchfield = $(this).parent().find('.select2-search__field');
-    searchfield.prop('disabled', true);
-  });
+  $('#datepicker').datepicker();
 
 </script>
 

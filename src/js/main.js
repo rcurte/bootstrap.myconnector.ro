@@ -20,14 +20,14 @@ $('#sidebar-toggle').on('click', function () {
 
 $('.show-filters').on('click', function () {
   $('.filters').removeClass('d-none');
-  $(this).addClass('d-none');
-  $('main').addClass('p-filter');
+  $(this).closest('.aside').addClass('d-none');
+  $('main').removeClass('has-aside').addClass('has-filter');
 });
 
 $('.close-filters').on('click', function () {
   $('.filters').addClass('d-none');
-  $('.show-filters').removeClass('d-none');
-  $('main').removeClass('p-filter');
+  $('.show-filters').closest('.aside').removeClass('d-none');
+  $('main').removeClass('has-filter');
 });
 $('#btn-menu').on('click', function () {
   $(this).find('i').toggleClass('d-none');
@@ -35,4 +35,18 @@ $('#btn-menu').on('click', function () {
 
   //Sidebar
   $('.sidebar').removeClass('sidebar-min').toggleClass('d-none d-flex w-100 h-100').find('ul').toggleClass('flex-grow-1 justify-content-center h-100');
+});
+
+$('.btn-chat-minimize,.btn-chat-maximize').on('click', function () {
+  var $cardChat = $(this).closest('.card-floating-chat');
+
+  $cardChat.find('.btn-chat-minimize').toggleClass('d-none');
+  $cardChat.find('.btn-chat-maximize').toggleClass('d-none');
+  $cardChat.find('.card-footer').toggleClass('d-none');
+  $cardChat.find('.card-body').toggleClass('d-none');
+  $cardChat.toggleClass('h-auto');
+
+});
+$('.btn-chat-close').on('click', function () {
+  $(this).closest('.card-floating-chat').remove();
 });
