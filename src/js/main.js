@@ -57,6 +57,16 @@ $('.show-aside').on('click', function () {
 });
 
 $('.expand-aside').on('click', function () {
+  $('.expand-aside').toggleClass('d-none');
   $('.aside-box').toggleClass('w-75');
   $('main').toggleClass('has-aside-expand');
+  $('.col-speaker').toggleClass('w-100');
+});
+$('.close-aside').on('click', function () {
+  $('.aside-box').removeClass('w-75');
+  $('main').removeClass('has-aside-expand');
+  $('.col-speaker').removeClass('w-100');
+  $('.aside-box').addClass('d-none');
+  $('.aside').removeClass('d-none');
+  $('main').addClass('has-aside').removeClass('has-filter');
 });

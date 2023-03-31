@@ -12827,8 +12827,8 @@ html {
 .aside-min .btn-nav-link i {
   margin-right: 0 !important;
 }
-.sidebar-min .btn-nav-link span,
-.aside-min .btn-nav-link span {
+.sidebar-min .btn-nav-link span:not(.badge-count),
+.aside-min .btn-nav-link span:not(.badge-count) {
   display: none;
 }
 
@@ -13212,6 +13212,12 @@ html {
   }
   .card-event-added {
     width: 50%;
+  }
+  .aside-content-tab {
+    height: calc(100vh - 270px);
+  }
+  .expand-aside {
+    display: none;
   }
 }
 @media (max-width: 575.98px) {

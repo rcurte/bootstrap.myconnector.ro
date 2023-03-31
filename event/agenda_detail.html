@@ -381,7 +381,7 @@
           <div class="col-12">
             <h2 class="h4 mb-3">Speakers</h2>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 mb-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-3 col-speaker">
             <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
               <div class="rounded-circle thumbnail-avatar position-relative">
                 <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
@@ -398,7 +398,7 @@
               </div>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 mb-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-3 col-speaker">
             <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
               <div class="rounded-circle thumbnail-avatar position-relative">
                 <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
@@ -415,7 +415,7 @@
               </div>
             </a>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 mb-3">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-3 col-speaker">
             <a href="" class="text-decoration-none d-flex flex-row align-items-center" data-bs-toggle="modal" data-bs-target="#modal-speaker">
               <div class="rounded-circle thumbnail-avatar position-relative">
                 <img src="https://api.myconnector.ro/files/events/speakers/10/dfc9faaef167e76b73c93dd25e93ddd6.png" class="img-fluid border border-3 border-dark rounded-circle">
@@ -552,7 +552,7 @@
         <div class="border-bottom border-primary px-2 pb-2 d-flex mb-2 justify-content-between align-items-center">
           <span class="aside-title">Session chat</span>
           <div class="">
-            <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 border-0 d-none expand-aside"><i class="fa-solid fa-compress"></i></button>
+            <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 border-0 me-2 d-none expand-aside"><i class="fa-solid fa-compress"></i></button>
             <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 border-0 me-2 expand-aside"><i class="fa-solid fa-expand"></i></button>
             <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 border-0 close-aside"><i class="fa-solid fa-xmark"></i></button>
           </div>
@@ -566,6 +566,7 @@
               >
                 <i class="fa-solid fa-message fs-4"></i>
                 <span class="badge-active bottom-4 end-4"></span>
+                <span class="badge-count top-4 end-4">9+</span>
               </button>
 
             </li>
@@ -676,27 +677,27 @@
           </div>
           <div class="tab-pane" id="aside-poll" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
             <div class="aside-content-tab overflow-auto">
-              <div class="p-2">
+              <div class="p-2 mb-3">
                 <h3 class="h5">Intrebare intrebatoare</h3>
 
                 <div class="form-check d-flex align-items-center mb-1">
                   <input class="form-check-input p-2 me-2 mb-1" type="radio" name="flexRadioDefault" id="answer-1" checked>
                   <label class="form-check-label" for="answer-1">
-                    Default checked radio
+                    Raspuns 1
                   </label>
                 </div>
 
                 <div class="form-check d-flex align-items-center mb-1">
                   <input class="form-check-input p-2 me-2 mb-1" type="radio" name="flexRadioDefault" id="answer-2">
                   <label class="form-check-label" for="answer-2">
-                    Default checked radio
+                    Raspuns 2
                   </label>
                 </div>
 
                 <div class="form-check d-flex align-items-center mb-1">
                   <input class="form-check-input p-2 me-2 mb-1" type="radio" name="flexRadioDefault" id="answer-3">
                   <label class="form-check-label" for="answer-3">
-                    Default checked radio
+                    Raspuns 3
                   </label>
                 </div>
 
@@ -707,7 +708,36 @@
             </button>
           </div>
           <div class="tab-pane" id="aside-quiz">
-            Session Quiz
+            <div class="aside-content-tab overflow-auto">
+              <div class="p-2 mb-3">
+                <h3 class="h5"><span class="text-secondary">(<span class="text-success">1</span>/1)</span> Care este cea mai folosita moneda din lume?</h3>
+
+                <div class="form-check d-flex align-items-center mb-1">
+                  <input class="form-check-input p-2 me-2 mb-1" type="checkbox" name="flexRadioDefault" id="answer-11" checked>
+                  <label class="form-check-label" for="answer-11">
+                    Euro
+                  </label>
+                </div>
+
+                <div class="form-check d-flex align-items-center mb-1">
+                  <input class="form-check-input p-2 me-2 mb-1" type="checkbox" name="flexRadioDefault" id="answer-22">
+                  <label class="form-check-label" for="answer-22">
+                    Dolar
+                  </label>
+                </div>
+
+                <div class="form-check d-flex align-items-center mb-1">
+                  <input class="form-check-input p-2 me-2 mb-1" type="checkbox" name="flexRadioDefault" id="answer-33">
+                  <label class="form-check-label" for="answer-33">
+                    Si LEi
+                  </label>
+                </div>
+
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary w-100">
+              Submit answer <span class="text-secondary">(<span class="text-success">1</span>/1)</span>
+            </button>
           </div>
         </div>
     </div>
@@ -716,18 +746,24 @@
       <div class="m-auto">
         <button type="button" class="btn btn-nav-link w-100 position-relative show-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Session chat">
           <i class="fa-solid fa-message fs-4"></i>
+          <span>Session chat</span>
+          <span class="badge-count top-4 end-4">9+</span>
         </button>
         <button type="button" class="btn btn-nav-link w-100 position-relative show-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Session Q&A">
           <i class="fa-regular fa-circle-question fs-4"></i>
+          <span>Session Q&A</span>
         </button>
         <button type="button" class="btn btn-nav-link w-100 position-relative show-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Session Poll">
           <i class="fa-solid fa-square-poll-horizontal fs-4"></i>
+          <span>Session Poll</span>
         </button>
         <button type="button" class="btn btn-nav-link w-100 position-relative show-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Session Quiz">
           <i class="fa-solid fa-check-to-slot fs-4"></i>
+          <span>Session Quiz</span>
         </button>
         <button type="button" class="btn btn-nav-link w-100 d-none d-lg-block show-aside" id="btn-toggle-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Expand menu">
           <i class="fa-solid fa-chevron-left fs-4"></i>
+          <span>Expand menu</span>
         </button>
       </div>
     </div>

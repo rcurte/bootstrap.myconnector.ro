@@ -3322,8 +3322,18 @@ jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-aside').on('click', functio
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('has-aside').addClass('has-filter');
 });
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('.expand-aside').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.expand-aside').toggleClass('d-none');
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('.aside-box').toggleClass('w-75');
   jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').toggleClass('has-aside-expand');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.col-speaker').toggleClass('w-100');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.close-aside').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.aside-box').removeClass('w-75');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('has-aside-expand');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.col-speaker').removeClass('w-100');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.aside-box').addClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.aside').removeClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').addClass('has-aside').removeClass('has-filter');
 });
 
 /***/ }),
