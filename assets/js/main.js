@@ -3316,6 +3316,15 @@ jquery__WEBPACK_IMPORTED_MODULE_2___default()('.btn-chat-minimize,.btn-chat-maxi
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('.btn-chat-close').on('click', function () {
   jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).closest('.card-floating-chat').remove();
 });
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.show-aside').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.aside-box').removeClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).closest('.aside').addClass('d-none');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').removeClass('has-aside').addClass('has-filter');
+});
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.expand-aside').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.aside-box').toggleClass('w-75');
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('main').toggleClass('has-aside-expand');
+});
 
 /***/ }),
 

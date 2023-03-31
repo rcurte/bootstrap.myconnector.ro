@@ -50,3 +50,13 @@ $('.btn-chat-minimize,.btn-chat-maximize').on('click', function () {
 $('.btn-chat-close').on('click', function () {
   $(this).closest('.card-floating-chat').remove();
 });
+$('.show-aside').on('click', function () {
+  $('.aside-box').removeClass('d-none');
+  $(this).closest('.aside').addClass('d-none');
+  $('main').removeClass('has-aside').addClass('has-filter');
+});
+
+$('.expand-aside').on('click', function () {
+  $('.aside-box').toggleClass('w-75');
+  $('main').toggleClass('has-aside-expand');
+});
