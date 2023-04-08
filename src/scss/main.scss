@@ -177,6 +177,9 @@ html {
 .has-filter {
   padding-right: 350px;
 }
+.p-aside {
+  padding-right: 200px;
+}
 .thumbnail-avatar {
   width: 150px;
   height: 150px;
@@ -210,7 +213,8 @@ html {
     left: 8px
   }
 }
-.sidebar {
+.sidebar,
+.aside {
   width: 200px;
   z-index: 10;
   ul {
@@ -222,6 +226,13 @@ html {
 .logo-event-header {
   max-height: 72px;
 }
+
+.filters,
+.aside-box {
+  width: 350px;
+  z-index: 10;
+}
+
 .sidebar-min,
 .aside-min {
   z-index: 10;
@@ -252,11 +263,6 @@ html {
                   $dark
   );
   position: relative;
-}
-.filters,
-.aside-box {
-  width: 350px;
-  z-index: 10;
 }
 .has-aside-expand {
   padding-right: 75%;
@@ -539,6 +545,74 @@ html {
 .aside-content-tab {
   height: calc(100vh - 350px);
 }
+.card-partner {
+  cursor: pointer;
+  .card-body {
+    height: 90px;
+    overflow: hidden;
+  }
+  img {
+    height: 180px;
+    background-color: $white;
+    object-fit: contain;
+  }
+  .card-content {
+    height: 180px;
+    background-color: $white;
+    &:hover {
+      p {
+        display: flex !important;
+      }
+    }
+  }
+}
+.popover-rooms {
+  min-width: 300px;
+  .popover-img {
+    width: 60px;
+    height: 60px;
+    img {
+      object-fit: contain;
+    }
+  }
+}
+.footer-booth-img {
+  width: 60px;
+  height: 60px;
+  img {
+    object-fit: contain;
+  }
+}
+.card-partner-search {
+  a {
+    max-height: 80px;
+  }
+  img {
+    object-fit: cover;
+  }
+}
+.floating-chatroom,
+.floating-question,
+.floating-search {
+  width: 400px;
+}
+.floating-modal {
+  backdrop-filter: blur(30px);
+}
+.btn-close-floating {
+  top: 32px;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+}
+.card-collection {
+  width: 150px;
+}
+.overflow-wrap {
+  overflow-wrap: anywhere;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
 @include media-breakpoint-down(lg) {
   .sidebar {
     z-index: 1032;
@@ -613,6 +687,19 @@ html {
   }
   .expand-aside {
     display: none;
+  }
+  .floating-chatroom,
+  .floating-question,
+  .floating-search {
+    width: 100%;
+  }
+  .box-floating {
+    width: 100%;
+  }
+  .floating-question {
+    .card {
+      height: 100% !important;
+    }
   }
 }
 @include media-breakpoint-down(sm) {

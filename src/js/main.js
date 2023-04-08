@@ -55,7 +55,13 @@ $('.show-aside').on('click', function () {
   $(this).closest('.aside').addClass('d-none');
   $('main').removeClass('has-aside').addClass('has-filter');
 });
+$('.toggle-aside').on('click', function () {
+  $('.aside').toggleClass('aside-min');
+  $('main').toggleClass('p-aside');
 
+  $('.aside-floating').toggleClass('p-aside');
+
+});
 $('.expand-aside').on('click', function () {
   $('.expand-aside').toggleClass('d-none');
   $('.aside-box').toggleClass('w-75');
@@ -63,10 +69,31 @@ $('.expand-aside').on('click', function () {
   $('.col-speaker').toggleClass('w-100');
 });
 $('.close-aside').on('click', function () {
-  $('.aside-box').removeClass('w-75');
-  $('main').removeClass('has-aside-expand');
+  $('.aside-box').removeClass('w-75').addClass('d-none');
   $('.col-speaker').removeClass('w-100');
-  $('.aside-box').addClass('d-none');
-  $('.aside').removeClass('d-none');
-  $('main').addClass('has-aside').removeClass('has-filter');
+  $('.aside').removeClass('d-none').addClass('aside-min');
+  $('main').addClass('has-aside').removeClass('has-filter p-aside has-aside-expand has-filter');
+});
+
+$('[data-show-floating]').on('click', function () {
+  $(this).closest('.aside').find('.badge-active').removeClass('d-none').addClass('d-none');
+  $(this).closest('.aside').find('.active').removeClass('active')
+  $('.box-floating').find('[class^="floating-"]').removeClass('d-none').addClass('d-none');
+
+  var targetSelector = '.' + $(this).data('show-floating');
+  var aditionalParentClass = $(targetSelector).data('parent-class');
+
+  $('.box-floating').removeClass('end-0 top-0 bottom-0 start-0 d-flex').addClass(aditionalParentClass);
+  $(targetSelector).removeClass('d-none');
+  $(this).addClass('active');
+  $(this).find('.badge-active').removeClass('d-none');
+});
+$('[data-close-floating]').on('click', function () {
+  $('.box-floating').removeClass('end-0 top-0 bottom-0 start-0 d-flex');
+
+  $('.aside').find('.badge-active').removeClass('d-none').addClass('d-none');
+  $('.aside').find('.active').removeClass('active');
+
+  var targetSelector = '.' + $(this).data('close-floating');
+  $(targetSelector).addClass('d-none');
 });

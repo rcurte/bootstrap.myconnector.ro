@@ -12769,6 +12769,10 @@ html {
   padding-right: 350px;
 }
 
+.p-aside {
+  padding-right: 200px;
+}
+
 .thumbnail-avatar {
   width: 150px;
   height: 150px;
@@ -12802,16 +12806,24 @@ html {
   left: 8px;
 }
 
-.sidebar {
+.sidebar,
+.aside {
   width: 200px;
   z-index: 10;
 }
-.sidebar ul li {
+.sidebar ul li,
+.aside ul li {
   max-height: 48px;
 }
 
 .logo-event-header {
   max-height: 72px;
+}
+
+.filters,
+.aside-box {
+  width: 350px;
+  z-index: 10;
 }
 
 .sidebar-min,
@@ -12848,12 +12860,6 @@ html {
   --bs-btn-disabled-bg: #242542;
   --bs-btn-disabled-border-color: #242542;
   position: relative;
-}
-
-.filters,
-.aside-box {
-  width: 350px;
-  z-index: 10;
 }
 
 .has-aside-expand {
@@ -13147,6 +13153,84 @@ html {
   height: calc(100vh - 350px);
 }
 
+.card-partner {
+  cursor: pointer;
+}
+.card-partner .card-body {
+  height: 90px;
+  overflow: hidden;
+}
+.card-partner img {
+  height: 180px;
+  background-color: #fff;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.card-partner .card-content {
+  height: 180px;
+  background-color: #fff;
+}
+.card-partner .card-content:hover p {
+  display: flex !important;
+}
+
+.popover-rooms {
+  min-width: 300px;
+}
+.popover-rooms .popover-img {
+  width: 60px;
+  height: 60px;
+}
+.popover-rooms .popover-img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer-booth-img {
+  width: 60px;
+  height: 60px;
+}
+.footer-booth-img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-partner-search a {
+  max-height: 80px;
+}
+.card-partner-search img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.floating-chatroom,
+.floating-question,
+.floating-search {
+  width: 400px;
+}
+
+.floating-modal {
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+}
+
+.btn-close-floating {
+  top: 32px;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.card-collection {
+  width: 150px;
+}
+
+.overflow-wrap {
+  overflow-wrap: anywhere;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 @media (max-width: 991.98px) {
   .sidebar {
     z-index: 1032;
@@ -13218,6 +13302,17 @@ html {
   }
   .expand-aside {
     display: none;
+  }
+  .floating-chatroom,
+  .floating-question,
+  .floating-search {
+    width: 100%;
+  }
+  .box-floating {
+    width: 100%;
+  }
+  .floating-question .card {
+    height: 100% !important;
   }
 }
 @media (max-width: 575.98px) {
