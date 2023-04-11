@@ -28,6 +28,8 @@ $accordion-icon-active-color: #fff;
 $popover-body-padding-y: .5em !default;
 $popover-body-padding-x: 1em !default;
 
+$zindex-popover: 1090 !default;
+
 @import "~bootstrap/scss/bootstrap";
 @import "~select2/src/scss/core";
 @import "~select2-bootstrap-5-theme/src/select2-bootstrap-5-theme";
@@ -613,6 +615,114 @@ html {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+.networking-chat {
+  height: calc(100vh - 303px);
+}
+.networking-conversation {
+  cursor: pointer;
+  position: relative;
+}
+.networking-conversation-active {
+  background-color: #3f4567 !important;
+  &:after {
+    position: absolute;
+    right: -6px;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #3f4567;
+  }
+}
+.networking-menu {
+  a {
+    color: $secondary;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+.card-attendee {
+  cursor: pointer;
+  &:hover {
+    .card-img-overlay {
+      background-color: $primary;
+    }
+    .card-attendee-info {
+      div {
+        display: flex !important;
+      }
+    }
+  }
+  .card-img {
+    height: 300px;
+    object-fit: cover;
+  }
+  .card-img-overlay {
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30%;
+      background: linear-gradient(to top, #242542, rgba(36, 37, 66, 0));
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    > div {
+      z-index: 1;
+    }
+  }
+  button:hover,
+  a:hover {
+    color: $success !important;
+  }
+}
+.card-eposter {
+  cursor: pointer;
+  &:hover {
+    .card-img-overlay {
+      justify-content: start !important;
+      background-color: $primary;
+      .card-text {
+        display: none;
+      }
+      .card-full-text {
+        display: block !important;
+      }
+    }
+  }
+  .card-img {
+    height: 300px;
+    object-fit: cover;
+  }
+  .card-img-overlay {
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30%;
+      background: linear-gradient(to top, #242542, rgba(36, 37, 66, 0));
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    > div {
+      z-index: 1;
+    }
+  }
+}
+
+.fa-star-active {
+  color: #EFC529;
+}
+
 @include media-breakpoint-down(lg) {
   .sidebar {
     z-index: 1032;
@@ -701,7 +811,30 @@ html {
       height: 100% !important;
     }
   }
+  .networking-conversations {
+    overflow: auto;
+  }
 }
+.item-attendee {
+  width: 70px;
+  height: 70px;
+  margin-left: -5px;
+  img {
+    object-fit: cover;
+  }
+  &:first-child {
+    padding-left: 5px;
+  }
+}
+.items-attendee {
+  &:hover {
+    .all-attendee {
+      cursor: pointer;
+      display: flex !important;
+    }
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .nav-fill{
     .nav-item {
