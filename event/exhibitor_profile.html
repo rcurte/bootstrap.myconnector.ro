@@ -344,10 +344,9 @@
         </li>
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
-          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100 active" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tickets">
+          <a href="" class="btn btn-nav-link d-flex align-items-center py-0 w-100" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tickets">
             <i class="fa-solid fa-address-card me-2 fs-4"></i>
-            <span>Register</span>
-            <div class="badge-active bottom-4 end-4"></div>
+            <span>Tickets</span>
           </a>
         </li>
 
@@ -362,513 +361,147 @@
 
     </div>
 
-    <main class="flex-grow-1 has-sidebar has-aside">
-      <div class="container-xxl pt-4">
-        <div class="d-flex mb-3">
-          <h2 class="h5 me-2 mb-0">Get tickets for IUF București 2023</h2>
-          <span class="text-secondary me-2">18  - 19 Mar 2023</span>
-          <span class="text-secondary me-2">Hybrid Event</span>
-        </div>
-        
-        <div class="mb-3 text-secondary">
-          You can register at this event by selecting one or multiple tickets available below. <br>
-          In case you acquire multiple tickets, you will be able to assign them to other people at a later stage.
-        </div>
-
-        <ul class="nav nav-pills nav-fill gap-2 flex-nowrap overflow-auto" id="pills-tab" role="tablist">
-          <li class="nav-item rounded-top" role="presentation">
-            <button class="btn btn-nav-link bg-primary w-100 mb-2" id="ticket-tab" data-bs-toggle="tab" data-bs-target="#ticket" type="button" role="tab" aria-controls="ticket" aria-selected="true">
-              <span class="me-1">1.</span>Select tickets
-              <i class="fa-solid fa-check position-absolute top-4 end-4 text-success"></i>
-              <div class="badge-active top-4 end-4 d-none"></div>
-            </button>
-          </li>
-          <li class="nav-item rounded-top" role="presentation">
-            <button class="btn btn-nav-link bg-primary w-100 mb-2" id="information-tab" data-bs-toggle="tab" data-bs-target="#information" type="button" role="tab" aria-controls="information" aria-selected="false">
-              <span class="me-1">2.</span>Ticket information
-              <i class="fa-solid fa-check position-absolute top-4 end-4 text-success"></i>
-              <div class="badge-active top-4 end-4 d-none"></div>
-            </button>
-          </li>
-          <li class="nav-item rounded-top" role="presentation">
-            <button class="btn btn-nav-link bg-primary w-100 mb-2" id="preview-tab" data-bs-toggle="tab" data-bs-target="#preview" type="button" role="tab" aria-controls="preview" aria-selected="false">
-              <span class="me-1">3.</span>Tickets preview
-              <i class="fa-solid fa-check position-absolute top-4 end-4 text-success"></i>
-              <div class="badge-active top-4 end-4 d-none"></div>
-            </button>
-          </li>
-          <li class="nav-item rounded-top" role="presentation">
-            <button class="btn btn-nav-link bg-primary w-100 mb-2" id="billing-tab" data-bs-toggle="tab" data-bs-target="#billing" type="button" role="tab" aria-controls="billing" aria-selected="false">
-              <span class="me-1">4.</span>Billing information
-              <i class="fa-solid fa-check position-absolute top-4 end-4 text-success"></i>
-              <div class="badge-active top-4 end-4 d-none"></div>
-            </button>
-          </li>
-          <li class="nav-item rounded-top bg-primary" role="presentation">
-            <button class="btn btn-nav-link bg-primary w-100 mb-2 active" id="registration-tab" data-bs-toggle="tab" data-bs-target="#registration" type="button" role="tab" aria-controls="registration" aria-selected="false">
-              <span class="me-1">4.</span>Finish registration
-              <i class="fa-solid fa-check position-absolute top-4 end-4 text-success d-none"></i>
-              <div class="badge-active top-4 end-4"></div>
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane show" id="ticket" role="tabpanel" aria-labelledby="ticket-tab" tabindex="0">
-
-            <div class="bg-primary p-3 pt-0 rounded-bottom rounded-end mb-3">
-              <div class="d-flex mb-3">
-                <span class="badge bg-success rounded-0 py-1 px-2 fs-6 fw-semibold">Note</span>
-              </div>
-              <p class="mb-0">
-                You can register at this event by selecting one or multiple tickets available below.
-              </p>
-            </div>
-
-            <div class="bg-primary mb-3 rounded">
-              <div class="row">
-                
-                <div class="col-12 col-md-8 ticket-border position-relative">
-                  <div class="crop-ticket-top"></div>
-                  <div class="crop-ticket-bottom"></div>
-                  <div class="d-flex justify-content-between p-5">
-                    <div class="">
-                      <h3 class="h5">testiare</h3>
-                      <p class="mb-0 text-secondary">testt</p>
-                    </div>
-
-                    <div class="text-success fs-4 fw-semibold">
-                      Free
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="d-flex justify-content-center align-items-center h-100 d-none">
-                    Unavailable
-                  </div>
-
-                  <div class="d-flex justify-content-center align-items-center h-100">
-                    <button type="button" class="btn btn-nav-link bg-dark border-dark">
-                      <i class="fa-solid fa-minus"></i>
-                    </button>
-                    <div class="text-center p-4 fs-5">0</div>
-                    <button type="button" class="btn btn-nav-link bg-dark border-dark">
-                      <i class="fa-solid fa-plus"></i>
-                    </button>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-
-            <div class="bg-primary mb-3 rounded">
-              <div class="row">
-
-                <div class="col-12 col-md-8 ticket-border position-relative">
-                  <div class="crop-ticket-top"></div>
-                  <div class="crop-ticket-bottom"></div>
-                  <div class="d-flex justify-content-between p-5">
-                    <div class="">
-                      <h3 class="h5">testiare</h3>
-                      <p class="mb-0 text-secondary">testt</p>
-                    </div>
-
-                    <div class="text-success fs-4 fw-semibold">
-                      RON 10
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="d-flex justify-content-center align-items-center h-100">
-                    Unavailable
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="bg-primary mb-3 rounded">
-              <div class="row">
-
-                <div class="col-12 col-md-8 ticket-border position-relative">
-                  <div class="crop-ticket-top"></div>
-                  <div class="crop-ticket-bottom"></div>
-                  <div class="d-flex justify-content-between p-5">
-                    <div class="">
-                      <h3 class="h5">testiare</h3>
-                      <p class="mb-0 text-secondary">testt</p>
-                    </div>
-
-                    <div class="text-danger fs-4 fw-semibold">
-                      SOLD OUT
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="d-flex justify-content-center align-items-center h-100">
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-12 col-md-8 d-inline-flex mb-3 mb-md-0">
-                <div class="bg-primary me-2 rounded d-inline-flex p-2 align-items-center">
-                  <label for="input-ticket-discount" class="small col-md-auto me-2">Insert discount code, here:</label>
-                  <input type="text" class="form-control form-control-primary bg-dark" id="input-ticket-discount" placeholder="*******">
-                </div>
-
-                <div class="align-self-center">
-                  <button type="button" class="btn btn-primary h-auto">Apply</button>
+    <main class="flex-grow-1 h-main has-sidebar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-4 mb-3">
+            <div class="card bg-dark shadow border-0 h-100">
+              <div class="card-header px-3 py-0 border-0">
+                <div class="rounded-bottom p-3 card-header-blue">
+                  Basic details
                 </div>
               </div>
-              <div class="col-12 col-md-4">
-                <button type="button" class="btn btn-primary w-100">Next step</button>
-              </div>
-            </div>
-
-          </div>
-          <div class="tab-pane show" id="information" role="tabpanel" aria-labelledby="information-tab" tabindex="0">
-            
-            <div class="bg-primary p-3 pt-0 rounded mb-3">
-              <div class="d-flex mb-3">
-                <span class="badge bg-success rounded-0 py-1 px-2 fs-6 fw-semibold">Note</span>
-              </div>
-              <p class="mb-0">
-                Please fill in the form below in order to continue your registration process.<br>
-                Be wary of the required fields (marked with *), you must fill it in, otherwise the registration process cannot continue.
-              </p>
-            </div>
-
-            <div class="rounded border border-2 border-primary p-4">
-
-              <div class="mb-3">
-                <label for="input-firstname" class="form-label"><span class="me-1 text-danger">*</span>Firstname</label>
-                <input type="text" class="form-control form-control-primary is-invalid" id="input-firstname" placeholder="Firstname">
-                <div class="invalid-feedback invalid-arrow bg-white px-3 py-1 rounded-1 position-relative">Erroare</div>
-              </div>
-
-              <div class="mb-3">
-                <label for="input-lastname" class="form-label"><span class="me-1 text-danger">*</span>Lastname</label>
-                <input type="text" class="form-control form-control-primary" id="input-lastname" placeholder="Lastname">
-              </div>
-
-              <div class="mb-3">
-                <label for="input-email" class="form-label"><span class="me-1 text-danger">*</span>Email</label>
-                <input type="text" class="form-control form-control-primary" id="input-email" placeholder="Email">
-              </div>
-
-              <div class="mb-3">
-                <label for="input-phone" class="form-label"><span class="me-1 text-danger">*</span>Phone</label>
-                <div class="input-group">
-                  <div class="bg-primary">
-                    <select name="phone_prefix" id="input-phone-prefix" data-theme="bootstrap-dark-5">
-
-                    </select>
-                  </div>
-                  <input type="text" class="form-control form-control-primary ps-0" id="input-phone" placeholder="Phone">
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="input-file" class="form-label">File</label>
-                <div class="input-group">
-                  <input type="file" class="form-control form-control-primary d-none-choose" id="input-file" placeholder="File">
-                  <label class="input-group-text bg-primary text-white border-0 fs-5" for="input-file"><i class="fa-solid fa-cloud-arrow-up"></i></label>
-                </div>
-              </div>
-
-              <div class="form-check d-flex align-items-start">
-                <input class="form-check-input p-2" type="checkbox" value="1" id="input-terms">
-                <label class="form-check-label ms-2" for="input-terms">
-                  <span class="text-danger">*</span> I agree to the <a href="#" class="text-success">Terms and Conditions</a> of the event organiser.
-                </label>
-              </div>
-
-              <div class="form-check d-flex align-items-start">
-                <input class="form-check-input p-2" type="checkbox" value="1" id="input-personal-data">
-                <label class="form-check-label ms-2" for="input-personal-data">
-                  <span class="text-danger">*</span> I agree to share my personal data completed in the registration form with the partners/exhibitors which I will interact with and/or exchange information during the event. For the detailed list of event partners please consult this <a href="#" class="text-success">link</a>.
-                </label>
-              </div>
-
-              <div class="form-check d-flex align-items-start">
-                <input class="form-check-input p-2" type="checkbox" value="1" id="input-network">
-                <label class="form-check-label ms-2" for="input-network">
-                  I agree to be part of the event networking area in order to connect with top industry professionals. I agree to share my email address and data with event partners.
-                </label>
-              </div>
-            </div>
-
-            <div class="row my-3">
-              <div class="col-12 col-md-4 offset-md-8">
-                <button type="button" class="btn btn-primary w-100">Next step</button>
-              </div>
-            </div>
-
-          </div>
-          <div class="tab-pane show" id="preview" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
-
-            <div class="bg-primary p-3 pt-0 rounded mb-3">
-              <div class="d-flex mb-3">
-                <span class="badge bg-success rounded-0 py-1 px-2 fs-6 fw-semibold">Note</span>
-              </div>
-              <p class="mb-0">
-                Preview or change the registration info that you added.<br>
-                If there is something you missed, use the action buttons alongside each ticket to modify the info.
-              </p>
-            </div>
-
-            <div class="bg-primary mb-3 rounded">
-              <div class="row">
-
-                <div class="col-12 col-md-8 ticket-border position-relative">
-                  <div class="crop-ticket-top"></div>
-                  <div class="crop-ticket-bottom"></div>
-                  <div class="d-flex justify-content-between p-5">
-                    <div class="">
-                      <h3 class="h5">testiare</h3>
-                      <p class="mb-0 text-secondary">testt</p>
-                    </div>
-
-                    <button type="button" class="btn btn-nav-link bg-transparent border-0" data-bs-toggle="modal" data-bs-target="#modal-ticket-edit">
-                      <i class="fa-solid fa-pen fs-4"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-12 col-md-4">
-                  <div class="d-flex justify-content-center align-items-center h-100 text-success fs-4 fw-semibold">
-                    RON 10
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-          <div class="tab-pane show" id="billing" role="tabpanel" aria-labelledby="billing-tab" tabindex="0">
-            <div class="bg-primary p-3 pt-0 rounded mb-3">
-              <div class="d-flex mb-3">
-                <span class="badge bg-success rounded-0 py-1 px-2 fs-6 fw-semibold">Note</span>
-              </div>
-              <p class="mb-0">
-                Add the billing info required to finalize the registration process.
-              </p>
-            </div>
-
-            <div class="rounded border border-2 border-primary p-4">
-              <h3 class="h4 mb-4">General information</h3>
-
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="mb-3">
-                    <label for="billing-firstname" class="form-label"><span class="me-1 text-danger">*</span>Firstname</label>
-                    <input type="text" class="form-control form-control-primary" id="billing-firstname" placeholder="Firstname">
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="mb-3">
-                    <label for="billing-lastname" class="form-label"><span class="me-1 text-danger">*</span>Lastname</label>
-                    <input type="text" class="form-control form-control-primary" id="billing-lastname" placeholder="Lastname">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-6">
-                  <div class="mb-3">
-                    <label for="billing-email" class="form-label"><span class="me-1 text-danger">*</span>E-mail</label>
-                    <input type="email" class="form-control form-control-primary" id="billing-email" placeholder="E-mail">
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  <div class="mb-3">
-                    <label for="billing-phone" class="form-label"><span class="me-1 text-danger">*</span>Phone number</label>
-                    <input type="text" class="form-control form-control-primary" id="billing-phone" placeholder="Phone number">
-                  </div>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="billing-type" class="form-label"><span class="me-1 text-danger">*</span>Invoice type</label>
-                <select name="" id="billing-type" class="js-select2" data-placeholder="Select invoice type" data-theme="bootstrap-dark-5" data-width="100%" data-minimum-results-for-search="Infinity">
-                  <option value=""></option>
-                  <option value="company">Company</option>
-                  <option value="personal">Personal</option>
-                </select>
-              </div>
-              
-              <div class="d-none" id="billing-personal">
+              <div class="card-body">
                 <div class="mb-3">
-                  <label for="billing-personal-country" class="form-label"><span class="me-1 text-danger">*</span>Country</label>
-                  <select name="" id="billing-personal-country" class="js-select2" data-placeholder="Select country" data-theme="bootstrap-dark-5" data-width="100%">
-                    <option value=""></option>
-                    <option value="RO">Romania</option>
-                    <option value="MD">Moldova</option>
+                  <label for="input-company-name" class="form-label">Company's name</label>
+                  <input type="text" class="form-control form-control-primary" id="input-company-name" placeholder="Company's name">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-country" class="form-label">Country</label>
+                  <select name="" id="input-country" class="form-control js-select2" data-theme="bootstrap-dark-5" data-placeholder="Select country">
+                    <option value="1">Test 1</option>
+                    <option value="2">Test 3</option>
+                    <option value="3">Test 4</option>
                   </select>
                 </div>
 
                 <div class="mb-3">
-                  <label for="billing-personal-county" class="form-label"><span class="me-1 text-danger">*</span>County</label>
-                  <select name="" id="billing-personal-county" class="js-select2" data-placeholder="Select county" data-theme="bootstrap-dark-5" data-width="100%">
-                    <option value=""></option>
-                    <option value="BV">Brasov</option>
-                    <option value="IS">Iasi</option>
-                  </select>
+                  <label for="input-city" class="form-label">City</label>
+                  <input type="text" class="form-control form-control-primary" id="input-city" placeholder="City">
                 </div>
 
                 <div class="mb-3">
-                  <label for="billing-personal-city" class="form-label"><span class="me-1 text-danger">*</span>City</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-personal-city" placeholder="Fill in your city">
+                  <label for="input-address" class="form-label">Address</label>
+                  <input type="text" class="form-control form-control-primary" id="input-address" placeholder="Address">
                 </div>
-
-                <div class="mb-3">
-                  <label for="billing-personal-address" class="form-label"><span class="me-1 text-danger">*</span>Address</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-personal-address" placeholder="Fill in your address">
-                </div>
-
-                <div class="mb-3">
-                  <label for="billing-personal-postal-code" class="form-label"><span class="me-1 text-danger">*</span>Postal code</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-personal-postal-code" placeholder="Fill in your postal code">
-                </div>
-
               </div>
-
-              <div class="d-none" id="billing-company">
-
-                <div class="mb-3">
-                  <label for="billing-company-name" class="form-label"><span class="me-1 text-danger">*</span>Company name</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-company-name" placeholder="Fill in your company name">
-                </div>
-
-                <div class="mb-3">
-                  <label for="billing-company-vat" class="form-label"><span class="me-1 text-danger">*</span>VAT ID</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-company-vat" placeholder="Fill in your VAT ID">
-                </div>
-
-                <div class="mb-3">
-                  <label for="billing-company-country" class="form-label"><span class="me-1 text-danger">*</span>Country</label>
-                  <select name="" id="billing-company-country" class="js-select2" data-placeholder="Select country" data-theme="bootstrap-dark-5" data-width="100%">
-                    <option value=""></option>
-                    <option value="RO">Romania</option>
-                    <option value="MD">Moldova</option>
-                  </select>
-                </div>
-
-                <div class="mb-3">
-                  <label for="billing-company-county" class="form-label"><span class="me-1 text-danger">*</span>County</label>
-                  <select name="" id="billing-company-county" class="js-select2" data-placeholder="Select county" data-theme="bootstrap-dark-5" data-width="100%">
-                    <option value=""></option>
-                    <option value="BV">Brasov</option>
-                    <option value="IS">Iasi</option>
-                  </select>
-                </div>
-
-                <div class="mb-3">
-                  <label for="billing-company-city" class="form-label"><span class="me-1 text-danger">*</span>City</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-company-city" placeholder="Fill in your city">
-                </div>
-
-                <div class="mb-3">
-                  <label for="billing-company-address" class="form-label"><span class="me-1 text-danger">*</span>Address</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-company-address" placeholder="Fill in your address">
-                </div>
-
-                <div class="mb-3">
-                  <label for="billing-company-postal-code" class="form-label"><span class="me-1 text-danger">*</span>Postal code</label>
-                  <input type="text" class="form-control form-control-primary" id="billing-company-postal-code" placeholder="Fill in your postal code">
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="row my-3">
-              <div class="col-12 col-md-4 offset-md-8">
-                <button type="button" class="btn btn-primary w-100">Next step</button>
+              <div class="card-footer border-primary p-3">
+                <button type="button" class="btn btn-primary w-100">Save</button>
               </div>
             </div>
-
           </div>
-          <div class="tab-pane show active" id="registration" role="tabpanel" aria-labelledby="registration-tab" tabindex="0">
-            <div class="bg-primary p-3 pt-0 rounded-bottom rounded-start mb-3">
-              <div class="d-flex mb-3">
-                <span class="badge bg-success rounded-0 py-1 px-2 fs-6 fw-semibold">Note</span>
-              </div>
-              <p class="mb-0">
-                Review and finish up the registration process. <br>
-                The system will automatically redirect you to the success page or the payment page.
-              </p>
-            </div>
-            <div class="mb-3">
-              <h3 class="h4 mb-3 d-flex align-items-center">Ticket summary <span class="border-top border-primary col ms-2"></span></h3>
 
-              <div class="bg-primary mb-3 rounded">
-                <div class="row">
-                  <div class="col-12 col-md-8 ticket-border position-relative">
-                    <div class="crop-ticket-top"></div>
-                    <div class="crop-ticket-bottom"></div>
-                    <div class="d-flex justify-content-between p-5">
-                      <div class="">
-                        <h3 class="h5">testiare</h3>
-                        <p class="mb-0 text-secondary">testt</p>
-                      </div>
-
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-4">
-                    <div class="d-flex justify-content-center align-items-center h-100 text-success fs-4 fw-semibold">
-                      RON 10
-                    </div>
-                  </div>
-
+          <div class="col-12 col-md-12 col-xl-4 mb-3">
+            <div class="card bg-dark shadow border-0 h-100">
+              <div class="card-header px-3 py-0 border-0">
+                <div class="rounded-bottom p-3 card-header-purple">
+                  Profile details
                 </div>
               </div>
-            </div>
-            
-            <div class="mb-3">
-              <h3 class="h4 mb-3 d-flex align-items-center">Billing summary <span class="border-top border-primary col ms-2"></span></h3>
-              <div class="text-secondary">
-                asdad asdasd, 1231231231231, asdad@asdad.com, Albania , OTHER COUNTY, sadasd, asdasd, 123123
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="input-company-logo" class="form-label">Company's logo</label>
+                  <div class="input-group">
+                    <input type="file" class="form-control form-control-primary d-none-choose" id="input-company-logo" placeholder="Company's logo">
+                    <label class="input-group-text bg-primary text-white border-0 fs-5" for="input-company-logo"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-short-description" class="form-label">Short company's description</label>
+                  <textarea name="" class="form-control form-control-primary" id="input-short-description" placeholder="Short company's description" rows="5"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-company-description" class="form-label">Long company's description</label>
+                  <textarea name="" class="form-control form-control-primary" id="input-company-description" placeholder="Long company's description" rows="5"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-video-url" class="form-label">Video URL</label>
+                  <input type="text" class="form-control form-control-primary" id="input-video-url" placeholder="Video URL">
+                </div>
+              </div>
+              <div class="card-footer border-primary p-3">
+                <button type="button" class="btn btn-primary w-100">Save</button>
               </div>
             </div>
+          </div>
 
-            <div class="mb-3">
-              <h3 class="h4 mb-3 d-flex align-items-center">Payment <span class="border-top border-primary col ms-2"></span></h3>
-
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input p-2" type="radio" name="payment" id="payment-bank">
-                <label class="form-check-label ms-2" for="payment-bank">
-                  Pay by bank transfer
-                </label>
+          <div class="col-12 col-md-12 col-xl-4 mb-3">
+            <div class="card bg-dark shadow border-0 h-100">
+              <div class="card-header px-3 py-0 border-0">
+                <div class="rounded-bottom p-3 card-header-red">
+                  Menu
+                </div>
               </div>
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="input-facebook-url" class="form-label">Facebook Link</label>
+                  <input type="text" class="form-control form-control-primary" id="input-facebook-url" placeholder="Facebook Page URL">
+                </div>
 
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input p-2" type="radio" name="payment" id="payment-card">
-                <label class="form-check-label ms-2" for="payment-card">
-                  Pay by credit card <i class="fa-brands fa-cc-visa ms-1 fs-5"></i> <i class="fa-brands fa-cc-mastercard ms-1 fs-5"></i>
-                </label>
+                <div class="mb-3">
+                  <label for="input-linkedin-url" class="form-label">LinkedIN Link</label>
+                  <input type="text" class="form-control form-control-primary" id="input-linkedin-url" placeholder="LinkedIN Page URL">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-instagram-url" class="form-label">Instagram Link</label>
+                  <input type="text" class="form-control form-control-primary" id="input-instagram-url" placeholder="Instagram Page URL">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-twitter-url" class="form-label">Twitter Link</label>
+                  <input type="text" class="form-control form-control-primary" id="input-twitter-url" placeholder="Twitter Page URL">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-tiktok-url" class="form-label">TikTok Link</label>
+                  <input type="text" class="form-control form-control-primary" id="input-tiktok-url" placeholder="TikTok Page URL">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-quiz-url" class="form-label">Quiz Link</label>
+                  <input type="text" class="form-control form-control-primary" id="input-quiz-url" placeholder="Quiz Page URL">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-website-url" class="form-label">Website Link</label>
+                  <input type="text" class="form-control form-control-primary" id="input-website-url" placeholder="Website Page URL">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-chat-representatives" class="form-label">Chat Representatives</label>
+                  <select name="" id="input-chat-representatives" class="form-control js-select2" data-theme="bootstrap-dark-5" data-placeholder="Chat Representatives">
+                    <option value=""></option>
+                    <option value="1">User 1</option>
+                    <option value="1">User 2</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-google-url" class="form-label">Google Address</label>
+                  <input type="text" class="form-control form-control-primary" id="input-google-url" placeholder="Google locaion URL">
+                </div>
               </div>
-
-              <div class="form-check d-flex align-items-center mb-2">
-                <input class="form-check-input p-2" type="radio" name="payment" id="payment-bitcoin">
-                <label class="form-check-label ms-2" for="payment-bitcoin">
-                  Pay with BitCoin <i class="fa-solid fa-bitcoin-sign ms-1 fs-5"></i>
-                </label>
+              <div class="card-footer border-primary p-3">
+                <button type="button" class="btn btn-primary w-100">Save</button>
               </div>
             </div>
-
-            <div class="row my-3">
-              <div class="col-12 col-md-4 offset-md-8">
-                <button type="button" class="btn btn-danger w-100">Finish registration</button>
-              </div>
-            </div>
-
           </div>
         </div>
-
       </div>
 
       <div class="position-fixed box-floating-chat d-none">
@@ -978,88 +611,11 @@
           </div>
         </div>
       </div>
+
     </main>
 
   </div>
 
-  <div class="modal fade" id="modal-ticket-edit" tabindex="-1" aria-labelledby="modal-ticket-edit" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title fs-5" id="exampleModalLabel">Edit ticket info</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="input-firstname" class="form-label"><span class="me-1 text-danger">*</span>Firstname</label>
-              <input type="text" class="form-control is-invalid" id="input-modal-firstname" placeholder="Firstname">
-              <div class="invalid-feedback">Erroare</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="input-lastname" class="form-label"><span class="me-1 text-danger">*</span>Lastname</label>
-              <input type="text" class="form-control" id="input-modal-lastname" placeholder="Lastname">
-            </div>
-
-            <div class="mb-3">
-              <label for="input-email" class="form-label"><span class="me-1 text-danger">*</span>Email</label>
-              <input type="text" class="form-control" id="input-modal-email" placeholder="Email">
-            </div>
-
-            <div class="mb-3">
-              <label for="input-modal-phone" class="form-label"><span class="me-1 text-danger">*</span>Phone</label>
-              <div class="input-group">
-                <div class="bg-white" id="box-modal-phone-prefix">
-                  <select name="phone_prefix" id="input-modal-phone-prefix" data-theme="bootstrap-5">
-
-                  </select>
-                </div>
-                <input type="text" class="form-control" id="input-modal-phone" placeholder="Phone">
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="input-modal-file" class="form-label">File</label>
-              <div class="input-group">
-                <input type="file" class="form-control d-none-choose" id="input-modal-file" placeholder="File">
-                <label class="input-group-text bg-white text-primary fs-5" for="input-modal-file"><i class="fa-solid fa-cloud-arrow-up"></i></label>
-              </div>
-            </div>
-
-            <div class="form-check d-flex align-items-start">
-              <input class="form-check-input p-2" type="checkbox" value="1" id="input-modal-terms">
-              <label class="form-check-label ms-2" for="input-modal-terms">
-                <span class="text-danger">*</span> I agree to the <a href="#" class="text-success">Terms and Conditions</a> of the event organiser.
-              </label>
-            </div>
-
-            <div class="form-check d-flex align-items-start">
-              <input class="form-check-input p-2" type="checkbox" value="1" id="input-modal-personal-data">
-              <label class="form-check-label ms-2" for="input-modal-personal-data">
-                <span class="text-danger">*</span> I agree to share my personal data completed in the registration form with the partners/exhibitors which I will interact with and/or exchange information during the event. For the detailed list of event partners please consult this <a href="#" class="text-success">link</a>.
-              </label>
-            </div>
-
-            <div class="form-check d-flex align-items-start">
-              <input class="form-check-input p-2" type="checkbox" value="1" id="input-modal-network">
-              <label class="form-check-label ms-2" for="input-modal-network">
-                I agree to be part of the event networking area in order to connect with top industry professionals. I agree to share my email address and data with event partners.
-              </label>
-            </div>
-          </div>
-          <div class="py-4 px-3">
-            <div class="row">
-              <div class="col-12 col-md-6 mb-3 mb-md-0">
-                <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal">Cancel</button>
-              </div>
-              <div class="col-12 col-md-6">
-                <button type="button" class="btn btn-primary w-100">Save</button>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
 
   <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
     <div class="container-fluid">
@@ -1257,69 +813,6 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
-
-<script>
-  $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function (event) {
-    $('#' + event.target.id).find('.badge-active').removeClass('d-none');
-    $('#' + event.target.id).find('i').addClass('d-none');
-    $('#' + event.target.id).closest('li').addClass('bg-primary');
-
-    $('#' + event.relatedTarget.id).find('.badge-active').addClass('d-none');
-    $('#' + event.relatedTarget.id).find('i').removeClass('d-none');
-    $('#' + event.relatedTarget.id).closest('li').removeClass('bg-primary');
-  });
-
-  $('#input-phone-prefix, #input-modal-phone-prefix').select2({
-    width: '130px',
-    dropdownAutoWidth : true,
-    data: [ // https://gist.github.com/anubhavshrimal/75f6183458db8c453306f93521e93d37
-      {
-        "id": '+93',
-        "name": "Afghanistan",
-        "dial_code": "+93",
-        "code": "AF"
-      },
-      {
-        "id": '+358',
-        "name": "Aland Islands",
-        "dial_code": "+358",
-        "code": "AX"
-      },
-      {
-        "id": '+355',
-        "name": "Albania",
-        "dial_code": "+355",
-        "code": "AL"
-      },
-    ],
-    templateResult: function (event) {
-      if (!event.id) {
-        return event.text;
-      }
-
-      var $event = $('<div class="d-flex align-items-center"><img src="https://flagcdn.com/'+ event.code.toLowerCase() +'.svg" width="20" class="me-2"/>'+ event.name +' <span class="text-secondary px-2">'+ event.dial_code +'</span></div>');
-
-      return $event;
-    },
-    templateSelection: function (event) {
-      var $event = $('<div class="d-flex align-items-center"><img src="https://flagcdn.com/'+ event.code.toLowerCase() +'.svg" width="20" class="me-e"/><span class="px-2">'+ event.dial_code +'</span></div>');
-
-      return $event;
-    }
-  });
-
-  $(document).on('change', '#billing-type', function () {
-    $('#billing-company, #billing-personal').removeClass('d-none').addClass('d-none');
-    $('#billing-' + $(this).val()).removeClass('d-none');
-  });
-
-  // tabEl.addEventListener('shown.bs.tab', event => {
-  //   console.log(event.target.id);
-  //   console.log(event.relatedTarget.id);
-  //
-  // })
-
-</script>
 
 </body>
 </html>

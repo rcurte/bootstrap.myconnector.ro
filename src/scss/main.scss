@@ -30,6 +30,21 @@ $popover-body-padding-x: 1em !default;
 
 $zindex-popover: 1090 !default;
 
+$table-border-color: $primary;
+$table-hover-bg: #3F4567;
+$table-color: #fff;
+$table-cell-padding-y: 1rem;
+$table-cell-padding-x: 1rem;
+
+$pagination-disabled-bg: transparent;
+$pagination-border-width: 0;
+$pagination-bg: transparent;
+$pagination-color: $secondary;
+$pagination-hover-bg: $primary;
+$pagination-hover-color: #fff;
+$pagination-focus-bg: transparent;
+$pagination-focus-color: #fff;
+
 @import "~bootstrap/scss/bootstrap";
 @import "~select2/src/scss/core";
 @import "~select2-bootstrap-5-theme/src/select2-bootstrap-5-theme";
@@ -283,6 +298,27 @@ html {
     color: $white;
     background-color: $primary;
     border-color: $primary;
+  }
+  &::placeholder {
+    color: $secondary;
+  }
+  &::file-selector-button {
+    color: $secondary;
+    @include gradient-bg($primary);
+  }
+}
+.d-none-choose::file-selector-button {
+  display: none;
+}
+.form-control-dark {
+  background-color: $dark;
+  color: $white;
+  border-color: $dark;
+
+  &:focus {
+    color: $white;
+    background-color: $dark;
+    border-color: $dark;
   }
   &::placeholder {
     color: $secondary;
@@ -816,6 +852,176 @@ html {
   height: 70px;
   img {
     object-fit: cover;
+  }
+}
+.container-photo-booth {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://media.myconnector.ro/images/back_photo-p-1600.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.card-exhibitor-folder {
+  width: 234px;
+  height: 180px;
+  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='233.876' height='179.907' viewBox='0 0 233.876 179.907'> <defs> <filter id='Icon_awesome-folder' x='0' y='0' width='233.876' height='179.907' filterUnits='userSpaceOnUse'> <feOffset dy='3' input='SourceAlpha'/> <feGaussianBlur stdDeviation='3' result='blur'/> <feFlood flood-opacity='0.161'/> <feComposite operator='in' in2='blur'/> <feComposite in='SourceGraphic'/> </filter> </defs> <g id='Group_3515' data-name='Group 3515' transform='translate(-789.614 -127.371)'> <rect id='Rectangle_1473' data-name='Rectangle 1473' width='191.372' height='57.529' rx='10' transform='translate(810.866 127.5)' fill='#fff'/> <g transform='matrix(1, 0, 0, 1, 789.61, 127.37)' filter='url(#Icon_awesome-folder)'> <path id='Icon_awesome-folder-2' data-name='Icon awesome-folder' d='M195.638,31.485H89.948L75.344,4.5H20.238A20.238,20.238,0,0,0,0,24.738V146.169a20.238,20.238,0,0,0,20.238,20.238h175.4a20.238,20.238,0,0,0,20.238-20.238V51.723A20.238,20.238,0,0,0,195.638,31.485Z' transform='translate(9 1.5)' fill='#2f3252'/> </g> </g> </svg> "));
+  background-repeat: no-repeat;
+}
+
+.card-exhibitor-folder-empty {
+  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='233.876' height='179.907' viewBox='0 0 233.876 179.907'> <defs> <filter id='Icon_awesome-folder' x='0' y='0' width='233.876' height='179.907' filterUnits='userSpaceOnUse'> <feOffset dy='3' input='SourceAlpha'/> <feGaussianBlur stdDeviation='3' result='blur'/> <feFlood flood-opacity='0.161'/> <feComposite operator='in' in2='blur'/> <feComposite in='SourceGraphic'/> </filter> </defs> <g transform='matrix(1, 0, 0, 1, 0, 0)' filter='url(#Icon_awesome-folder)'> <path id='Icon_awesome-folder-2' data-name='Icon awesome-folder' d='M195.638,31.485H89.948L75.344,4.5H20.238A20.238,20.238,0,0,0,0,24.738V146.169a20.238,20.238,0,0,0,20.238,20.238h175.4a20.238,20.238,0,0,0,20.238-20.238V51.723A20.238,20.238,0,0,0,195.638,31.485Z' transform='translate(9 1.5)' fill='#2f3252'/> </g></svg>"));
+}
+.card-exhibitor-general {
+  width: 250px;
+  background: transparent linear-gradient(167deg, #FF0057 0%, #800080 100%) 0% 0% no-repeat padding-box;
+  .progress {
+    background: transparent linear-gradient(270deg, #FFFFFFD9 0%, #FFFFFF1A 100%) 0 0 no-repeat padding-box;
+    height: 36px;
+    .progress-bar {
+      font-size: 1.5rem;
+      color: $white;
+      background: transparent linear-gradient(90deg, #7033FF 0%, #7033FFA6 100%) 0 0 no-repeat padding-box;
+      &:after {
+        content: " ";
+        width: 2px;
+        height: 37px;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: -1px;
+        border-radius: 2px;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+  .overview {
+    .count {
+      width: 75px;
+      height: 75px;
+      color: #7033FF;
+    }
+  }
+}
+
+.card-header-blue {
+  background-color: #4E7CFF;
+}
+.card-header-purple {
+  background-color: #7033FF;
+}
+.card-header-red {
+  background-color: #F65164;
+}
+
+.table {
+  border-top-left-radius: 10px;
+  border-spacing: 0;
+  border-collapse: separate;
+  thead {
+    border-top-left-radius: 10px;
+    th {
+      border-top: 1px solid $primary;
+      &:first-child {
+        border-left: 1px solid $primary;
+        border-top-left-radius: 10px;
+      }
+      &:last-child {
+        border-right: 1px solid $primary;
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        &:first-child {
+          border-left: 1px solid $primary;
+        }
+        &:last-child {
+          border-right: 1px solid $primary;
+        }
+      }
+      &:last-child {
+        td {
+          &:first-child {
+            border-bottom-left-radius: 10px;
+          }
+          &:last-child {
+            border-bottom-right-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+table th.sorting:after,
+table th.sorting:before,
+table th.sorting_asc:after,
+table th.sorting_desc:before
+{
+ opacity: 0;
+}
+table thead .sorting:before,
+table thead .sorting_asc:before,
+table thead .sorting_desc:before,
+table thead .sorting_asc_disabled:before,
+table thead .sorting_desc_disabled:before,
+table thead .sorting:after,
+table thead .sorting_asc:after,
+table thead .sorting_desc:after,
+table thead .sorting_asc_disabled:after,
+table thead .sorting_desc_disabled:after
+{
+  color: #56F750;
+  bottom: 0;
+  top: 0;
+  font-size: 1rem !important;
+  right: 1rem;
+  padding: 15px;
+}
+
+.card-exhibitor-visitor {
+  cursor: pointer;
+  &:hover {
+    .card-img-overlay {
+      background-color: $primary;
+    }
+    .card-exhibitor-visitor-info {
+      div {
+        display: flex !important;
+      }
+    }
+  }
+  .card-img {
+    height: 300px;
+    object-fit: cover;
+  }
+  .card-img-overlay {
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30%;
+      background: linear-gradient(to top, #242542, rgba(36, 37, 66, 0));
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    > div {
+      z-index: 1;
+    }
+  }
+  button:hover,
+  a:hover {
+    color: $success !important;
+  }
+  .card-title {
+    span {
+      background-color: rgba(78, 124, 255, 0.25);
+    }
   }
 }
 
