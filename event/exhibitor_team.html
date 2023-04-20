@@ -365,9 +365,12 @@
     <main class="flex-grow-1 h-main has-sidebar">
       <div class="container-fluid pt-4">
         <div class="row">
-          <div class="col-12 col-md-8 col-lg-9 col-xxl-10">
+          <div class="col-12 col-md-8 col-lg-6 col-xxl-9">
             <h2 class="mb-0 fw-bold h4">Team Members</h2>
             <p class="mb-0 small text-secondary">View or edit your team members.</p>
+          </div>
+          <div class="col-12 col-lg-3 col-xxl-1 text-end mb-3">
+            <button class="btn btn-gradient d-flex d-lg-inline-flex align-items-center w-100" data-bs-toggle="modal" data-bs-target="#modal-team"><i class="fa-solid fa-plus me-2"></i> Member</button>
           </div>
           <div class="col-12 col-md-4 col-lg-3 col-xxl-2 mb-2">
             <div class="position-relative">
@@ -542,7 +545,6 @@
     </main>
 
   </div>
-
 
   <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
     <div class="container-fluid">
@@ -736,6 +738,47 @@
 
     </div>
   </footer>
+
+  <div class="modal fade" id="modal-team" tabindex="-1" aria-labelledby="modal-team-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5">Add new team member</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="input-modal-firstname" class="form-label">Firstname</label>
+              <input type="text" name="" value="" class="form-control" id="input-modal-firstname">
+            </div>
+            <div class="mb-3">
+              <label for="input-modal-lastname" class="form-label">Lastname</label>
+              <input type="text" name="" value="" class="form-control" id="input-modal-lastname">
+            </div>
+            <div class="mb-3">
+              <label for="input-modal-email" class="form-label">Email</label>
+              <input type="email" name="" value="" class="form-control" id="input-modal-email">
+            </div>
+            <div class="mb-3">
+              <label for="input-modal-phone" class="form-label">Phone</label>
+              <input type="email" name="" value="" class="form-control" id="input-modal-phone">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row w-100">
+              <div class="col-6">
+                <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel</button>
+              </div>
+              <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">Save</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
 </div>
 
