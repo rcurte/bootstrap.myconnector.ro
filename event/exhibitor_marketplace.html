@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/all.min.css">
-  <link rel="stylesheet" href="../assets/vendor/DataTables/css/dataTables.bootstrap5.min.css">
 
 </head>
 <body>
@@ -365,13 +364,31 @@
     <main class="flex-grow-1 h-main has-sidebar">
       <div class="container-fluid pt-4">
         <div class="row">
-          <div class="col-12 col-md-8 col-lg-9 col-xxl-10">
-            <h2 class="mb-0 fw-bold h4">Team Members</h2>
-            <p class="mb-0 small text-secondary">View or edit your team members.</p>
+          <div class="col-12 col-lg-3 col-xxl-3">
+            <div class="mb-3">
+              <h2 class="mb-0 fw-bold h4">Marketplace</h2>
+              <p class="mb-0 small text-secondary">Add a new product.</p>
+            </div>
           </div>
-          <div class="col-12 col-md-4 col-lg-3 col-xxl-2 mb-2">
+          <div class="col-12 col-lg-9 col-xxl-5 align-self-center mb-3">
+            <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 text-primary bg-white">All</a> <!-- remove "text-white" add "text-primary bg-white" -->
+            <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 text-white">city break</a>
+            <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 text-white">vacanta exotica</a>
+            <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 text-white">Circuit speacial</a>
+          </div>
+          <div class="col-12 col-lg-3 col-xxl-1 text-end mb-3">
+            <a href="" class="btn btn-gradient d-flex d-lg-inline-flex align-items-center w-100" data-bs-toggle="modal" data-bs-target="#modal-product"><i class="fa-solid fa-plus me-2"></i> Product</a>
+          </div>
+          <div class="col-12 col-lg-3 col-xxl-1 mb-3">
+            <select name="" id="" class="js-select2" data-placeholder="Order" data-minimum-results-for-search="Infinity" data-theme="bootstrap-dark-5" data-width="100%">
+              <option value=""></option>
+              <option value="1">Order 1</option>
+              <option value="2">Order 2</option>
+            </select>
+          </div>
+          <div class="col-12 col-lg-6 col-xxl-2 mb-3">
             <div class="position-relative">
-              <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search member">
+              <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search product">
               <span class="position-absolute input-group-overlay">
                   <i class="fa-solid fa-magnifying-glass text-secondary"></i>
                 </span>
@@ -379,56 +396,77 @@
           </div>
         </div>
 
-        <table class="table table-hover" id="table-team">
-          <thead>
-          <tr>
-            <th class="text-secondary small bg-primary">Name</th>
-            <th class="text-secondary small bg-primary">Email</th>
-            <th class="text-secondary small bg-primary">Phone</th>
-            <th class="text-secondary small bg-primary">Code</th>
-            <th class="text-secondary small bg-primary">Type</th>
-            <th class="text-secondary small bg-primary">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 mb-3">
+            <div class="card bg-primary card-exhibitor-product">
+              <div class="card-body">
+                <div class="row h-100">
+                  <div class="col-6 align-self-center">
+                    <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/marketplace/4903/10/fc9a242bb2a05503f5b71ede07f87647.jpg" alt="" class="img-fluid">
+                  </div>
+
+                  <div class="col-6">
+                    <h3 class="h5 fw-bold">Product name 1</h3>
+                    <p>300 EUR</p>
+                    <div class="row">
+                      <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 mb-2 text-white col-auto">city break</a>
+                      <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 mb-2 text-white col-auto">city break</a>
+                      <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 mb-2 text-white col-auto">city break</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-3 d-flex justify-content-between position-relative">
+                <a href="" class="btn bg-danger bg-opacity-50 text-danger p-0 rounded-1 d-flex justify-content-center align-items-center"><i class="fa-solid fa-trash small"></i></a>
+                <a href="" class="btn text-white fw-bold p-0 rounded-1 d-flex justify-content-center align-items-center w-100">Categorie 1</a>
+                <a href="" class="btn bg-blue bg-opacity-50 text-blue p-0 rounded-1 d-flex justify-content-center align-items-center"><i class="fa-solid fa-pen"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 mb-3">
+            <div class="card bg-primary card-exhibitor-product">
+              <div class="card-body">
+                <div class="row h-100">
+                  <div class="col-6 align-self-center">
+                    <img src="https://s3.eu-central-1.amazonaws.com/myc.images/api/files/events/marketplace/4903/10/4867698a6cef8bbf5d51b49e6493b0e5.png" alt="" class="img-fluid">
+                  </div>
+
+                  <div class="col-6">
+                    <h3 class="h5 fw-bold">Product name 1</h3>
+                    <p>300 EUR</p>
+                    <div class="row">
+                      <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 mb-2 text-white col-auto">city break</a>
+                      <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 mb-2 text-white col-auto">city break</a>
+                      <a href="" class="border border-white rounded px-2 py-1 text-decoration-none me-2 mb-2 text-white col-auto">city break</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer p-3 d-flex justify-content-between position-relative">
+                <a href="" class="btn bg-danger bg-opacity-50 text-danger p-0 rounded-1 d-flex justify-content-center align-items-center"><i class="fa-solid fa-trash small"></i></a>
+                <a href="" class="btn text-white fw-bold p-0 rounded-1 d-flex justify-content-center align-items-center w-100">Categorie 2</a>
+                <a href="" class="btn bg-blue bg-opacity-50 text-blue p-0 rounded-1 d-flex justify-content-center align-items-center"><i class="fa-solid fa-pen"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xxl-3 mb-3">
+            <div class="card card-exhibitor-product-add" data-bs-toggle="modal" data-bs-target="#modal-product">
+              <div class="card-body p-0 d-flex justify-content-between">
+                <div class="card-content p-3 d-flex flex-column">
+                  <h3 class="card-title h5">Add new collection</h3>
+                  <p class="card-text small mt-auto">Opens a setup wizard</p>
+                </div>
+                <div class="card-info col-auto">
+                  <div class="d-flex justify-content-center align-items-center bg-white">
+                    <i class="fa-solid fa-plus text-danger fs-4"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <div class="position-fixed box-floating-chat d-none">
@@ -737,24 +775,169 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="modal-product" tabindex="-1" aria-labelledby="modal-product-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xxl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5">Add new product</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="mb-3">
+                  <label for="input-modal-title" class="form-label">Title</label>
+                  <input type="text" name="" value="" class="form-control" id="input-modal-title">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-category" class="form-label">Category</label>
+                  <select name="" id="input-modal-category" class="js-select2" data-placeholder="Select category" data-theme="bootstrap-5"
+                          data-width="100%">
+                    <option value=""></option>
+                    <option value="1">Category 1</option>
+                    <option value="2">Category 2</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-price" class="form-label">Price (in EUR)</label>
+                  <input type="text" name="" value="" class="form-control" id="input-modal-price">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-url" class="form-label">URL</label>
+                  <input type="text" name="" value="" class="form-control" id="input-modal-url">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-description" class="form-label">Description</label>
+                  <textarea name="" class="form-control" id="input-modal-description" rows="3"></textarea>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="mb-3">
+                  <label for="input-modal-content" class="form-label">Content</label>
+                  <textarea name="" class="form-control" id="input-modal-content"></textarea>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-3">
+                <div class="mb-3">
+                  <label for="input-modal-image" class="form-label">Upload image</label>
+                  <div class="input-group">
+                    <input type="file" class="form-control d-none-choose" id="input-modal-image">
+                    <label class="input-group-text text-primary bg-white fs-5" for="input-modal-image"><i
+                        class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                  <span class="text-secondary small">Recommended size: 1536/864 px, with a maximum size of MB.</span>
+                </div>
+
+                <div class="mb-3">
+                  <label for="" class="form-label">Product tags</label>
+                  <div class="mb-1 border rounded p-2">
+                    <p class="mb-1 small fw-bold">In ce scop?</p>
+
+                    <div class="form-check d-inline-block me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-1">
+                      <label class="form-check-label small" for="input-tag-1">
+                        Default radio
+                      </label>
+                    </div>
+
+                    <div class="form-check d-inline-block  me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-2">
+                      <label class="form-check-label small" for="input-tag-2">
+                        Default radio 1
+                      </label>
+                    </div>
+
+                    <div class="form-check d-inline-block me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-3">
+                      <label class="form-check-label small" for="input-tag-3">
+                        Default radio
+                      </label>
+                    </div>
+
+                    <div class="form-check d-inline-block  me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-4">
+                      <label class="form-check-label small" for="input-tag-4">
+                        Default radio 1
+                      </label>
+                    </div>
+
+
+                  </div>
+
+                  <div class="mb-1 border rounded p-2">
+                    <p class="mb-1 small fw-bold">In ce stil?</p>
+
+                    <div class="form-check d-inline-block me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-5">
+                      <label class="form-check-label small" for="input-tag-5">
+                        Default radio
+                      </label>
+                    </div>
+
+                    <div class="form-check d-inline-block  me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-6">
+                      <label class="form-check-label small" for="input-tag-6">
+                        Default radio 1
+                      </label>
+                    </div>
+
+                    <div class="form-check d-inline-block me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-7">
+                      <label class="form-check-label small" for="input-tag-7">
+                        Default radio
+                      </label>
+                    </div>
+
+                    <div class="form-check d-inline-block  me-2 mb-1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="input-tag-8">
+                      <label class="form-check-label small" for="input-tag-8">
+                        Default radio 1
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row w-100">
+              <div class="col-6">
+                <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel</button>
+              </div>
+              <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">Save</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
 </div>
 
 <script src="../assets/js/main.js"></script>
-<script src="../assets/vendor/DataTables/js/jquery.dataTables.min.js"></script>
-<script src="../assets/vendor/DataTables/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
 
 <script>
-  $(document).ready(function () {
-    var table = $('#table-team').DataTable({
-      dom: "tr" +
-             "<'row'<'col-6 text-secondary'l><'col-6'p>>",
-    });
+  ClassicEditor.create( document.querySelector( '#input-modal-content' ), {
+    // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+  } )
+  .then( editor => {
+    window.editor = editor;
+  } )
+  .catch( err => {
+    console.error( err.stack );
+  } );
 
-    $('#input-search').on( 'keyup', function () {
-      table.search( this.value ).draw();
-    } );
-  });
 </script>
-
 </body>
 </html>

@@ -365,70 +365,159 @@
     <main class="flex-grow-1 h-main has-sidebar">
       <div class="container-fluid pt-4">
         <div class="row">
-          <div class="col-12 col-md-8 col-lg-9 col-xxl-10">
-            <h2 class="mb-0 fw-bold h4">Team Members</h2>
-            <p class="mb-0 small text-secondary">View or edit your team members.</p>
+          <div class="col-12 mb-3">
+            <h2 class="mb-0 fw-bold h4">Company booth</h2>
+            <p class="mb-0 small text-secondary">Your package includes Premium Booths. You can choose any booth and configure it.</p>
           </div>
-          <div class="col-12 col-md-4 col-lg-3 col-xxl-2 mb-2">
-            <div class="position-relative">
-              <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search member">
-              <span class="position-absolute input-group-overlay">
-                  <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                </span>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-3 col-lg-3 col-xl-2 mb-3">
+            <div class="card border-0 bg-primary card-exhibitor-booth-selection">
+              <div class="card-header p-3">
+                <h3 class="card-title h6 mb-0">Booth type selection</h3>
+              </div>
+              <div class="card-body overflow-auto">
+                <button type="button" class="btn btn-link text-white text-start text-decoration-none position-relative w-100 mb-2 border-white">
+                  Virtual tour
+                  <span class="badge-active bottom-4 end-4 d-none"></span>
+                </button>
+                <button type="button" class="btn btn-link text-white text-start text-decoration-none position-relative w-100 mb-2 border-white">
+                  <img src="https://api.myconnector.ro/files/events/booths/MyC-Stand-Thumbnail_premium3.jpg" alt="" class="img-fluid mb-1 rounded">
+                  Virtual tour
+                  <span class="badge-active bottom-4 end-4 d-none"></span>
+                </button>
+
+                <button type="button" class="btn btn-link text-white text-start text-decoration-none position-relative w-100 mb-2 border-white">
+                  Virtual tour
+                  <span class="badge-active bottom-4 end-4 d-none"></span>
+                </button>
+                <button type="button" class="btn btn-link text-white text-start text-decoration-none position-relative w-100 mb-2 border-white">
+                  <img src="https://api.myconnector.ro/files/events/booths/MyC-Stand-Thumbnail_premium3.jpg" alt="" class="img-fluid mb-1 rounded">
+                  Virtual tour
+                  <span class="badge-active bottom-4 end-4 d-none"></span>
+                </button>
+
+                <button type="button" class="btn btn-link text-white text-start text-decoration-none position-relative w-100 mb-2 border-white">
+                  Virtual tour
+                  <span class="badge-active bottom-4 end-4 d-none"></span>
+                </button>
+                <button type="button" class="btn btn-link text-white text-start text-decoration-none position-relative w-100 mb-2 border-white">
+                  <img src="https://api.myconnector.ro/files/events/booths/MyC-Stand-Thumbnail_premium3.jpg" alt="" class="img-fluid mb-1 rounded">
+                  Virtual tour
+                  <span class="badge-active bottom-4 end-4 d-none"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 col-xl-8 mb-3">
+            <div class="position-relative card-exhibitor-booth-canva">
+              <canva class="w-100 d-flex bg-primary h-100 w-100">Aici canva</canva>
+              <button type="button" class="btn btn-success text-white w-25 position-absolute start-0 end-0 mx-auto">Save booth</button>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3 col-lg-3 col-xl-2 mb-3">
+            <div class="card border-0 bg-primary card-exhibitor-booth-config">
+              <div class="card-header p-3">
+                <h3 class="card-title h6 mb-0">Booth type selection</h3>
+              </div>
+              <div class="card-body overflow-auto">
+                <div class="mb-3">
+                  <label for="input-right-wall" class="form-label">Right wall <i class="fa-solid fa-circle-info ms-1" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Upload file type: image(jpeg, bmp, tiff). Dimensions: 598px width x 1000px height. Max file size 20MB."></i></label>
+                  <div class="input-group">
+                    <input type="file" name="" value="" class="form-control form-control-dark d-none-choose" id="input-right-wall">
+                    <label class="input-group-text text-white bg-dark border-dark fs-5" for="input-right-wall"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-left-wall" class="form-label">Left wall <i class="fa-solid fa-circle-info ms-1" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Upload file type: image(jpeg, bmp, tiff). Dimensions: 598px width x 1000px height. Max file size 20MB."></i></label>
+                  <div class="input-group">
+                    <input type="file" name="" value="" class="form-control form-control-dark d-none-choose" id="input-left-wall">
+                    <label class="input-group-text text-white bg-dark border-dark fs-5" for="input-left-wall"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-tv-wall" class="form-label">TV <i class="fa-solid fa-circle-info ms-1" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Upload file type: image(jpeg, bmp, tiff). Dimensions: 598px width x 1000px height. Max file size 20MB."></i></label>
+                  <div class="input-group">
+                    <input type="file" name="" value="" class="form-control form-control-dark d-none-choose" id="input-tv-wall">
+                    <label class="input-group-text text-white bg-dark border-dark fs-5" for="input-tv-wall"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label class="form-label">Branding Color 1</label>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="rounded border border-4 border-dark branding-color branding-color-1">
+
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="rounded border border-4 border-dark branding-color branding-color-2">
+
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="rounded border border-4 border-dark branding-color branding-color-3">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <label for="input-tv-wall" class="form-label mb-0"><small>Custom color</small></label>
+                    <input type="text" name="" value="" class="form-control form-control-dark py-1 text-secondary">
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-booth-wall" class="form-label">Booth carpet image <i class="fa-solid fa-circle-info ms-1" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Upload file type: image(jpeg, bmp, tiff). Dimensions: 598px width x 1000px height. Max file size 20MB."></i></label>
+                  <div class="input-group">
+                    <input type="file" name="" value="" class="form-control form-control-dark d-none-choose" id="input-booth-wall">
+                    <label class="input-group-text text-white bg-dark border-dark fs-5" for="input-booth-wall"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Branding Color 2</label>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="rounded border border-4 border-dark branding-color branding-color-1">
+
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="rounded border border-4 border-dark branding-color branding-color-2">
+
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="rounded border border-4 border-dark branding-color branding-color-3">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <label for="input-tv-wall" class="form-label mb-0"><small>Custom color</small></label>
+                    <input type="text" name="" value="" class="form-control form-control-dark py-1 text-secondary">
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-booth-carpet" class="form-label">Booth Carpet Image - This image will appear in front of the booth, on the floor (only for events that enabled 3D expo area) </label>
+                  <div class="input-group">
+                    <input type="file" name="" value="" class="form-control form-control-dark d-none-choose" id="input-booth-carpet">
+                    <label class="input-group-text text-white bg-dark border-dark fs-5" for="input-booth-wall"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <table class="table table-hover" id="table-team">
-          <thead>
-          <tr>
-            <th class="text-secondary small bg-primary">Name</th>
-            <th class="text-secondary small bg-primary">Email</th>
-            <th class="text-secondary small bg-primary">Phone</th>
-            <th class="text-secondary small bg-primary">Code</th>
-            <th class="text-secondary small bg-primary">Type</th>
-            <th class="text-secondary small bg-primary">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
       </div>
 
       <div class="position-fixed box-floating-chat d-none">
@@ -740,19 +829,12 @@
 </div>
 
 <script src="../assets/js/main.js"></script>
-<script src="../assets/vendor/DataTables/js/jquery.dataTables.min.js"></script>
-<script src="../assets/vendor/DataTables/js/dataTables.bootstrap5.min.js"></script>
-
 <script>
-  $(document).ready(function () {
-    var table = $('#table-team').DataTable({
-      dom: "tr" +
-             "<'row'<'col-6 text-secondary'l><'col-6'p>>",
-    });
-
-    $('#input-search').on( 'keyup', function () {
-      table.search( this.value ).draw();
-    } );
+  $('.card-exhibitor-booth-selection button').on('click', function () {
+      $('.card-exhibitor-booth-selection').find('button').removeClass('border-white border-success').addClass('border-white');
+      $('.card-exhibitor-booth-selection').find('.badge-active').removeClass('d-none').addClass('d-none');
+      $(this).removeClass('border-white').addClass('border-success');
+      $(this).find('.badge-active').removeClass('d-none')
   });
 </script>
 

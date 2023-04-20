@@ -643,9 +643,9 @@ html {
   width: 32px;
   height: 32px;
 }
-.card-collection {
-  width: 150px;
-}
+//.card-collection {
+//  width: 150px;
+//}
 .overflow-wrap {
   overflow-wrap: anywhere;
   -webkit-overflow-scrolling: touch;
@@ -1025,6 +1025,213 @@ table thead .sorting_desc_disabled:after
   }
 }
 
+.btn-gradient {
+  background: transparent linear-gradient(90deg, #FF0057 0%, #800080 100%) 0 0 no-repeat padding-box;
+  color: var(--bs-white);
+  border-color: transparent !important;
+}
+.card-collection {
+  .card-title {
+    height: 42px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .card-text {
+    height: 74px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  .card-info {
+    width: 80px;
+    .card-info-type {
+      height: 76px;
+      border-top-right-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+  }
+  .card-footer {
+    z-index: 3;
+    .btn {
+      width: 25px;
+      height: 25px;
+    }
+    .bg-danger {
+      &:hover {
+        background-color: var(--bs-danger) !important;
+        color: var(--bs-white) !important;
+      }
+    }
+    .bg-secondary {
+      &:hover {
+        background-color: var(--bs-success) !important;
+        color: var(--bs-white) !important;
+      }
+    }
+    .bg-blue {
+      background-color: rgba(78, 124, 255, 0.5);
+      color: rgba(78, 124, 255);
+      &:hover {
+        background-color: rgba(78, 124, 255);
+        color: #fff;
+      }
+    }
+    .card-footer-pause {
+      display: none;
+    }
+    .card-footer-active {
+      display: flex;
+    }
+  }
+}
+.card-collection-pause {
+  &:after {
+    content: ' ';
+    position: absolute;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  .card-footer {
+    .card-footer-pause {
+      display: flex;
+    }
+    .card-footer-active {
+      display: none;
+    }
+  }
+}
+.card-collection-add {
+  height: 217px;
+  background: transparent linear-gradient(180deg, #FF0057 0%, #800080 100%) 0 0 no-repeat padding-box;
+  .card-info {
+    div {
+      width: 94px;
+      height: 85px;
+      border-top-right-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+  }
+}
+.card-collection-new {
+  background-color: #800080;
+  border-top-left-radius: 0;
+}
+.collection-active {
+  margin-right: -24px;
+}
+.collection-item {
+  .collection-avatar {
+    width: 54px;
+    height: 46px;
+  }
+}
+
+.ck-editor__editable {
+  min-height: 240px;
+  color: $primary;
+  border-bottom-left-radius: $border-radius !important;
+  border-bottom-right-radius: $border-radius !important;
+}
+.ck-toolbar {
+  border-top-left-radius: $border-radius !important;
+  border-top-right-radius: $border-radius !important;
+}
+.card-collection-component {
+  .btn {
+    width: 25px;
+    height: 25px;
+  }
+  .bg-danger {
+    &:hover {
+      background-color: var(--bs-danger) !important;
+      color: var(--bs-white) !important;
+    }
+  }
+  .bg-blue {
+    background-color: rgba(78, 124, 255, 0.5);
+    color: rgba(78, 124, 255);
+    &:hover {
+      background-color: rgba(78, 124, 255);
+      color: #fff;
+    }
+  }
+  .card-text {
+    height: 36px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.card-exhibitor-product {
+  .card-body {
+    height: 300px;
+  }
+  .btn {
+    width: 25px;
+    height: 25px;
+  }
+  .bg-danger {
+    &:hover {
+      background-color: var(--bs-danger) !important;
+      color: var(--bs-white) !important;
+    }
+  }
+  .bg-blue {
+    background-color: rgba(78, 124, 255, 0.5);
+    color: rgba(78, 124, 255);
+    &:hover {
+      background-color: rgba(78, 124, 255);
+      color: #fff;
+    }
+  }
+}
+.card-exhibitor-product-add {
+  height: 360px;
+  background: transparent linear-gradient(180deg, #FF0057 0%, #800080 100%) 0 0 no-repeat padding-box;
+  .card-info {
+    div {
+      width: 94px;
+      height: 85px;
+      border-top-right-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+  }
+}
+
+.card-exhibitor-booth-selection,
+.card-exhibitor-booth-config {
+  .card-body {
+    height: calc(100vh - 310px);
+  }
+}
+.card-exhibitor-booth-canva {
+  height: calc(100vh - 260px);
+  button {
+    bottom: 50px;
+  }
+}
+.branding-color {
+  height: 50px;
+  cursor: pointer;
+}
+.branding-color-1 {
+  background-color: #4B9CD4;
+}
+.branding-color-2 {
+  background-color: #4898AC;
+}
+.branding-color-3 {
+  background-color: #EFE0C2;
+}
 @include media-breakpoint-down(lg) {
   .sidebar {
     z-index: 1032;
@@ -1137,6 +1344,12 @@ table thead .sorting_desc_disabled:after
       cursor: pointer;
       display: flex !important;
     }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .collection-active {
+    margin-right: 0;
   }
 }
 

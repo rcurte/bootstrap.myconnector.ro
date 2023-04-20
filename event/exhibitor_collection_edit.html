@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/all.min.css">
-  <link rel="stylesheet" href="../assets/vendor/DataTables/css/dataTables.bootstrap5.min.css">
 
 </head>
 <body>
@@ -365,70 +364,131 @@
     <main class="flex-grow-1 h-main has-sidebar">
       <div class="container-fluid pt-4">
         <div class="row">
-          <div class="col-12 col-md-8 col-lg-9 col-xxl-10">
-            <h2 class="mb-0 fw-bold h4">Team Members</h2>
-            <p class="mb-0 small text-secondary">View or edit your team members.</p>
+          <div class="col-12 col-md-4 col-lg-2">
+            <div class="mb-3">
+              <a href="" class="text-center btn btn-gradient w-100 border-0"><i class="fa-solid fa-plus me-2"></i> Add a new collection</a>
+            </div>
+
+            <div class="rounded-start mb-2 bg-primary p-2 d-flex collection-item collection-active ">
+              <div class="rounded bg-white me-2 d-flex justify-content-center align-items-center collection-avatar">
+                <span class="text-primary h5 mb-0 fw-bold">T1</span>
+              </div>
+              <div class="d-flex flex-column justify-content-start align-items-center">
+                <p class="mb-1 align-self-start">Test 1</p>
+                <p class="mb-0"><span class="small me-2 text-secondary">1 file(s)</span><span class="small fw-bold text-success text-uppercase">Active</span></p>
+              </div>
+            </div>
+
+            <div class="rounded mb-2 bg-primary p-2 d-flex collection-item">
+              <div class="rounded bg-white me-2 d-flex justify-content-center align-items-center collection-avatar">
+                <span class="text-primary h5 mb-0 fw-bold">T1</span>
+              </div>
+              <div class="d-flex flex-column justify-content-start align-items-center">
+                <p class="mb-1 align-self-start">Test 1</p>
+                <p class="mb-0"><span class="small me-2 text-secondary">1 file(s)</span><span class="small fw-bold text-success text-uppercase">Active</span></p>
+              </div>
+            </div>
+            <div class="rounded mb-2 bg-primary p-2 d-flex collection-item">
+              <div class="rounded bg-white me-2 d-flex justify-content-center align-items-center collection-avatar">
+                <span class="text-primary h5 mb-0 fw-bold">T1</span>
+              </div>
+              <div class="d-flex flex-column justify-content-start align-items-center">
+                <p class="mb-1 align-self-start">Test 1</p>
+                <p class="mb-0"><span class="small me-2 text-secondary">1 file(s)</span><span class="small fw-bold text-success text-uppercase">Active</span></p>
+              </div>
+            </div>
+
           </div>
-          <div class="col-12 col-md-4 col-lg-3 col-xxl-2 mb-2">
-            <div class="position-relative">
-              <input type="text" name="" value="" class="form-control form-control-primary pe-5" id="input-search" placeholder="Search member">
-              <span class="position-absolute input-group-overlay">
-                  <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                </span>
+
+          <div class="col-12 col-md-8 col-lg-10">
+            <div class="card card-collection-edit border-0 bg-primary">
+              <form action="">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <div class="mb-3">
+                            <label for="input-title" class="form-label">Title</label>
+                            <input type="text" name="" value="" class="form-control" id="input-title">
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                          <div class="mb-3">
+                            <label for="input-order" class="form-label">Order</label>
+                            <input type="text" name="" value="" class="form-control" id="input-order">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                          <div class="mb-3">
+                            <label for="input-type" class="form-label">Type</label>
+                            <select name="" id="input-type" class="js-select2" data-placeholder="Select..." data-minimum-results-for-search="Infinity" data-theme="bootstrap-5" data-width="100%">
+                              <option value=""></option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                          <div class="mb-3">
+                            <label for="input-content" class="form-label">Content</label>
+                            <input type="text" name="" value="" class="form-control" id="input-content">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="mb-3">
+                            <label for="input-description" class="form-label">Description</label>
+                            <textarea name="" class="form-control" id="input-description"></textarea>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                      <div class="mb-3">
+                        <label for="input-files" class="form-label">Assigned files</label>
+                        <button type="button" class="btn bg-white bg-opacity-25 text-white text-start w-100" id="input-files" data-bs-toggle="modal" data-bs-target="#modal-component"><i class="fa-solid fa-plus me-3"></i> Add new file to this collection</button>
+                      </div>
+
+                      <div class="rounded p-2 bg-dark">
+                        <div class="card border-0 bg-primary card-collection-component mb-2">
+                          <div class="card-body d-flex justify-content-between">
+                            <div class="">
+                              <h5 class="card-title h6 text-truncate">Test nume</h5>
+                              <p class="card-text text-secondary small">asdasdhgaskdjask</p>
+                            </div>
+                            <div class="d-flex flex-column justify-content-between">
+                              <button type="button" class="btn bg-blue bg-opacity-50 text-blue p-0 rounded-1 d-flex justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#modal-component"><i class="fa-solid fa-pen"></i></button>
+                              <a href="button"  class="btn bg-danger bg-opacity-50 text-danger p-0 rounded-1 d-flex justify-content-center align-items-center"><i class="fa-solid fa-trash"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="" class="w-100 btn btn-danger">Cancel</a>
+                    </div>
+                    <div class="col-6">
+                      <button type="submit" class="btn bg-white bg-opacity-25 text-white w-100">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-
-        <table class="table table-hover" id="table-team">
-          <thead>
-          <tr>
-            <th class="text-secondary small bg-primary">Name</th>
-            <th class="text-secondary small bg-primary">Email</th>
-            <th class="text-secondary small bg-primary">Phone</th>
-            <th class="text-secondary small bg-primary">Code</th>
-            <th class="text-secondary small bg-primary">Type</th>
-            <th class="text-secondary small bg-primary">Actions</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>5G - enabaling the real-time enterprise</td>
-            <td>test@test.com</td>
-            <td>07000000</td>
-            <td>123456</td>
-            <td>Admin</td>
-            <td>
-              <a href="" class="btn btn-danger btn-sm">
-                <i class="fa-solid fa-trash"></i>
-              </a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
       </div>
 
       <div class="position-fixed box-floating-chat d-none">
@@ -542,7 +602,6 @@
     </main>
 
   </div>
-
 
   <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
     <div class="container-fluid">
@@ -737,24 +796,105 @@
     </div>
   </footer>
 
+  <div class="modal fade" id="modal-component" tabindex="-1" aria-labelledby="modal-component-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xxl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5">Add new component</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form action="">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="mb-3">
+                  <label for="input-modal-title" class="form-label">Title</label>
+                  <input type="text" name="" value="" class="form-control" id="input-modal-title">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-order" class="form-label">Order</label>
+                  <input type="text" name="" value="" class="form-control" id="input-modal-order">
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-short-description" class="form-label">Short description</label>
+                  <textarea name="" class="form-control" id="input-modal-short-description" rows="3"></textarea>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <div class="mb-3">
+                  <label for="input-modal-description" class="form-label">Advanced description</label>
+                  <textarea name="" class="form-control" id="input-modal-description"></textarea>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-3">
+                <div class="mb-3">
+                  <label for="input-modal-image" class="form-label">Upload image</label>
+                  <div class="input-group">
+                    <input type="file" class="form-control d-none-choose" id="input-modal-image">
+                    <label class="input-group-text text-primary bg-white fs-5" for="input-modal-image"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-image" class="form-label">Upload document</label>
+                  <div class="input-group">
+                    <input type="file" class="form-control d-none-choose" id="input-modal-document">
+                    <label class="input-group-text text-primary bg-white fs-5" for="input-modal-document"><i class="fa-solid fa-cloud-arrow-up"></i></label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="input-modal-link" class="form-label">Add external links</label>
+                  <input type="text" name="" value="" class="form-control" id="input-modal-link">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row w-100">
+              <div class="col-6">
+                <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancel</button>
+              </div>
+              <div class="col-6">
+                <button type="submit" class="btn btn-primary w-100">Save</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <script src="../assets/js/main.js"></script>
-<script src="../assets/vendor/DataTables/js/jquery.dataTables.min.js"></script>
-<script src="../assets/vendor/DataTables/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
 
 <script>
-  $(document).ready(function () {
-    var table = $('#table-team').DataTable({
-      dom: "tr" +
-             "<'row'<'col-6 text-secondary'l><'col-6'p>>",
-    });
+  ClassicEditor.create( document.querySelector( '#input-description' ), {
+    // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+  } )
+  .then( editor => {
+    window.editor = editor;
+  } )
+  .catch( err => {
+    console.error( err.stack );
+  } );
 
-    $('#input-search').on( 'keyup', function () {
-      table.search( this.value ).draw();
-    } );
-  });
+  ClassicEditor.create( document.querySelector( '#input-modal-description' ), {
+    // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+  } )
+  .then( editor => {
+    window.editor = editor;
+  } )
+  .catch( err => {
+    console.error( err.stack );
+  } );
+
 </script>
-
 </body>
 </html>
