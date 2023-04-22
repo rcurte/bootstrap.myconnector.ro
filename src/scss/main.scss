@@ -1232,6 +1232,21 @@ table thead .sorting_desc_disabled:after
 .branding-color-3 {
   background-color: #EFE0C2;
 }
+
+.photo-overlay {
+  cursor: pointer;
+  .photo-overlay-img {
+    height: 180px;
+    overflow: hidden;
+  }
+  img {
+    object-fit: fill;
+  }
+}
+.photo-booth-button {
+  bottom: 50px;
+}
+
 @include media-breakpoint-down(lg) {
   .sidebar {
     z-index: 1032;

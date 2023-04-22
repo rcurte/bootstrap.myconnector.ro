@@ -13810,6 +13810,22 @@ table thead .sorting_desc_disabled:after {
   background-color: #EFE0C2;
 }
 
+.photo-overlay {
+  cursor: pointer;
+}
+.photo-overlay .photo-overlay-img {
+  height: 180px;
+  overflow: hidden;
+}
+.photo-overlay img {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.photo-booth-button {
+  bottom: 50px;
+}
+
 @media (max-width: 991.98px) {
   .sidebar {
     z-index: 1032;
