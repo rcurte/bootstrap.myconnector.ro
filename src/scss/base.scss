@@ -71,10 +71,6 @@ $turquise: #4898AC;
 $light-yellow: #EFE0C2;
 $leftMenuBackground: $primary;
 
-@import "~bootstrap/scss/bootstrap";
-@import "~select2/src/scss/core";
-@import "~select2-bootstrap-5-theme/src/select2-bootstrap-5-theme";
-@import "../select2-bootstrap-5-dark-theme/src/select2-bootstrap-5-dark-theme";
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -291,20 +287,6 @@ html {
   }
 }
 .btn-nav-link {
-  @include button-variant(
-                  $dark,
-                  $dark,
-                  $secondary,
-                  $primary,
-                  $primary,
-                  $white,
-                  $primary,
-                  $primary,
-                  $white,
-                  $dark,
-                  $dark,
-                  $dark
-  );
   position: relative;
 }
 .has-aside-expand {
@@ -330,7 +312,7 @@ html {
   }
   &::file-selector-button {
     color: $secondary;
-    @include gradient-bg($primary);
+    background-image: linear-gradient(to right, $primary 0, $gray-800 100%);
   }
 }
 .d-none-choose::file-selector-button {
@@ -398,9 +380,6 @@ html {
       i.fa-angle-down {
         display: block;
       }
-      svg.fa-angle-down {
-        display: block;
-      }
       small {
         display: none;
       }
@@ -416,12 +395,6 @@ html {
         display: block;
       }
       i.fa-angle-down {
-        display: none;
-      }
-      svg.fa-xmark {
-        display: none;
-      }
-      svg.fa-angle-down {
         display: none;
       }
       small {
@@ -1282,7 +1255,7 @@ table thead .sorting_desc_disabled:after
   bottom: 50px;
 }
 
-@include media-breakpoint-down(lg) {
+@media (max-width: 1199.98px) {
   .sidebar {
     z-index: 1032;
   }
@@ -1397,13 +1370,13 @@ table thead .sorting_desc_disabled:after
   }
 }
 
-@include media-breakpoint-down(md) {
+@media (max-width: 991.98px) {
   .collection-active {
     margin-right: 0;
   }
 }
 
-@include media-breakpoint-down(sm) {
+@media (max-width: 767.98px) {
   .nav-fill{
     .nav-item {
       flex: 0 0 auto;

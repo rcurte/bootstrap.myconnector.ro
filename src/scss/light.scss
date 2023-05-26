@@ -6,10 +6,11 @@ $gray-800: #343a40 !default;
 $black:    #000 !default;
 $box-shadow-sm: 0 .125rem .25rem rgba($black, .075) !default;
 
-$primary: #2f3252 !default;
-$secondaryColor: #3f4567 !default;
-$dark: #242542 !default;
-$white: #ffffff !default;
+
+$primary: #ffffff !default;
+$secondaryColor: #ECECEC !default;
+$dark: #ffffff !default;
+$white: #242542 !default;
 $success: #2fd326 !default;
 $secondary: #858798 !default;
 $danger: #e61657 !default;
@@ -20,9 +21,9 @@ $form-check-label-cursor: pointer;
 $form-check-input-checked-bg-color: $success !default;
 $dropdown-link-active-bg: #e9ecef !default;
 
-$tooltip-bg: $primary;
+$tooltip-bg: $white;
 $tooltip-font-size: $font-size-base;
-$tooltip-color: $white;
+$tooltip-color: $dark;
 
 $accordion-color: $secondary;
 $accordion-bg: $primary;
@@ -69,7 +70,7 @@ $blue_50: rgba(78, 124, 255, 0.5);
 $black_80: rgba(0, 0, 0, .8);
 $turquise: #4898AC;
 $light-yellow: #EFE0C2;
-$leftMenuBackground: $primary;
+$leftMenuBackground: #4D4E66;
 
 @import "~bootstrap/scss/bootstrap";
 @import "~select2/src/scss/core";
@@ -82,7 +83,7 @@ $leftMenuBackground: $primary;
 }
 /*track*/
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+  background: $transparentDarkBackground;
   border-radius: 5px;
 }
 /*thumb*/
@@ -92,16 +93,25 @@ $leftMenuBackground: $primary;
 }
 * {
   scrollbar-width: thin !important;
-  scrollbar-color: rgba(255, 255, 255, 0.1) #85879875;
+  scrollbar-color: $transparentWhiteBackground #85879875;
 }
 
 :root {
   --bs-body-font-family: 'Poppins', sans-serif;
-  --bs-body-bg: #242542;
+  --bs-body-bg: #2f3252;
   --swiper-navigation-size: 12;
-  --swiper-theme-color: #fff;
+  --swiper-theme-color: #ffffff;
   --swiper-pagination-bullet-inactive-color: #858798;
+  --bs-primary-rgb: 235, 235, 235;
+  --bs-modal-bg: #ffffff;
 }
+
+.modal
+{
+  --bs-modal-bg: #ffffff !important;
+  --bs-modal-color: #000000 !important;
+}
+
 .filter-datepicker {
   .datepicker-inline {
     background-color: $primary;
@@ -199,7 +209,7 @@ html {
   width: 50px;
   height: 50px;
   border: 2px solid transparent;
-  background-color: #2fd326;
+  background-color: $success;
 }
 .h-main {
   min-height: calc(100vh - 153px);
@@ -291,20 +301,6 @@ html {
   }
 }
 .btn-nav-link {
-  @include button-variant(
-                  $dark,
-                  $dark,
-                  $secondary,
-                  $primary,
-                  $primary,
-                  $white,
-                  $primary,
-                  $primary,
-                  $white,
-                  $dark,
-                  $dark,
-                  $dark
-  );
   position: relative;
 }
 .has-aside-expand {
@@ -330,7 +326,7 @@ html {
   }
   &::file-selector-button {
     color: $secondary;
-    @include gradient-bg($primary);
+    background-image: linear-gradient(to right, $primary 0, $gray-800 100%);
   }
 }
 .d-none-choose::file-selector-button {
@@ -384,6 +380,7 @@ html {
   padding-top: 0;
   padding-bottom: 0;
 }
+
 .min-w-100 {
   min-width: 100%;
 }
@@ -395,12 +392,14 @@ html {
   &:hover {
     .header-chat {
       background-color: $white !important;
-      i.fa-angle-down {
+      i.fa-angle-down{
         display: block;
       }
-      svg.fa-angle-down {
+
+      svg.fa-angle-down{
         display: block;
       }
+
       small {
         display: none;
       }
@@ -412,18 +411,21 @@ html {
     }
     .header-chat {
       background-color: $white !important;
-      i.fa-xmark {
-        display: block;
+      i.fa-xmark{
+        display: none;
       }
+      svg.fa-xmark{
+        display: none;
+      }
+
       i.fa-angle-down {
         display: none;
       }
-      svg.fa-xmark {
-        display: none;
-      }
+
       svg.fa-angle-down {
         display: none;
       }
+
       small {
         display: none;
       }
@@ -431,6 +433,9 @@ html {
   }
   .header-chat {
     i {
+      display: none;
+    }
+    svg {
       display: none;
     }
   }
@@ -444,12 +449,12 @@ html {
 }
 .card-track {
   border: 0;
-  background: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(47, 47, 106, 1) 77%, rgba(63, 69, 103, 1) 100% );
+  background: linear-gradient( 90deg, $darkest 0%, $primary 77%, $secondaryColor 100% );
   border-left: 10px solid $white;
   transition: all 0.3s;
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0px 2px 8px #242542;
+    box-shadow: 0 2px 8px $primary;
   }
 }
 .card-info-category {
@@ -694,7 +699,7 @@ html {
   position: relative;
 }
 .networking-conversation-active {
-  background-color: #3f4567 !important;
+  background-color: $secondaryColor !important;
   &:after {
     position: absolute;
     right: -6px;
@@ -703,7 +708,7 @@ html {
     height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-left: 6px solid #3f4567;
+    border-left: 6px solid $secondaryColor;
   }
 }
 .networking-menu {
@@ -740,7 +745,7 @@ html {
       right: 0;
       bottom: 0;
       height: 30%;
-      background: linear-gradient(to top, #242542, rgba(36, 37, 66, 0));
+      background: linear-gradient(to top, $primary, rgba(36, 37, 66, 0));
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
@@ -780,7 +785,7 @@ html {
       right: 0;
       bottom: 0;
       height: 30%;
-      background: linear-gradient(to top, #242542, rgba(36, 37, 66, 0));
+      background: linear-gradient(to top, $primary, rgba(36, 37, 66, 0));
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
@@ -791,7 +796,7 @@ html {
 }
 
 .fa-star-active {
-  color: #EFC529;
+  color: $yellow;
 }
 
 .progress-badge {
@@ -803,14 +808,14 @@ html {
   background-color: $primary;
   height: 5px;
   .progress-bar {
-    background: transparent linear-gradient(90deg, #21CBCB 0%, #60FF38 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(90deg, #21CBCB 0%, #60FF38 100%) 0 0 no-repeat padding-box;
   }
 }
 .leaderboard-avatar {
   width: 100px;
   height: 100px;
   border: 2px solid transparent;
-  background-color: #2fd326;
+  background-color: $success;
   span {
     background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='34' height='39' viewBox='0 0 34 39'><g transform='translate(-168.163 -234.582)'><path id='Polygon_12' data-name='Polygon 12' d='M29.25,0,39,17,29.25,34H9.75L0,17,9.75,0Z' transform='translate(202.163 234.582) rotate(90)' fill='#ff0057'/><path id='Polygon_12_-_Outline' data-name='Polygon 12 - Outline' d='M10.909,2l-8.6,15,8.6,15H28.091l8.6-15-8.6-15H10.909M9.75,0h19.5L39,17,29.25,34H9.75L0,17Z' transform='translate(202.163 234.582) rotate(90)' fill='#fff'/></g></svg>"));
     width: 34px;
@@ -900,23 +905,23 @@ html {
 .card-exhibitor-folder {
   width: 234px;
   height: 180px;
-  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='233.876' height='179.907' viewBox='0 0 233.876 179.907'> <defs> <filter id='Icon_awesome-folder' x='0' y='0' width='233.876' height='179.907' filterUnits='userSpaceOnUse'> <feOffset dy='3' input='SourceAlpha'/> <feGaussianBlur stdDeviation='3' result='blur'/> <feFlood flood-opacity='0.161'/> <feComposite operator='in' in2='blur'/> <feComposite in='SourceGraphic'/> </filter> </defs> <g id='Group_3515' data-name='Group 3515' transform='translate(-789.614 -127.371)'> <rect id='Rectangle_1473' data-name='Rectangle 1473' width='191.372' height='57.529' rx='10' transform='translate(810.866 127.5)' fill='#fff'/> <g transform='matrix(1, 0, 0, 1, 789.61, 127.37)' filter='url(#Icon_awesome-folder)'> <path id='Icon_awesome-folder-2' data-name='Icon awesome-folder' d='M195.638,31.485H89.948L75.344,4.5H20.238A20.238,20.238,0,0,0,0,24.738V146.169a20.238,20.238,0,0,0,20.238,20.238h175.4a20.238,20.238,0,0,0,20.238-20.238V51.723A20.238,20.238,0,0,0,195.638,31.485Z' transform='translate(9 1.5)' fill='#2f3252'/> </g> </g> </svg> "));
+  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='233.876' height='179.907' viewBox='0 0 233.876 179.907'> <defs> <filter id='Icon_awesome-folder' x='0' y='0' width='233.876' height='179.907' filterUnits='userSpaceOnUse'> <feOffset dy='3' input='SourceAlpha'/> <feGaussianBlur stdDeviation='3' result='blur'/> <feFlood flood-opacity='0.161'/> <feComposite operator='in' in2='blur'/> <feComposite in='SourceGraphic'/> </filter> </defs> <g id='Group_3515' data-name='Group 3515' transform='translate(-789.614 -127.371)'> <rect id='Rectangle_1473' data-name='Rectangle 1473' width='191.372' height='57.529' rx='10' transform='translate(810.866 127.5)' fill='#fff'/> <g transform='matrix(1, 0, 0, 1, 789.61, 127.37)' filter='url(#Icon_awesome-folder)'> <path id='Icon_awesome-folder-2' data-name='Icon awesome-folder' d='M195.638,31.485H89.948L75.344,4.5H20.238A20.238,20.238,0,0,0,0,24.738V146.169a20.238,20.238,0,0,0,20.238,20.238h175.4a20.238,20.238,0,0,0,20.238-20.238V51.723A20.238,20.238,0,0,0,195.638,31.485Z' transform='translate(9 1.5)' fill='$mainBackgroundColor'/> </g> </g> </svg> "));
   background-repeat: no-repeat;
 }
 
 .card-exhibitor-folder-empty {
-  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='233.876' height='179.907' viewBox='0 0 233.876 179.907'> <defs> <filter id='Icon_awesome-folder' x='0' y='0' width='233.876' height='179.907' filterUnits='userSpaceOnUse'> <feOffset dy='3' input='SourceAlpha'/> <feGaussianBlur stdDeviation='3' result='blur'/> <feFlood flood-opacity='0.161'/> <feComposite operator='in' in2='blur'/> <feComposite in='SourceGraphic'/> </filter> </defs> <g transform='matrix(1, 0, 0, 1, 0, 0)' filter='url(#Icon_awesome-folder)'> <path id='Icon_awesome-folder-2' data-name='Icon awesome-folder' d='M195.638,31.485H89.948L75.344,4.5H20.238A20.238,20.238,0,0,0,0,24.738V146.169a20.238,20.238,0,0,0,20.238,20.238h175.4a20.238,20.238,0,0,0,20.238-20.238V51.723A20.238,20.238,0,0,0,195.638,31.485Z' transform='translate(9 1.5)' fill='#2f3252'/> </g></svg>"));
+  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='233.876' height='179.907' viewBox='0 0 233.876 179.907'> <defs> <filter id='Icon_awesome-folder' x='0' y='0' width='233.876' height='179.907' filterUnits='userSpaceOnUse'> <feOffset dy='3' input='SourceAlpha'/> <feGaussianBlur stdDeviation='3' result='blur'/> <feFlood flood-opacity='0.161'/> <feComposite operator='in' in2='blur'/> <feComposite in='SourceGraphic'/> </filter> </defs> <g transform='matrix(1, 0, 0, 1, 0, 0)' filter='url(#Icon_awesome-folder)'> <path id='Icon_awesome-folder-2' data-name='Icon awesome-folder' d='M195.638,31.485H89.948L75.344,4.5H20.238A20.238,20.238,0,0,0,0,24.738V146.169a20.238,20.238,0,0,0,20.238,20.238h175.4a20.238,20.238,0,0,0,20.238-20.238V51.723A20.238,20.238,0,0,0,195.638,31.485Z' transform='translate(9 1.5)' fill='$mainBackgroundColor'/> </g></svg>"));
 }
 .card-exhibitor-general {
   width: 250px;
-  background: transparent linear-gradient(167deg, #FF0057 0%, #800080 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(167deg, $pink 0%, $purple 100%) 0 0 no-repeat padding-box;
   .progress {
-    background: transparent linear-gradient(270deg, #FFFFFFD9 0%, #FFFFFF1A 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(270deg, $white_85 0%, $white_10 100%) 0 0 no-repeat padding-box;
     height: 36px;
     .progress-bar {
       font-size: 1.5rem;
       color: $white;
-      background: transparent linear-gradient(90deg, #7033FF 0%, #7033FFA6 100%) 0 0 no-repeat padding-box;
+      background: transparent linear-gradient(90deg, $purpleMain 0%, $purpleMain_65 100%) 0 0 no-repeat padding-box;
       &:after {
         content: " ";
         width: 2px;
@@ -926,7 +931,7 @@ html {
         right: 0;
         top: -1px;
         border-radius: 2px;
-        background-color: #FFFFFF;
+        background-color: $white;
       }
     }
   }
@@ -934,19 +939,19 @@ html {
     .count {
       width: 75px;
       height: 75px;
-      color: #7033FF;
+      color: $purpleMain;
     }
   }
 }
 
 .card-header-blue {
-  background-color: #4E7CFF;
+  background-color: $blue;
 }
 .card-header-purple {
-  background-color: #7033FF;
+  background-color: $purpleMain;
 }
 .card-header-red {
-  background-color: #F65164;
+  background-color: $pink;
 }
 
 .table {
@@ -1008,7 +1013,7 @@ table thead .sorting_desc:after,
 table thead .sorting_asc_disabled:after,
 table thead .sorting_desc_disabled:after
 {
-  color: #56F750;
+  color: $success;
   bottom: 0;
   top: 0;
   font-size: 1rem !important;
@@ -1041,7 +1046,7 @@ table thead .sorting_desc_disabled:after
       right: 0;
       bottom: 0;
       height: 30%;
-      background: linear-gradient(to top, #242542, rgba(36, 37, 66, 0));
+      background: linear-gradient(to top, $primary, rgba(36, 37, 66, 0));
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
@@ -1055,13 +1060,13 @@ table thead .sorting_desc_disabled:after
   }
   .card-title {
     span {
-      background-color: rgba(78, 124, 255, 0.25);
+      background-color: $blue_25;
     }
   }
 }
 
 .btn-gradient {
-  background: transparent linear-gradient(90deg, #FF0057 0%, #800080 100%) 0 0 no-repeat padding-box;
+  background: transparent linear-gradient(90deg, $pink 0%, $purple 100%) 0 0 no-repeat padding-box;
   color: var(--bs-white);
   border-color: transparent !important;
 }
@@ -1107,11 +1112,11 @@ table thead .sorting_desc_disabled:after
       }
     }
     .bg-blue {
-      background-color: rgba(78, 124, 255, 0.5);
-      color: rgba(78, 124, 255);
+      background-color: $blue_50;
+      color: $blue;
       &:hover {
-        background-color: rgba(78, 124, 255);
-        color: #fff;
+        background-color: $blue;
+        color: $white;
       }
     }
     .card-footer-pause {
@@ -1126,7 +1131,7 @@ table thead .sorting_desc_disabled:after
   &:after {
     content: ' ';
     position: absolute;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: $black_80;
     width: 100%;
     height: 100%;
     top: 0;
@@ -1144,7 +1149,7 @@ table thead .sorting_desc_disabled:after
 }
 .card-collection-add {
   height: 217px;
-  background: transparent linear-gradient(180deg, #FF0057 0%, #800080 100%) 0 0 no-repeat padding-box;
+  background: transparent linear-gradient(180deg, $pink 0%, $purple 100%) 0 0 no-repeat padding-box;
   .card-info {
     div {
       width: 94px;
@@ -1155,7 +1160,7 @@ table thead .sorting_desc_disabled:after
   }
 }
 .card-collection-new {
-  background-color: #800080;
+  background-color: $purple;
   border-top-left-radius: 0;
 }
 .collection-active {
@@ -1190,11 +1195,11 @@ table thead .sorting_desc_disabled:after
     }
   }
   .bg-blue {
-    background-color: rgba(78, 124, 255, 0.5);
-    color: rgba(78, 124, 255);
+    background-color: $blue_50;
+    color: $blue;
     &:hover {
-      background-color: rgba(78, 124, 255);
-      color: #fff;
+      background-color: $blue;
+      color: $white;
     }
   }
   .card-text {
@@ -1221,17 +1226,17 @@ table thead .sorting_desc_disabled:after
     }
   }
   .bg-blue {
-    background-color: rgba(78, 124, 255, 0.5);
-    color: rgba(78, 124, 255);
+    background-color: $blue_50;
+    color: $blue;
     &:hover {
-      background-color: rgba(78, 124, 255);
-      color: #fff;
+      background-color: $blue;
+      color: $white;
     }
   }
 }
 .card-exhibitor-product-add {
   height: 360px;
-  background: transparent linear-gradient(180deg, #FF0057 0%, #800080 100%) 0 0 no-repeat padding-box;
+  background: transparent linear-gradient(180deg, $pink 0%, $purple 100%) 0 0 no-repeat padding-box;
   .card-info {
     div {
       width: 94px;
@@ -1259,13 +1264,13 @@ table thead .sorting_desc_disabled:after
   cursor: pointer;
 }
 .branding-color-1 {
-  background-color: #4B9CD4;
+  background-color: $blue;
 }
 .branding-color-2 {
-  background-color: #4898AC;
+  background-color: $turquise;
 }
 .branding-color-3 {
-  background-color: #EFE0C2;
+  background-color: $light-yellow;
 }
 
 .photo-overlay {
@@ -1282,7 +1287,7 @@ table thead .sorting_desc_disabled:after
   bottom: 50px;
 }
 
-@include media-breakpoint-down(lg) {
+@media (max-width: 1199.98px) {
   .sidebar {
     z-index: 1032;
   }
@@ -1397,13 +1402,13 @@ table thead .sorting_desc_disabled:after
   }
 }
 
-@include media-breakpoint-down(md) {
+@media (max-width: 991.98px) {
   .collection-active {
     margin-right: 0;
   }
 }
 
-@include media-breakpoint-down(sm) {
+@media (max-width: 767.98px) {
   .nav-fill{
     .nav-item {
       flex: 0 0 auto;
@@ -1413,4 +1418,20 @@ table thead .sorting_desc_disabled:after
   .card-event-added {
     width: 90%;
   }
+}
+
+.navbar
+{
+  border-bottom: 1px $secondaryColor solid !important;
+}
+
+.sidebar ul li a.active
+{
+  background-color: $leftMenuBackground;
+  color: $dark;
+}
+
+.sidebar ul li a.active i
+{
+  color: $dark;
 }

@@ -12983,12 +12983,12 @@ html {
   background-color: #ffffff !important;
 }
 .btn-dropdown-chat.show .header-chat i.fa-xmark {
-  display: block;
-}
-.btn-dropdown-chat.show .header-chat i.fa-angle-down {
   display: none;
 }
 .btn-dropdown-chat.show .header-chat svg.fa-xmark {
+  display: none;
+}
+.btn-dropdown-chat.show .header-chat i.fa-angle-down {
   display: none;
 }
 .btn-dropdown-chat.show .header-chat svg.fa-angle-down {
