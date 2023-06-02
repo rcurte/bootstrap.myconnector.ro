@@ -392,20 +392,7 @@
 
         <div class="position-relative">
           <canva class="bg-success d-block" style="height: calc(100vh - 320px); width: 100%;"></canva>
-          <div class="d-flex align-items-center pt-2 justify-content-between mt-1" id="save">
-            <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Retak">
-              <i class="fa-solid fa-rotate-right fs-5"></i>
-            </button>
-            <div class="">
-              <button type="button" class="btn btn-primary me-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="fa-brands fa-square-facebook fs-5"></i></button>
-              <button type="button" class="btn btn-primary me-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="fa-brands fa-square-twitter fs-5"></i></button>
-            </div>
-            <div class="">
-              <button type="button" class="btn btn-primary me-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="fa-solid fa-download fs-5"></i></button>
-              <button type="button" class="btn btn-primary me-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="fa-solid fa-link fs-5"></i></button>
-              <button type="button" class="btn btn-primary me-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top"><i class="fa-solid fa-circle-user fs-5"></i></button>
-            </div>
-          </div>
+
         </div>
 
       </div>
@@ -519,7 +506,39 @@
       </div>
     </main>
 
+    <div class="h-main bg-dark d-flex align-items-center flex-row flex-lg-column p-2 aside aside-min position-fixed end-0">
+      <div class="m-auto">
+        <button type="button" class="btn btn-nav-link w-100 d-flex align-items-center position-relative" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Retake">
+          <i class="fa-solid fa-rotate-right me-2 fs-4"></i>
+          <span>Retake</span>
+        </button>
+        <button type="button" class="btn btn-nav-link w-100 d-flex align-items-center position-relative" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Twitter">
+          <i class="fa-brands fa-square-facebook me-2 fs-4"></i>
+          <span>Twitter</span>
+        </button>
+        <button type="button" class="btn btn-nav-link w-100 d-flex align-items-center position-relative" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Facebook">
+          <i class="fa-brands fa-square-twitter me-2 fs-4"></i>
+          <span>Facebook</span>
+        </button>
+        <button type="button" class="btn btn-nav-link w-100 d-flex align-items-center position-relative" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+          <i class="fa-solid fa-download me-2 fs-4"></i>
+          <span>Tooltip on left</span>
+        </button>
+        <button type="button" class="btn btn-nav-link w-100 d-flex align-items-center position-relative" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+          <i class="fa-solid fa-link me-2 fs-4"></i>
+          <span>Tooltip on left</span>
+        </button>
+        <button type="button" class="btn btn-nav-link w-100 d-flex align-items-center position-relative" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">
+          <i class="fa-solid fa-circle-user me-2 fs-4"></i>
+          <span>Tooltip on left</span>
+        </button>
 
+        <button type="button" class="btn btn-nav-link w-100 d-lg-block toggle-aside" id="btn-toggle-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Expand menu">
+          <i class="fa-solid fa-chevron-left me-2 fs-4"></i>
+          <span>Expand menu</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
