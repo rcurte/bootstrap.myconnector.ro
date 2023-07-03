@@ -7,11 +7,14 @@
   <title>Event info</title>
 
   <link rel="stylesheet" href="../assets/css/main.css">
+
+  <link rel="stylesheet" href="../assets/css/main-light.css">
+
   <link rel="stylesheet" href="../assets/css/all.min.css">
 
 </head>
 <body>
-<div class="bg-dark min-vh-100">
+<div class="min-vh-100">
   <nav class="navbar navbar-expand-lg bg-primary bg-opacity-75 border-bottom border-primary fixed-top backdrop-filter p-0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
@@ -282,8 +285,8 @@
     </div>
   </nav>
 
-  <div class="d-flex position-relative main-container text-white h-100">
-    <div class="d-lg-flex d-none flex-column p-2 justify-content-between sidebar sidebar-min position-fixed z-index h-main bg-dark"> <!-- Remove class "sidebar-min"  -->
+  <div class="d-flex position-relative main-container h-100">
+    <div class="d-lg-flex d-none flex-column p-2 justify-content-between sidebar sidebar-min position-fixed z-index h-main"> <!-- Remove class "sidebar-min"  -->
       <ul class="nav nav-pills flex-column justify-content-center flex-grow-1">
 
         <li class="nav-item mb-1 d-flex flex-grow-1">
@@ -368,7 +371,7 @@
       </div>
 
       <div class="container-xxl">
-        <div class="mb-3 pb-3 border-bottom border-primary">
+        <div class="mb-3 pb-3 border-bottom">
           <h2 class="h4 mb-3">Session details</h2>
           <p>
             Lorem ipsum dot mit dolor.
@@ -390,7 +393,7 @@
                 </div>
               </div>
               <div class="ms-3 col">
-                <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                <p class="mb-0 fw-semibold">Mihai Cima</p>
                 <p class="text-secondary">
                   Managing Partner <br>
                   Lagoo Snagov
@@ -407,7 +410,7 @@
                 </div>
               </div>
               <div class="ms-3 col">
-                <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                <p class="mb-0 fw-semibold">Mihai Cima</p>
                 <p class="text-secondary">
                   Managing Partner <br>
                   Lagoo Snagov
@@ -424,7 +427,7 @@
                 </div>
               </div>
               <div class="ms-3 col">
-                <p class="mb-0 fw-semibold text-white">Mihai Cima</p>
+                <p class="mb-0 fw-semibold">Mihai Cima</p>
                 <p class="text-secondary">
                   Managing Partner <br>
                   Lagoo Snagov
@@ -547,14 +550,14 @@
 
     </main>
 
-    <div class="aside-box p-2 h-main position-fixed end-0 bg-dark d-none">
+    <div class="aside-box p-2 h-main position-fixed end-0 d-none">
 
         <div class="border-bottom border-primary px-2 pb-2 d-flex mb-2 justify-content-between align-items-center">
           <span class="aside-title">Session chat</span>
           <div class="">
-            <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 border-0 me-2 d-none expand-aside"><i class="fa-solid fa-compress"></i></button>
-            <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 border-0 me-2 expand-aside"><i class="fa-solid fa-expand"></i></button>
-            <button type="button" class="btn btn-nav-link p-0 bg-transparent fs-4 border-0 close-aside"><i class="fa-solid fa-xmark"></i></button>
+            <button type="button" class="btn btn-icon p-0 bg-transparent fs-4 border-0 me-2 d-none expand-aside"><i class="fa-solid fa-compress"></i></button>
+            <button type="button" class="btn btn-icon p-0 bg-transparent fs-4 border-0 me-2 expand-aside"><i class="fa-solid fa-expand"></i></button>
+            <button type="button" class="btn btn-icon p-0 bg-transparent fs-4 border-0 close-aside"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
 
@@ -650,7 +653,7 @@
                 <div class="">
                   <div class="border border-2 border-primary px-3 py-2 d-inline-flex rounded-bottom rounded-end position-relative">
                     test
-                    <span class="badge badge-like position-absolute start-100 top--4 translate-middle p-1 bg-white rounded-pill text-primary fw-normal">
+                    <span class="badge badge-like position-absolute start-100 top--4 translate-middle p-1 text-bg-primary rounded-pill fw-normal">
                       <i class="fa-solid fa-thumbs-up small"></i>
                       <span>Vote</span>
                     </span>
@@ -742,7 +745,7 @@
         </div>
     </div>
 
-    <div class="h-main bg-dark d-flex align-items-center flex-row flex-lg-column p-2 aside aside-min position-fixed end-0">
+    <div class="h-main d-flex align-items-center flex-row flex-lg-column p-2 aside aside-min position-fixed end-0">
       <div class="m-auto">
         <button type="button" class="btn btn-nav-link w-100 d-flex align-items-center position-relative show-aside" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Session chat">
           <i class="fa-solid fa-message me-2 fs-4"></i>
@@ -988,7 +991,7 @@
                     </div>
 
                     <div class="row mt-auto mx-0">
-                      <div class="col-12 col-sm-6 col-md-6 bg-primary bg-opacity-75 backdrop-filter text-white py-2">
+                      <div class="col-12 col-sm-6 col-md-6 text-bg-dark bg-opacity-75 backdrop-filter py-2">
                         <div class="">
                           <h3 class="h5">Mihai Cima</h3>
                           <p class="mb-0">

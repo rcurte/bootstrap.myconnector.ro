@@ -19606,23 +19606,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/scss/default.scss":
-/*!*******************************!*\
-  !*** ./src/scss/default.scss ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/scss/light.scss":
-/*!*****************************!*\
-  !*** ./src/scss/light.scss ***!
-  \*****************************/
+/***/ "./src/scss/main-light.scss":
+/*!**********************************!*\
+  !*** ./src/scss/main-light.scss ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -25944,8 +25931,7 @@ S2.define('jquery.select2',[
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/assets/js/main": 0,
-/******/ 			"assets/css/light": 0,
-/******/ 			"assets/css/default": 0,
+/******/ 			"assets/css/main-light": 0,
 /******/ 			"assets/css/main": 0
 /******/ 		};
 /******/ 		
@@ -25996,10 +25982,9 @@ S2.define('jquery.select2',[
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/css/light","assets/css/default","assets/css/main"], () => (__webpack_require__("./src/js/main.js")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/light","assets/css/default","assets/css/main"], () => (__webpack_require__("./src/scss/main.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/light","assets/css/default","assets/css/main"], () => (__webpack_require__("./src/scss/default.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/light","assets/css/default","assets/css/main"], () => (__webpack_require__("./src/scss/light.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/main-light","assets/css/main"], () => (__webpack_require__("./src/js/main.js")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/main-light","assets/css/main"], () => (__webpack_require__("./src/scss/main.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/main-light","assets/css/main"], () => (__webpack_require__("./src/scss/main-light.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

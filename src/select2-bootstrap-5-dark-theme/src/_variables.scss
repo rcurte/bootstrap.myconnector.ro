@@ -31,7 +31,7 @@ $s2bs5d-transition:               $input-transition !default;
 
 // Indicator
 $s2bs5d-indicator-padding:        $form-select-indicator-padding !default;
-$s2bs5d-indicator:                str-replace($form-select-indicator, #{$form-select-indicator-color} ,$white); //$form-select-indicator !default;
+$s2bs5d-indicator:                str-replace($form-select-indicator, #{$form-select-indicator-color}, $s2bs5d-indicator-color); //$form-select-indicator !default;
 
 // Focus
 $s2bs5d-focus-border-color:       $primary !default;

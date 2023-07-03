@@ -7,19 +7,22 @@
   <title>Login</title>
 
   <link rel="stylesheet" href="../assets/css/main.css">
+
+  <link rel="stylesheet" href="../assets/css/main-light.css">
+
   <link rel="stylesheet" href="../assets/css/all.min.css">
 
 </head>
 <body>
-<div class="bg-dark min-vh-100">
-  <nav class="navbar navbar-expand-lg bg-primary bg-opacity-75 border-bottom border-primary fixed-top backdrop-filter">
+<div class="min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-main border-bottom fixed-top backdrop-filter">
     <div class="container-fluid">
       <a href="#" class="navbar-brand">
         <img src="../assets/images/logo.svg" alt="">
       </a>
 
       <div class="ml-auto d-flex justify-content-center align-items-center">
-        <div class="me-2 text-white">
+        <div class="me-2">
           Hello, <b>Marius</b>
         </div>
         <div class="dropdown">
@@ -35,7 +38,7 @@
     </div>
   </nav>
 
-  <div class="d-flex position-relative main-container text-white">
+  <div class="d-flex position-relative main-container">
     <main class="flex-grow-1">
     <div class="container-fluid pt-4">
       <div class="row">
@@ -125,8 +128,8 @@
 
 
           <a href="#" class="mb-4 d-block text-decoration-none">
-            <div class="card bg-primary">
-              <div class="card-body text-white">
+            <div class="card shadow">
+              <div class="card-body">
                 <div class="row">
                   <div class="col-12 col-md-2 text-center">
                     <span class=" display-4 fw-semibold">01</span><br>
@@ -169,8 +172,8 @@
           </a>
 
           <a href="#" class="mb-4 d-block text-decoration-none">
-            <div class="card bg-primary">
-              <div class="card-body text-white">
+            <div class="card shadow">
+              <div class="card-body">
                 <div class="row">
                   <div class="col-12 col-md-2 text-center">
                     <div class="d-flex justify-content-center align-items-center h-100">
@@ -232,13 +235,13 @@
           <p class="fw-semibold mb-2">Favorites/event:</p>
 
           <a href="" class="text-decoration-none mb-2">
-            <div class="card text-center bg-primary text-white">
+            <div class="card shadow text-center">
               <div class="card-body mt-4">
                 <p class="card-text">
                   MyConnector Conference
                 </p>
               </div>
-              <div class="card-footer text-end border-0 bg-primary pt-0">
+              <div class="card-footer text-end border-0 pt-0">
                 <small class="text-success">1 assets</small>
               </div>
             </div>
@@ -250,7 +253,7 @@
   </main>
   </div>
 
-  <footer class="border-top border-primary fixed-bottom py-3 text-white bg-primary bg-opacity-75 backdrop-filter">
+  <footer class="footer-main border-top fixed-bottom py-3 backdrop-filter">
     <div class="container-fluid d-flex align-items-center">
       <span class="fw-bold fs-4">Hello, </span> <img src="../assets/images/hello_icon.svg" alt="" class="mx-1"> <span class="fw-bold fs-4">Mariusa Constantina!</span>
       <span class="ms-2">You are navigating MyConnectors' dashboard. From here you can access your events, change personal information or manage saved assets(videos, documents, business cards etc.)</span>
@@ -269,7 +272,7 @@
       <div class="modal-body">
 
       <p>To access an offline event, share your info with our partners, share your vCard with other guests.</p>
-      <div class="bg-light p-4 text-center">
+      <div class="p-4 text-center">
         <img src="data:image/png;base64,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">
       </div>
 
@@ -294,7 +297,7 @@
             <div class="col-12 col-md-6">
 
               <div class="mb-3">
-                <label class="form-label text-primary" for="input-salutation">Salutation</label>
+                <label class="form-label" for="input-salutation">Salutation</label>
                 <select name="salutation" id="input-salutation" class="form-control js-select2" data-minimum-results-for-search="Infinity" data-theme="bootstrap-5">
                   <option value="">Select Salutation</option>
                   <option value="Mr.">Mr.</option>
@@ -304,22 +307,22 @@
               </div>
 
               <div class="mb-3">
-                <label class="form-label text-primary" for="input-firstname">Firstname</label>
+                <label class="form-label" for="input-firstname">Firstname</label>
                 <input class="form-control" id="input-firstname" type="text" name="firstname" placeholder="Fill in your given firstname" required>
               </div>
 
               <div class="mb-3">
-                <label class="form-label text-primary" for="input-lastname">Lastname</label>
+                <label class="form-label" for="input-lastname">Lastname</label>
                 <input class="form-control" id="input-lastname" type="text" name="lastname" placeholder="Fill in your given lastname" required>
               </div>
 
               <div class="mb-3">
-                <label class="form-label text-primary" for="input-phone">Phone</label>
+                <label class="form-label" for="input-phone">Phone</label>
                 <input class="form-control" id="input-phone" type="text" name="phone" placeholder="Fill in your phone" required>
               </div>
 
               <div class="mb-3">
-                <label class="form-label text-primary" for="input-timezone">Timezone</label>
+                <label class="form-label" for="input-timezone">Timezone</label>
                 <select name="id_timezone" id="input-timezone" class="form-control js-select2" data-theme="bootstrap-5">
                   <option value="">Select Salutation</option>
                   <option value="Mr.">Mr.</option>
@@ -426,17 +429,17 @@
           <p>The new password should be at least 7 characters long, with at least a small case letter, at least an uppercase letter, at least a number and at least a special character</p>
           
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-current-password">Current Password</label>
+            <label class="form-label" for="input-current-password">Current Password</label>
             <input class="form-control" id="input-current-password" type="password" name="current_password" autocomplete="new-password" required>
           </div>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-new-password">New Password</label>
+            <label class="form-label" for="input-new-password">New Password</label>
             <input class="form-control" id="input-new-password" type="password" name="new_password" autocomplete="new-password" required>
           </div>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-repeat-password">Repeat Password</label>
+            <label class="form-label" for="input-repeat-password">Repeat Password</label>
             <input class="form-control" id="input-repeat-password" type="password" name="repeat_password" autocomplete="new-password" required>
           </div>
       
@@ -555,22 +558,22 @@
           <p>Your social media profiles will be displayed during events that allow guests interactions and networking, in your public profile section or business card exchange.</p>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-facebook">Facebook</label>
+            <label class="form-label" for="input-facebook">Facebook</label>
             <input class="form-control" id="input-facebook" type="text" name="social_media_links[facebook]" placeholder="paste your url here">
           </div>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-instagram">Instagram</label>
+            <label class="form-label" for="input-instagram">Instagram</label>
             <input class="form-control" id="input-instagram" type="text" name="social_media_links[instagram]" placeholder="paste your url here">
           </div>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-twitter">Twitter</label>
+            <label class="form-label" for="input-twitter">Twitter</label>
             <input class="form-control" id="input-twitter" type="text" name="social_media_links[twitter]" placeholder="paste your url here">
           </div>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-linkedin">Linkedin</label>
+            <label class="form-label" for="input-linkedin">Linkedin</label>
             <input class="form-control" id="input-linkedin" type="text" name="social_media_links[linkedin]" placeholder="paste your url here">
           </div>
 
@@ -600,12 +603,12 @@
           <p>Please type "CLOSE" and your password below to confirm that you wish to close your account!</p>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-close">Type here "CLOSE"</label>
+            <label class="form-label" for="input-close">Type here "CLOSE"</label>
             <input class="form-control" id="input-close" type="text" name="close_input" autocomplete="new-password" required>
           </div>
 
           <div class="mb-3">
-            <label class="form-label text-primary" for="input-close-password">Password</label>
+            <label class="form-label" for="input-close-password">Password</label>
             <input class="form-control" id="input-close-password" type="password" name="password" autocomplete="new-password" required>
           </div>
 

@@ -2,51 +2,48 @@
 
 $font-size-base: 0.875rem !default;
 
-$primary: #2f3252 !default; /*  rgba(47, 50, 82, 1) */
-$dark: #242542 !default; /* rgba(36, 37, 66, 1) */
+$primary: rgba(237, 237, 237, 1) !default; /* rgba(237, 237, 237, 1) */  /*  #F6F6F6  ->default card cu sahdow si border identic */
+$dark: rgba(36, 37, 66, 1) !default;
 $success: #2fd326 !default;
-$secondary: #858798 !default;
+$secondary: rgba(133, 135, 152, 1) !default;
 $danger: #e61657 !default;
-$light: #f8f9fa !default;
+$light: rgba(40, 41, 72, 1) !default;
 
 /* Default Helper */
-$body-bg: rgba(36, 37, 66, 1) !default;
-$body-color: rgba(255, 255, 255, 1) !default;
+$body-bg: rgba(255, 255, 255, 1) !default;
+$body-color: rgba(40, 41, 72, 1) !default;
 $link-color: $body-color !default;
 $link-hover-color: '';
 
 /* NavBar Header */
-$navbarBg: rgba(47, 50, 82, 0.75);
-$navbar-light-color: rgba(255, 255, 255, 1);
-$navbarBorderColor: rgba(47, 50, 82, 1);
+$navbarBg: rgba(255, 255, 255, 0.75);
+$navbar-light-color: rgba(40, 41, 72, 1);
+$navbarBorderColor: rgba(246, 246, 246, 1);
 
 /* Sidebar  */
-$sidebarBg: rgba(36, 37, 66, 1);
-
-/* Sidebar  */
-$sidebarBg: rgba(36, 37, 66, 1);
+$sidebarBg: rgba(255, 255, 255, 1);
 
 /* Footer */
-$footerBg: rgba(47, 50, 82, .75);
-$footerColor: rgba(255, 255, 255, 1);
-$footerBorderColor: rgba(47, 50, 82, 1);
+$footerBg: rgba(255, 255, 255, 0.75);
+$footerColor: rgba(40, 41, 72, 1);
+$footerBorderColor: rgba(246, 246, 246, 1);
 
 /* Tooltip color */
-$tooltip-bg: rgba(47, 50, 82, 1)  !default;
-$tooltip-color: rgba(255, 255, 255, 1) !default;
+$tooltip-bg: rgba(237, 237, 237, 1)  !default;
+$tooltip-color: rgba(47, 50, 82, 1) !default;
 
 /* Card */
-$card-border-color: rgba(47, 50, 82, 1);
-$card-bg: rgba(47, 50, 82, 1);
-$card-cap-bg: rgba(47, 50, 82, 1);
-$card-color: rgba(255, 255, 255, 1);
+$card-border-color: rgba(246, 246, 246, 1);
+$card-bg: rgba(246, 246, 246, 1);
+$card-cap-bg: rgba(246, 246, 246, 1);
+$card-color: rgba(40, 41, 72, 1);
 
 /* Event info section */
-$sectionEven: rgba(47, 50, 82, .75);
-$sectionOdd: rgba(36, 37, 66, 1);
+$sectionEven: rgba(255, 255, 255, .75);
+$sectionOdd: rgba(237, 237, 237, 1);
 
 /* Event info card Track and ticket */
-$cardTrackBg: linear-gradient( 90deg, rgba(2, 0, 36, 1) 0%, rgba(47, 47, 106, 1) 77%, rgba(63, 69, 103, 1) 100% );
+$cardTrackBg: linear-gradient(80deg, #3DE0CF 0%, #37CBBC 27%, #279389 100%);
 $cardTrackColor: rgba(255, 255, 255, 1);
 
 /* Swiper color arrow navigator */
@@ -56,10 +53,10 @@ $carousel-control-color: $secondary;
 $dropdown-color: rgba(40, 41, 72, 1) !default;
 
 /* Form control primary folosit in site cu exceptia modal */
-$formControlPrimaryBg: rgba(47, 50, 82, 1);
-$formControlPrimaryColor: rgba(255, 255, 255, 1);
-$formControlPrimaryBorder: rgba(47, 50, 82, 1);
-$s2bs5d-indicator-color: rgba(255, 255, 255, 1); // arrow down select2
+$formControlPrimaryBg: rgba(233, 233, 233, 1);
+$formControlPrimaryColor: rgba(40, 41, 72, 1);
+$formControlPrimaryBorder: rgba(233, 233, 233, 1);
+$s2bs5d-indicator-color: rgba(133, 135, 152, 1);
 
 /* Form control use in modal */
 $input-bg: rgba(255, 255, 255, 1);
@@ -71,6 +68,7 @@ $border-radius: .625rem !default;
 $form-check-label-cursor: pointer;
 $form-check-input-checked-bg-color: $success !default;
 $dropdown-link-active-bg: #e9ecef !default;
+
 
 $tooltip-font-size: $font-size-base;
 
@@ -129,7 +127,7 @@ $pagination-focus-color: #fff;
 :root {
   --bs-body-font-family: 'Poppins', sans-serif;
   --swiper-navigation-size: 12;
-  --swiper-theme-color: #fff;
+  --swiper-theme-color: red;
   --swiper-pagination-bullet-inactive-color: #858798;
 }
 .filter-datepicker {
@@ -150,7 +148,7 @@ $pagination-focus-color: #fff;
 
 .navbar-main {
   background-color: #{$navbarBg};
-  border-bottom-color: #{$navbarBorderColor} !important;
+  border-color: #{$navbarBorderColor} !important;
 }
 .sidebar,
 .aside,
@@ -342,18 +340,18 @@ $pagination-focus-color: #fff;
 }
 .btn-nav-link {
   @include button-variant(
-                  transparent, //$dark,
-                  $dark,
-                  $secondary,
-                  $primary,
-                  $primary,
-                  $white,
-                  $primary,
-                  $primary,
-                  $white,
-                  $dark,
-                  $dark,
-                  $dark
+                  rgba(255, 255, 255, 1),
+                  rgba(255, 255, 255, 1),
+                  rgba(77, 78, 102, 1),
+                  rgba(77, 78, 102, 1),
+                  rgba(77, 78, 102, 1),
+                  rgba(255, 255, 255, 1),
+                  rgba(77, 78, 102, 1),
+                  rgba(77, 78, 102, 1),
+                  rgba(255, 255, 255, 1),
+                  rgba(255, 255, 255, 1),
+                  rgba(255, 255, 255, 1),
+                  rgba(237, 237, 237, 1)
   );
   position: relative;
 }
@@ -383,14 +381,14 @@ $pagination-focus-color: #fff;
   cursor: pointer;
 }
 .form-control-primary {
-  background-color: $primary;
-  color: $white;
-  border-color: $primary;
+  background-color: $formControlPrimaryBg;
+  color: $formControlPrimaryColor;
+  border-color: $formControlPrimaryBorder;
 
   &:focus {
-    color: $white;
-    background-color: $primary;
-    border-color: $primary;
+    color: $formControlPrimaryColor;
+    background-color: $formControlPrimaryBg;
+    border-color: $formControlPrimaryBorder;
   }
   &::placeholder {
     color: $secondary;
@@ -508,7 +506,6 @@ $pagination-focus-color: #fff;
   transition: all 0.3s;
   &:hover {
     transform: scale(1.02);
-    box-shadow: 0px 2px 8px #242542;
   }
 }
 .card-info-category {
@@ -670,7 +667,7 @@ $pagination-focus-color: #fff;
   }
   &:hover {
     span {
-     font-size: 0.656rem;
+      font-size: 0.656rem;
     }
   }
 }
@@ -1054,7 +1051,7 @@ table th.sorting:before,
 table th.sorting_asc:after,
 table th.sorting_desc:before
 {
- opacity: 0;
+  opacity: 0;
 }
 table thead .sorting:before,
 table thead .sorting_asc:before,
