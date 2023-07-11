@@ -97,3 +97,9 @@ $('[data-close-floating]').on('click', function () {
   var targetSelector = '.' + $(this).data('close-floating');
   $(targetSelector).addClass('d-none');
 });
+
+const popoverQuestTriggerList = document.querySelectorAll('[rel="popover-quest"]');
+const popoverQuestList = [...popoverQuestTriggerList].map(popoverQuestTriggerEl => new bootstrap.Popover(popoverQuestTriggerEl, {container: 'body', html: true, content: function () {
+    var clone = $($(this).data('popover-content')).clone(true).removeClass('d-none');
+    return clone;
+  }}));

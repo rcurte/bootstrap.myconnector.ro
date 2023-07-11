@@ -3356,6 +3356,17 @@ jquery__WEBPACK_IMPORTED_MODULE_2___default()('[data-close-floating]').on('click
   var targetSelector = '.' + jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('close-floating');
   jquery__WEBPACK_IMPORTED_MODULE_2___default()(targetSelector).addClass('d-none');
 });
+var popoverQuestTriggerList = document.querySelectorAll('[rel="popover-quest"]');
+var popoverQuestList = _toConsumableArray(popoverQuestTriggerList).map(function (popoverQuestTriggerEl) {
+  return new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Popover(popoverQuestTriggerEl, {
+    container: 'body',
+    html: true,
+    content: function content() {
+      var clone = jquery__WEBPACK_IMPORTED_MODULE_2___default()(jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('popover-content')).clone(true).removeClass('d-none');
+      return clone;
+    }
+  });
+});
 
 /***/ }),
 

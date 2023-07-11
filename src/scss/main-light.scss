@@ -100,6 +100,10 @@ $pagination-hover-color: #fff;
 $pagination-focus-bg: transparent;
 $pagination-focus-color: #fff;
 
+$progress-bar-bg: linear-gradient(270deg, #21CBCB 0%, #60FF38 100%);
+$progress-bg: $primary;
+$progress-height: .75rem;
+
 @import "~bootstrap/scss/bootstrap";
 @import "~select2/src/scss/core";
 @import "~select2-bootstrap-5-theme/src/select2-bootstrap-5-theme";
@@ -1450,6 +1454,108 @@ table thead .sorting_desc_disabled:after
       cursor: pointer;
       display: flex !important;
     }
+  }
+}
+
+/* Gamification */
+.gamification-avatar {
+  > div {
+    width: 32px;
+    height: 32px;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid $primary;
+  }
+}
+.gamification-leaderboard {
+  &.gamification-bronze {
+    padding: 3px;
+  }
+  &.gamification-silver {
+    padding: 3px;
+  }
+  &.gamification-gold {
+    padding: 3px;
+  }
+  > div {
+    width: 28px;
+    height: 28px;
+  }
+  img {
+    width: 66px;
+    height: 66px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid $primary;
+  }
+}
+.leaderboard-list {
+  .leaderboard-quest {
+    img {
+      height: 24px;
+      object-fit: cover;
+      margin-left: .25rem;
+    }
+  }
+  .leaderboard-count {
+    width: 1rem;
+    text-align: right;
+  }
+}
+.gamification-progress {
+  background: $dark;
+}
+.gamification-bronze {
+  background: linear-gradient(136deg, #AD7D5D 0%, #EFCDA2 23%, #F7D6B6 27%, #F0BB92 37%, #FEE2C3 47%, #D4B192 55%, #D29C77 66%, #DCA681 100%);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.gamification-silver {
+  background: linear-gradient(136deg, #859CAD 0%, #DDE4E4 23%, #E5EBE8 27%, #6E90A1 37%, #C3CCCC 47%, #BFC9CA 55%, #7394A5 66%, #B8CADA 100%);
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.gamification-gold {
+  background: linear-gradient(136deg, #FDCE0A 0%, #F8F27D 23%, #F8F27D 27%, #FDCE0A 42%, #ECA315 47%, #FDCE0A 55%, #F8F27D 66%, #FDCE0A 100%);
+  border-radius: 50%;
+  padding: 4px;
+}
+.progress-bar {
+  background: $progress-bar-bg;
+}
+.progress-sm {
+  height: .375rem;
+}
+.progress-xs {
+  height: .25rem;
+}
+.quest-badge {
+  width: 48px;
+  height: 48px;
+  background-color: $body-bg;
+}
+.gamification-claim {
+  button {
+    color: $body-color;
+  }
+}
+.quest-popover {
+  background-color: $primary;
+  border: 0;
+  box-shadow: $box-shadow-lg;
+  width: 300px;
+  .popover-arrow::before,
+  .popover-arrow::after {
+    border-right-color: $primary !important;
+  }
+  .progress {
+    background: $dark;
   }
 }
 
