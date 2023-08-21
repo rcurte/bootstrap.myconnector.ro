@@ -1345,6 +1345,16 @@ table thead .sorting_desc_disabled:after
   bottom: 50px;
 }
 
+/* Session management */
+.card-session-chat,
+.card-session-qa {
+  height: calc(100vh - 330px);
+}
+.card-session-status-qa {
+  height: calc(50vh - 174px);
+}
+/* end Session management */
+
 @include media-breakpoint-down(lg) {
   .sidebar {
     z-index: 1032;

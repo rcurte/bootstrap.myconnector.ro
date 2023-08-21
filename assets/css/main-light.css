@@ -14092,6 +14092,17 @@ table thead .sorting_desc_disabled:after {
   background: rgb(36, 37, 66);
 }
 
+/* Session management */
+.card-session-chat,
+.card-session-qa {
+  height: calc(100vh - 330px);
+}
+
+.card-session-status-qa {
+  height: calc(50vh - 174px);
+}
+
+/* end Session management */
 @media (max-width: 767.98px) {
   .collection-active {
     margin-right: 0;
